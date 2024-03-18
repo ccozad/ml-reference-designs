@@ -14,6 +14,7 @@ To avoid conflicts with your local environment, create a virtual environment and
 ```
 python -m venv .venv
 .venv\Scripts\activate
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install -r requirements.txt
 python -m ipykernel install --user --name=virtualenv
 ```
