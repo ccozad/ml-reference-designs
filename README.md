@@ -1,16 +1,18 @@
 # Introduction
 
-This repo contains a set of reference designs for various ML topics. References for futher reading are provided with each example.
+This repo contains a set of reference designs for various ML topics.
 
-# Jupyter requirement
+# Setup
+
+## Jupyter requirement
 
 The examples in this repo are meant to be run interactively using Jupyter-Lab or Jupiter-Notebooks. See https://jupyter.org/install
 
-# Virtual environment
+## Virtual environment
 
 To avoid conflicts with your local environment, create a virtual environment and run the notebook within this environment.
 
-## Windows
+### Windows
 ```
 python -m venv .venv
 .venv\Scripts\activate
@@ -19,11 +21,11 @@ pip install -r requirements.txt
 python -m ipykernel install --user --name=virtualenv
 ```
 
-## Selecting the new kernel
+### Selecting the new kernel
 
 Then select the virtualenv kernel after launching Jupyter Lab with the command `jupyter lab`
 
-## Additional resources
+### Additional resources
 For additional background see https://www.linkedin.com/pulse/how-use-virtual-environment-inside-jupyter-lab-sina-khoshgoftar
 
 # Contents
@@ -43,6 +45,7 @@ Various simple examples for getting started with different frameworks
 
 Various recipes for common feature engineering tasks.
 
+- [Pandas essentials](/feature-engineering/pandas_essentials.ipynb)
 - [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
 
 ## Computer Vision
