@@ -33,20 +33,20 @@ For additional background see https://www.linkedin.com/pulse/how-use-virtual-env
 Various simple examples for getting started with different frameworks
 
 - PyTorch
-  - Hello World
-  - GPU
+  - [Hello World](/getting-started/pytorch_hello_world.ipynb)
+  - [GPU](/getting-started/pytorch_gpu.ipynb)
 - TensorFlow
-  - Hello World
-  - GPU (Linux only)
+  - [Hello World](/getting-started/tensorflow_hello_world.ipynb)
+  - [GPU (Linux only)](/getting-started/tensorflow_gpu.ipynb)
 
 ## Feature Engineering
 
 Various recipes for common feature engineering tasks.
 
-- Handle missing data
+- [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
 
 ## Computer Vision
 
 Various examples that deal with processing image data.
 
-- Image classification with Pytorch and Fashion MNIST
+- [Image classification with Pytorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
