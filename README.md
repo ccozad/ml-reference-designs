@@ -24,4 +24,29 @@ python -m ipykernel install --user --name=virtualenv
 Then select the virtualenv kernel after launching Jupyter Lab with the command `jupyter lab`
 
 ## Additional resources
-For additional background see https://www.linkedin.com/pulse/how-use-virtual-environment-inside-jupyter-lab-sina-khoshgoftar 
+For additional background see https://www.linkedin.com/pulse/how-use-virtual-environment-inside-jupyter-lab-sina-khoshgoftar
+
+# Contents
+
+## Getting Started
+
+Various simple examples for getting started with different frameworks
+
+- PyTorch
+  - Hello World
+  - GPU
+- TensorFlow
+  - Hello World
+  - GPU (Linux only)
+
+## Feature Engineering
+
+Various recipes for common feature engineering tasks.
+
+- Handle missing data
+
+## Computer Vision
+
+Various examples that deal with processing image data.
+
+- Image classification with Pytorch and Fashion MNIST
