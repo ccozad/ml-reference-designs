@@ -48,8 +48,12 @@ Various recipes for common feature engineering tasks.
 - [Pandas essentials](/feature-engineering/pandas_essentials.ipynb)
 - [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
 
+## Linear Regression
+
+ - [Predict home prices with PyTorch](/linear-regression/predict-house-price.ipynb)
+
 ## Computer Vision
 
 Various examples that deal with processing image data.
 
-- [Image classification with Pytorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
+- [Image classification with PyTorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
