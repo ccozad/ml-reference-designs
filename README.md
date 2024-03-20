@@ -47,6 +47,7 @@ Various recipes for common feature engineering tasks.
 
 - [Pandas essentials](/feature-engineering/pandas_essentials.ipynb)
 - [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
+- [Predict home price feature prep](/linear-regression/predict-home-price-data-prep.ipynb)
 
 ## Linear Regression
 
