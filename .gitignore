@@ -1,5 +1,5 @@
 .venv
 .ipynb_checkpoints
 data
-.pth
-.pth
+*.pth
+*.pth
