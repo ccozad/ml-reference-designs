@@ -47,14 +47,20 @@ Various recipes for common feature engineering tasks.
 
 - [Pandas essentials](/feature-engineering/pandas_essentials.ipynb)
 - [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
-- [Predict home price feature prep](/linear-regression/predict-home-price-data-prep.ipynb)
+- [Kaggle predict home price feature prep](/linear-regression/kaggle-predict-house-price-data-prep.ipynb)
 
 ## Linear Regression
 
- - [Predict home prices with PyTorch](/linear-regression/predict-house-price.ipynb)
+ - [Kaggle predict home prices with PyTorch](/linear-regression/kaggle-predict-house-prices.ipynb)
 
 ## Computer Vision
 
 Various examples that deal with processing image data.
 
 - [Image classification with PyTorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
+
+## Deployment
+
+Various tasks that deal with using trained models
+
+- [Kaggle predict home prices, batch evaluate blind test data](/linear-regression/kaggle-predict-house-price-evaluation.ipynb)
