@@ -49,7 +49,7 @@ Various recipes for common feature engineering tasks.
 - [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
 - [Kaggle predict home price feature prep](/linear-regression/kaggle-predict-house-price-data-prep.ipynb)
 
-## Linear Regression
+## Regression
 
  - [Kaggle predict home prices with PyTorch](/linear-regression/kaggle-predict-house-prices.ipynb)
 
