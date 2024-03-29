@@ -83,3 +83,17 @@ Various examples that deal with processing image data.
 Various tasks that deal with using trained models
 
 - [Kaggle predict home prices, batch evaluate blind test data](/linear-regression/kaggle-predict-house-price-evaluation.ipynb)
+
+# Industry domains
+
+ - Medical
+   - Breast cancer diagnosis
+ - Real Estate
+   - Price prediction
+ - Retail
+   - Product image classification
+ - Transportation
+   - Airline traffic prediction
+
+
+
