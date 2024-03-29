@@ -13,7 +13,7 @@ Examples in this repo cover the following industry domain problems:
  - Retail
    - Product image classification
  - Transportation
-   - Airline traffic prediction
+   - Seasonal airline traffic prediction
 
 # Setup
 
