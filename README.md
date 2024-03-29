@@ -55,11 +55,21 @@ Various recipes for common feature engineering tasks.
 
 ## Regression
 
+Various examples that deal with predicting a value based on inputs
+
 - [Kaggle predict home prices with PyTorch](/linear-regression/kaggle-predict-house-prices.ipynb)
 
 ## Classification
 
+Various examples that deal with placing inputs into one or more categories
+
 - [Classifify breast cancer diagnosis with PyTorch](/feature-engineering/imbalanced_classification.ipynb)
+
+## Time Series
+
+Various examples that deal with time based data
+
+- [Forecast seasonal airline traffic using scikit-learn](/feature-engineering/choosing_fourier_features.ipynb)
 
 ## Computer Vision
 
