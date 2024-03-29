@@ -34,6 +34,7 @@ For additional background see https://www.linkedin.com/pulse/how-use-virtual-env
 
 Various simple examples for getting started with different frameworks
 
+- [Terminology](/getting-started/terminology.ipynb)
 - PyTorch
   - [Hello World](/getting-started/pytorch_hello_world.ipynb)
   - [GPU](/getting-started/pytorch_gpu.ipynb)
@@ -48,12 +49,17 @@ Various recipes for common feature engineering tasks.
 - [Pandas essentials](/feature-engineering/pandas_essentials.ipynb)
 - [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
 - [Convert class labels to numbers](/feature-engineering/convert_class_to_numeric.ipynb)
+- [Imbalanced classification](/feature-engineering/imbalanced_classification.ipynb)
 - [Choose fourier features](/feature-engineering/choosing_fourier_features.ipynb)
 - [Kaggle predict home price feature prep](/linear-regression/kaggle-predict-house-price-data-prep.ipynb)
 
 ## Regression
 
 - [Kaggle predict home prices with PyTorch](/linear-regression/kaggle-predict-house-prices.ipynb)
+
+## Classification
+
+- [Classifify breast cancer diagnosis with PyTorch](/feature-engineering/imbalanced_classification.ipynb)
 
 ## Computer Vision
 
