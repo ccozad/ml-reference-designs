@@ -63,7 +63,8 @@ Various examples that deal with predicting a value based on inputs
 
 Various examples that deal with placing inputs into one or more categories
 
-- [Classifify breast cancer diagnosis with PyTorch](/feature-engineering/imbalanced_classification.ipynb)
+- [Classify breast cancer diagnosis with PyTorch](/feature-engineering/imbalanced_classification.ipynb)
+- [Image classification with PyTorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
 
 ## Time Series
 
