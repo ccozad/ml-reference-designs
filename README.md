@@ -65,13 +65,13 @@ Various recipes for common feature engineering tasks.
 - [Convert class labels to numbers](/feature-engineering/convert_class_to_numeric.ipynb)
 - [Imbalanced classification](/feature-engineering/imbalanced_classification.ipynb)
 - [Choose fourier features](/feature-engineering/choosing_fourier_features.ipynb)
-- [Kaggle predict home price feature prep](/linear-regression/kaggle-predict-house-price-data-prep.ipynb)
+- [Kaggle predict home price feature prep](/regression/kaggle-predict-house-price-data-prep.ipynb)
 
 ## Regression
 
 Various examples that deal with predicting a value based on inputs
 
-- [Kaggle predict home prices with PyTorch](/linear-regression/kaggle-predict-house-prices.ipynb)
+- [Kaggle predict home prices with PyTorch](/regression/kaggle-predict-house-prices.ipynb)
 
 ## Classification
 
@@ -96,7 +96,7 @@ Various examples that deal with processing image data.
 
 Various tasks that deal with using trained models
 
-- [Kaggle predict home prices, batch evaluate blind test data](/linear-regression/kaggle-predict-house-price-evaluation.ipynb)
+- [Kaggle predict home prices, batch evaluate blind test data](/regression/kaggle-predict-house-price-evaluation.ipynb)
 
 
 
