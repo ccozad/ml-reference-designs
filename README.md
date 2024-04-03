@@ -73,6 +73,7 @@ Various recipes for common feature engineering tasks.
 
 Various examples that deal with predicting a value based on inputs
 
+- [Synthetic regression with PyTorch](/regression/pytorch_synthetic_regression.ipynb)
 - [Kaggle predict home prices with PyTorch](/regression/kaggle-predict-house-prices.ipynb)
 
 ## Classification
