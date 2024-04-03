@@ -53,6 +53,7 @@ Various simple examples for getting started with different frameworks
   - [GPU](/getting-started/pytorch_gpu.ipynb)
   - [Tensor operations](/getting-started/pytorch_tensor_operations.ipynb)
   - [Auto differentiation](/getting-started/pytorch_auto_differentiation.ipynb)
+  - [Getting help](/getting-started/pytorch_getting_help.ipynb)
 - TensorFlow
   - [Hello World](/getting-started/tensorflow_hello_world.ipynb)
   - [GPU (Linux only)](/getting-started/tensorflow_gpu.ipynb)
