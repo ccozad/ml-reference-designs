@@ -34,6 +34,16 @@ pip install -r requirements.txt
 python -m ipykernel install --user --name=virtualenv
 ```
 
+### Working with LLMs
+
+Workbook examples that include LLMs models are more complex than other examples and require additional setup work.
+
+**Llama 3**
+ - Download the model weights (requires an access request that is granted by Meta staff, may take 24 hours or more to be approved) https://huggingface.co/meta-llama/Meta-Llama-3-8B
+ - Model weights are GBs of data, store them in a drive with suffient space
+ - Clone the model code https://github.com/meta-llama/llama3
+ - Change to the directory with the model code and pip install the model and dependencies `pip install -e .`
+
 ### Selecting the new kernel
 
 Then select the virtualenv kernel after launching Jupyter Lab with the command `jupyter lab`
