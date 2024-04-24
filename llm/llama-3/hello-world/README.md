@@ -8,7 +8,7 @@ The 8 Billion parameter model has increased hardware requirements, though still 
 
 The Llama 2 model was able to run on a server instance with a single T4 GPU. Single T4 machines are some of the cheapest inference machines out there. Unfortunately, as described on an issue in the Llama 3 GitHub, https://github.com/meta-llama/llama3/issues/95, the T4 is too small for this third generation of the Llama model.
 
-You could either use a machine with two T4 GPUs or move to an instance with a new A10G GPU. The price is comparable but we opted to go with a single A10G GPUS because they require a smaller allocation of virtual CPUs. We'll talk about the virtual CPU quota limit in a later section.
+You could either use a machine with two T4 GPUs or move to an instance with a newer A10G GPU. The price is comparable but we opted to go with a single A10G GPUS because they require a smaller allocation of virtual CPUs. We'll talk about the virtual CPU quota limit in a later section.
 
 # The Server
 
