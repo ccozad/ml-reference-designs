@@ -31,7 +31,7 @@ EC2 instances have several billing options including on demand, reserved and spo
 We'll assume you are using on demand pricing and will have full access to the server for the duration of the tutorial. When creating the EC2 instance, the important details are:
 
 - Instance Type: g5.xlarge
-- Machine Image: Amazon ECS-Optimized Amazon Linux 2023
+- Machine Image: Amazon EC2-Optimized Amazon Linux 2023
 - Root Volume: 40 GB
 - Network: Allow SSH, only from your IP
 
