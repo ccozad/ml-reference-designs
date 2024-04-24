@@ -18,7 +18,7 @@ You'll need an AWS account if you don't already have one. The resources used in 
 
 ## Increase Your EC2 Quota
 
-If you have never provisioned resources or have only provisioned free tier resources, there are additional steps required to provision more expensive resources. Your account has a quota for each type family of instances you can provision. By default you can't just provision expensive servers. This prevents abuse if your account is compromised and helps protect you from accidentally running up a large bill.
+If you have never provisioned resources or have only provisioned free tier resources, there are additional steps required to provision more expensive resources. Your account has a quota for each family of instances you can provision. By default you can't just provision expensive servers. This prevents abuse if your account is compromised and helps protect you from accidentally running up a large bill.
 
 For this tutorial you will need a quota of at least 4 vCPUs for the G series servers in the Accelerated Computing category. Specifically we'll be using a g5.xlarge instance. Information about the G5 line of servers is here: https://aws.amazon.com/ec2/instance-types/g5/ 
 
