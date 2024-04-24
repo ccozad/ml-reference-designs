@@ -34,6 +34,8 @@ pip install -r requirements.txt
 python -m ipykernel install --user --name=virtualenv
 ```
 
+Most advances in machine learning are happing on Linux targeting Nvidia GPUs with CUDA support. Some advanced models such as Llama 3 may not work well (or at all) on Windows machines.
+
 ### Working with LLMs
 
 Workbook examples that include LLMs models are more complex than other examples and require additional setup work.
@@ -105,11 +107,21 @@ Various examples that deal with processing image data.
 
 - [Image classification with PyTorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
 
+## Large Language Models
+
+Examples that interact with large language models with billions of parameters that are often training across many commercial grade GPUs for many millions of hours.
+
+### Llama 3
+
+- [Local Llama 3 chat demo](/llm//llama-3/hello-llama-3.ipynb)
+- [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
+
 ## Deployment
 
 Various tasks that deal with using trained models
 
 - [Kaggle predict home prices, batch evaluate blind test data](/regression/kaggle-predict-house-price-evaluation.ipynb)
+- [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
 
 
 
