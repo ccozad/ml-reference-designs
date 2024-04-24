@@ -14,6 +14,8 @@ Examples in this repo cover the following industry domain problems:
    - Product image classification
  - Transportation
    - Seasonal airline traffic prediction
+ - Customer Service
+   - Context aware chat bots
 
 # Setup
 
