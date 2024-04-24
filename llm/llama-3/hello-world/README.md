@@ -4,6 +4,8 @@ The Llama 3 LLM model from Meta was released in April 2024 and it rapidly showed
 
 The 8 Billion parameter model has increased hardware requirements, though still in an economical range for experimentation. Since this model starts to require hardware released in the last couple of years, this tutorial expects that you'll need cloud resources to try it on your own. We only explain in depth how to configure AWS EC2 cloud resources but the general ideas can be applied to other cloud providers. Running the instances described in this tutorial will cost around $1 an hour and you should be able to complete the setup in less than an hour. Be sure to turn off your server instance when you are done with this exercise.
 
+Do note that you may need to wait a fair amount of time to increase you AWS quota and get approved to access the model weights. (Get those areas approved before doing the actual server setup)
+
 ## How Much Hardware Do We Need?
 
 The Llama 2 model was able to run on a server instance with a single T4 GPU. Single T4 machines are some of the cheapest inference machines out there. Unfortunately, as described on an issue in the Llama 3 GitHub, https://github.com/meta-llama/llama3/issues/95, the T4 is too small for this third generation of the Llama model.
