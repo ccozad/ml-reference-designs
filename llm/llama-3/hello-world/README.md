@@ -37,7 +37,7 @@ We'll assume you are using on demand pricing and will have full access to the se
 
 During the setup process you will be asked for a key pair to use to access the instance. You can select a key you have created before or you can create a new key. You'll have one chance to save the key off. If you lose this key you'll need to terminate the instance and create a new instance.
 
-The G5 is going to have an ephemeral (temporary) SSD storage volume attached as a second storage. Leave the defaults as we'll use this local, fast storage to our advantage when we download our model weights.
+The G5 is going to have an ephemeral (temporary) SSD storage volume attached as a second storage. Leave the defaults as is and we'll use this local, fast storage to our advantage when we download our model weights.
 
 ## Use SSH to Connect to Your EC2 Instance
 
