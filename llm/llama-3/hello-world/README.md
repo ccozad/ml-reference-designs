@@ -90,7 +90,7 @@ The Llama 3 model is what is called a "gated model" in the sense that the owner 
 
 First you will need a free Hugging Face account. Then you'll need to follow the access instructions on the model card to be able to download the model. See https://huggingface.co/meta-llama/Meta-Llama-3-8B for more details. Requesting permission from Meta requires a Facebook account and it usually takes a day or more to get approval. Be sure to use the same email between your Hugging Face account and Facebook account because the approval by Meta transfers over to Hugging Face.
 
-We'll use our code to download the model onto the server when we run our code.
+We'll use our code to download the model onto the server.
 
 # The Code
 
