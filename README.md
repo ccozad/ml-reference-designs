@@ -111,8 +111,6 @@ Various examples that deal with time based data
 
 Various examples that deal with processing image data.
 
-- [OpenCV essentials](/computer-vision/opencv_essentials.ipynb)
-- [OpenCV basic image manipulation](/computer-vision/opencv_basic_image_manipulation.ipynb)
 - [Image classification with PyTorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
 
 ## Large Language Models
