@@ -79,13 +79,20 @@ Various simple examples for getting started with different frameworks
 Various recipes for common feature engineering tasks.
 
 - [Pandas essentials](/feature-engineering/pandas_essentials.ipynb)
-- [OpenCV essentials](/computer-vision/opencv_essentials.ipynb)
-- [OpenCV basic image manipulation](/computer-vision/opencv_basic_image_manipulation.ipynb)
 - [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
 - [Convert class labels to numbers](/feature-engineering/convert_class_to_numeric.ipynb)
 - [Imbalanced classification](/feature-engineering/imbalanced_classification.ipynb)
 - [Choose fourier features](/feature-engineering/choosing_fourier_features.ipynb)
 - [Kaggle predict home price feature prep](/regression/kaggle-predict-house-price-data-prep.ipynb)
+
+## Image Processing
+
+Recipes for working with images
+
+- [OpenCV essentials](/computer-vision/opencv_essentials.ipynb)
+- [OpenCV basic image manipulation](/computer-vision/opencv_basic_image_manipulation.ipynb)
+- [OpenCV annotate images](/computer-vision/opencv_annotate_images.ipynb)
+
 
 ## Regression
 
