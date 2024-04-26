@@ -21,7 +21,9 @@ Examples in this repo cover the following industry domain problems:
 
 ## Jupyter requirement
 
-The examples in this repo are meant to be run interactively using Jupyter-Lab or Jupiter-Notebooks. See https://jupyter.org/install
+Most of the examples in this repo are meant to be run interactively using Jupyter-Lab or Jupiter-Notebooks. See https://jupyter.org/install
+
+Examples that only have script files will have a README file with instructions.
 
 ## Virtual environment
 
@@ -77,7 +79,7 @@ Various simple examples for getting started with different frameworks
 Various recipes for common feature engineering tasks.
 
 - [Pandas essentials](/feature-engineering/pandas_essentials.ipynb)
-- [OpenCV essentials](/getting-started/opencv_essentials.ipynb)
+- [OpenCV essentials](/computer-vision/opencv_essentials.ipynb)
 - [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
 - [Convert class labels to numbers](/feature-engineering/convert_class_to_numeric.ipynb)
 - [Imbalanced classification](/feature-engineering/imbalanced_classification.ipynb)
@@ -108,7 +110,7 @@ Various examples that deal with time based data
 
 Various examples that deal with processing image data.
 
-- [OpenCV essentials](/getting-started/opencv_essentials.ipynb)
+- [OpenCV essentials](/computer-vision/opencv_essentials.ipynb)
 - [Image classification with PyTorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
 
 ## Large Language Models
