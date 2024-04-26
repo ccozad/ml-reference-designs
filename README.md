@@ -92,7 +92,7 @@ Recipes for working with images
 - [OpenCV essentials](/computer-vision/opencv_essentials.ipynb)
 - [OpenCV basic image manipulation](/computer-vision/opencv_basic_image_manipulation.ipynb)
 - [OpenCV annotate images](/computer-vision/opencv_annotate_images.ipynb)
-
+- [OpenCV image enhancement](/computer-vision/opencv_image_enhancement.ipynb)
 
 ## Regression
 
