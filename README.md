@@ -8,8 +8,6 @@ Examples in this repo cover the following industry domain problems:
 
  - Accounting
    - Receipt processing
- - Biology
-   - Group observations based on data density
  - Customer Service
    - Context aware chat bots
  - Medical
@@ -20,6 +18,8 @@ Examples in this repo cover the following industry domain problems:
    - Product image classification
  - Transportation
    - Seasonal airline traffic prediction
+ - Zoology
+   - Group observations based on data density
 
 
 
