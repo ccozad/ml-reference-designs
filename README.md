@@ -6,6 +6,12 @@ This repo contains a set of reference designs for various ML topics.
 
 Examples in this repo cover the following industry domain problems:
 
+ - Accounting
+   - Receipt processing
+ - Biology
+   - Group observations based on data density
+ - Customer Service
+   - Context aware chat bots
  - Medical
    - Breast cancer diagnosis
  - Real Estate
@@ -14,8 +20,8 @@ Examples in this repo cover the following industry domain problems:
    - Product image classification
  - Transportation
    - Seasonal airline traffic prediction
- - Customer Service
-   - Context aware chat bots
+
+
 
 # Setup
 
@@ -107,6 +113,12 @@ Various examples that deal with placing inputs into one or more categories
 
 - [Classify breast cancer diagnosis with PyTorch](/feature-engineering/imbalanced_classification.ipynb)
 - [Image classification with PyTorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
+
+## Clustering
+
+Various examples that deal with grouping data points by a similarity metric.
+
+- [Cluster penguin species using DBSCAN and scikit-learn](/clustering/dbscan_clustering.ipynb)
 
 ## Time Series
 
