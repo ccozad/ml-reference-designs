@@ -8,6 +8,8 @@ Examples in this repo cover the following industry domain problems:
 
  - Accounting
    - Receipt processing
+ - Botany
+   - Group observations into n groups based on equal variance
  - Customer Service
    - Context aware chat bots
  - Medical
@@ -117,7 +119,7 @@ Various examples that deal with placing inputs into one or more categories
 ## Clustering
 
 Various examples that deal with grouping data points by a similarity metric.
-
+- [Cluster seed types using K-Means and scikit-learn](/clustering/kmeans_clustering.ipynb)
 - [Cluster penguin species using DBSCAN and scikit-learn](/clustering/dbscan_clustering.ipynb)
 
 ## Time Series
