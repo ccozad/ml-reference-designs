@@ -4,9 +4,7 @@ LangChain is a framework for developing applications powered by large language m
 
 # API Terms
 
-## langchain
-
-## langchain
+## langchain namespace
 
 https://api.python.langchain.com/en/latest/langchain_api_reference.html
 
