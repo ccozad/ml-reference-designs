@@ -50,8 +50,12 @@ This namespace includes terms already explained in the previous section.
    - beta feature
    - Caching layer for LLMs
  - **Chat History**
-   - **Chat message history** stores a history of message interactions in a chat
+   - **Chat message history** stores a history of message interactions in a chat.
  - **Chat Sessions**
-   - **Chat Sessions** are a collection of messages and function calls
+   - **Chat Sessions** are a collection of messages and function calls.
  - **Language Model**
-   - A **Language Model** is a type of model that can generate text or complete prompts
+   - A **Language Model** is a type of model that can generate text or complete prompts.
+ - **Tools**
+   - **Tools** are classes that an agent uses to interact with the real world.
+ - **Vector Stores**
+   - A **Vector Store** stores embedded data performs vector searches. 
