@@ -18,6 +18,9 @@ Examples in this repo cover the following industry domain problems:
    - Price prediction
  - Retail
    - Product image classification
+ - Technology
+   - Deploy machine learning models to production
+   - Compose workflows involving large language models (LLMs)
  - Transportation
    - Seasonal airline traffic prediction
  - Zoology
@@ -137,6 +140,9 @@ Various examples that deal with processing image data.
 ## Large Language Models
 
 Examples that interact with large language models with billions of parameters that are often training across many commercial grade GPUs for many millions of hours.
+
+### LangChain
+- [LangChain Terminology](/langchain/terminology.md)
 
 ### Llama 3
 
