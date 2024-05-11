@@ -10,6 +10,8 @@ Pipeline Components used
  - Large Language Model: OpenAI Chat, gpt-3.5-turbo-0125, remote access (Requires paid account)
  - Vectorstore: Chroma, local instance (Open source)
 
+Paid model access should cost a few cents of usage fees.
+
 # Concepts
 
 First we index the data and then we do RAG using the user's question.
