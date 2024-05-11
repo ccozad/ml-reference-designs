@@ -24,10 +24,14 @@ Indexing involves making the data searchable. The process involves
 2. Split: Divide documents into chunks with a **Text Splitter**
 3. Store: Convert text to numbers with an **Embedding Model** and store it in a **Vector Store**
 
-## Retrieve and Generate
+ ![Indexing Pipeline](/images/indexing-pipeline.png?raw=true "Indexing Pipeline")
 
-1. Retrieve: Use the user input to retrieve relevant context chunk susing a **Retriever**
+## Retrieval Augmented Generation
+
+1. Retrieve: Use the user input to retrieve relevant context chunks using a **Retriever**
 2. Generate: A **Chat Model** or **LLM** generates a response using the prompt and context
+
+ ![RAG Pipeline](/images/rag-pipeline.png?raw=true "RAG Pipeline")
 
 # Dependencies
 
