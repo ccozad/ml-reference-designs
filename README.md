@@ -21,12 +21,11 @@ Examples in this repo cover the following industry domain problems:
  - Technology
    - Deploy machine learning models to production
    - Compose workflows involving large language models (LLMs)
+   - Store and search for embedding data in vectorstores
  - Transportation
    - Seasonal airline traffic prediction
  - Zoology
    - Group observations based on data density
-
-
 
 # Setup
 
@@ -143,6 +142,9 @@ Examples that interact with large language models with billions of parameters th
 
 ### LangChain
 - [LangChain Terminology](/langchain/terminology.md)
+- [RAG based Q&A](/langchain/RAG/README.md)
+  - [Index web page data using BeautifulSoup, OpenAI Embeddings and Chroma](/langchain/RAG/index_pipeline.py)
+  - [Retrieval Augmented Generation Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/langchain/RAG/rag_pipeline.py)
 
 ### Llama 3
 
@@ -155,6 +157,4 @@ Various tasks that deal with using trained models
 
 - [Kaggle predict home prices, batch evaluate blind test data](/regression/kaggle-predict-house-price-evaluation.ipynb)
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
-
-
-
+- [Retrieval Augmented Generation Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/langchain/RAG/rag_pipeline.py)
