@@ -1,4 +1,6 @@
 python-dotenv
-langchain langchain-community
+langchain
+langchain-community
 langchain-openai
-angchain-chroma
+langchain-chroma
+beautifulsoup4
