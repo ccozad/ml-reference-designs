@@ -35,11 +35,19 @@ Indexing involves making the data searchable. The process involves
 
 # Dependencies
 
+All of the dependencies listed below need to be in place before running the code.
+
+ - Funded OpenAI account
+ - ChromaDB
+ - Python virtual environment
+ - Environment variables
+
+
 ## OpenAI Account
 
 You'll need an OpenAI developer account an API Key. You will also need to purchase credits before making calls to the embedding model.
 
-## ChromaDB
+## ChromaDB 
 
 ChromaDB is an open source embedding database. You can install the server using pip.
 
