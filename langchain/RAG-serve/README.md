@@ -105,7 +105,7 @@ We'll define the following operations against these resources
   - List all Interactions `GET <server>/interactions`
   - Create an interaction `POST <server>/interactions`
 
-## Reference Data Format
+### Reference Data Format
 
 Create new Reference request body.
 ```json
@@ -142,7 +142,7 @@ Reference collection
 }
 ```
 
-## Interaction Data Format
+### Interaction Data Format
 
 Create new Interaction request body.
 ```json
