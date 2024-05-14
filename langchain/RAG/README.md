@@ -53,7 +53,6 @@ ChromaDB is an open source embedding database. You can install the server using 
 
 ```
 pip install chromadb
-chroma run
 ```
 
 For more details see https://www.trychroma.com

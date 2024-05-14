@@ -1,5 +1,3 @@
-import os
-
 # Flask imports
 from flask import Flask, request, Response
 # Used to generate globally unique identifiers
@@ -7,7 +5,9 @@ from uuid import uuid4
 # Used to serialize and deserialize Python objects
 import json
 
-import custom_pipelines as cp
+from custom_pipelines import CustomPipelines
+
+cp = CustomPipelines()
 
 app = Flask(__name__)
 
@@ -18,19 +18,13 @@ storage = {
     'interactions': {}
 }
 
-print("Loading OpenAI API key...")
-import dotenv
-dotenv.load_dotenv()
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
-
 @app.route("/references", methods=['GET', 'POST'])
 def all_references():
     if request.method == 'POST':
         body = request.get_json(silent=True)
         if body is not None and 'url' in body and 'docType' in body:
             if body['docType'] == 'html':
-                index_success = cp.index_html_pipeline(body['url'], openai_api_key)
+                index_success = cp.index_html_pipeline(body['url'])
                 if index_success:
                     id = uuid4()
                     body['id'] = str(id)
@@ -55,7 +49,7 @@ def all_interactions():
     if request.method == 'POST':
         body = request.get_json(silent=True)
         if body is not None and 'query' in body:
-            rag_success, answer = cp.rag_pipeline(body['query'], openai_api_key)
+            rag_success, answer = cp.rag_pipeline(body['query'])
             if rag_success:
                 id = uuid4()
                 body['id'] = str(id)
