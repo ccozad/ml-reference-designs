@@ -230,9 +230,40 @@ Create a file named `.env` with the contents shown below
 OPENAI_API_KEY=<your key>
 ```
 
+# Changes to previous code
+
+Small modifications were needed to adapt the code to being served with Flask. Those changes center on encapsulating individual script behavior into parameterized methods.
+
+
 # Running the code
 
 Use the command `flask run --port 5001` to start the flask app listening on port 5001.
+
+Messages are printed to console when different end points are accessed.
+
+Example output
+```text
+flask run --port 5001
+Initializing storage
+Loading OpenAI API key...
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5001
+Press CTRL+C to quit
+Index html pipeline
+Loading document from the web...
+URL: https://lilianweng.github.io/posts/2023-06-23-agent/
+Document length: 43131
+Splitting document into chunks...
+Number of splits: 66
+Adding splits to embedding vectorstore...
+Index pipeline complete
+127.0.0.1 - - [12/May/2024 11:37:02] "POST /references HTTP/1.1" 200 -
+RAG pipeline
+Retrieving documents similar to query...
+Retrieved 6 documents
+127.0.0.1 - - [12/May/2024 11:37:10] "POST /interactions HTTP/1.1" 200 -
+```
 
 # Testing the code
 
