@@ -9,7 +9,7 @@ We'll take the functioning RAG pipeline and wrap it in a REST API. We'll use Fla
 The goal of our API includes
 
  - Communicate over the internet
- - Add new web reference to index and add to our vectorstore
+ - Add new web references to index and add to our vectorstore
  - View a list of all references
  - Interact with the RAG pipeline by submitting a query and getting a response
  - View a list of interactions
