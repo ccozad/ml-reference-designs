@@ -158,3 +158,4 @@ Various tasks that deal with using trained models
 - [Kaggle predict home prices, batch evaluate blind test data](/regression/kaggle-predict-house-price-evaluation.ipynb)
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
 - [Retrieval Augmented Generation Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/langchain/RAG/rag_pipeline.py)
+- [Serve index and RAG pipelines over HTTP using Flask](/langchain/RAG-serve/README.md)
