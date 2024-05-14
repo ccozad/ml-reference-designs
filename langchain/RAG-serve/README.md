@@ -8,19 +8,19 @@ We'll take the functioning RAG pipeline and wrap it in a REST API. We'll use Fla
 
 The goal of our API includes
 
+ - Communicate over the internet
  - Add new web reference to index and add to our vectorstore
  - View a list of all references
  - Interact with the RAG pipeline by submitting a query and getting a response
  - View a list of interactions
 
 To simplify this example we are intentionally leaving out:
- - Temporary data storage
+ - Durable data storage
    - Data will only be kept in memory on the Flask side
-   - Indexing data is a single node setup with file based storage for chroma
-   - The Flask data will not be kept between server runs
- - No authentication
-   - No users, groups or permissions
-   - No individual resource ownership
+   - Indexing data is a single node setup with memory based storage for chroma
+ - Authentication
+   - There are no users, groups or permissions
+   - There is no individual resource ownership
 
 Solution Components used
  - Prompt Template: based on https://smith.langchain.com/hub/rlm/rag-prompt
