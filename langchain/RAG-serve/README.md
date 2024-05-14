@@ -242,6 +242,32 @@ Use the command `flask run --port 5001` to start the flask app listening on port
 
 Messages are printed to console when different end points are accessed.
 
+Example server output
+
+```text
+lask run --port 5001
+Initializing vectorstore...
+Initializing storage
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5001
+Press CTRL+C to quit
+Index html pipeline
+Loading document from the web...
+URL: https://lilianweng.github.io/posts/2023-06-23-agent/
+Document length: 43131
+Splitting document into chunks...
+Number of splits: 66
+Adding splits to embedding vectorstore...
+Index pipeline complete
+127.0.0.1 - - [14/May/2024 16:16:16] "POST /references HTTP/1.1" 200 -
+RAG pipeline
+Retrieving documents similar to query...
+Retrieved 6 documents
+RAG pipeline complete
+127.0.0.1 - - [14/May/2024 16:16:24] "POST /interactions HTTP/1.1" 200 -
+```
+
 # Testing the code
 
 ## Create a Reference

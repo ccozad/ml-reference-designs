@@ -17,8 +17,7 @@ class CustomPipelines:
         print("Initializing vectorstore...")
         self.vectorstore = Chroma(
             collection_name="demo", 
-            embedding_function=OpenAIEmbeddings(),
-            persist_directory=".")
+            embedding_function=OpenAIEmbeddings())
 
     def index_html_pipeline(self, url):
         print("Index html pipeline")
