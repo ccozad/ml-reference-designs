@@ -262,7 +262,7 @@ curl --location --request POST 'http://localhost:5001/interactions' \
 }'
 ```
 
-# Read all Interactions
+## Read all Interactions
 
 ```bash
 curl --location --request GET 'http://localhost:5001/interactions'
