@@ -31,7 +31,7 @@ Paid model access should cost a few cents of usage fees.
 
 # Concepts
 
-# REST architecture basics
+## REST architecture basics
 
 REST stands for representation state transfer. REST is an architecture style that was designed for the world wide web. Architecture principles for REST include:
 
@@ -51,7 +51,7 @@ REST stands for representation state transfer. REST is an architecture style tha
   - The client or server should not depend on speaking directly with one another
   - There may be layers in between such as proxies and caching systems
 
-# Resources
+## Resources
 
 A **Resource** is the fundamental unit of a REST API. A Resource has a type, associated data, relationships to other resources and a set of methods to operate on it. 
 
@@ -66,11 +66,11 @@ The methods to operate on a resource are reduced to few possible methods includi
 
  Resurces can be represented in a variety of data formats. We'll focus on the JavaScript Object Notion (JSON) for this example.
 
- # Universal resource identifier (URI)
+ ## Universal resource identifier (URI)
 
  A URI can be used to identify any type of resource, not just those on the internet. Since our goal is making our resources available over the interet we'll focus on Universal resource locators (URL) when describing resources. The format of URLs has a convention for REST APIs, That convention is
 
-## Collections
+### Collections
   - `GET <server>/<resources>`
     - Example: 
       - Get a collection of all users `GET https://server.com/users`
@@ -78,7 +78,7 @@ The methods to operate on a resource are reduced to few possible methods includi
     - Example: 
       - Create a new user `POST https://server.com/users`
 
-## Single items
+### Single items
   - `GET <server>/<resources>/<id>`
     - Example: 
       - Get a user with id 1 `GET https://server.com/users/1`
