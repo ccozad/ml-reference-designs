@@ -1,0 +1,7 @@
+python-dotenv
+langchain
+langchain-community
+langchain-openai
+langchain-chroma
+beautifulsoup4
+Flask
