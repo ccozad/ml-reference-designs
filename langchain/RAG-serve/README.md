@@ -1,6 +1,6 @@
 # Introduction
 
-This examples builds on the concepts shown in [Retrieval Augmented Generation Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/langchain/RAG/rag_pipeline.py)
+This examples builds on the concepts shown in [Retrieval Augmented Generation Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/langchain/RAG/README.md)
 
 We'll take the functioning RAG pipeline and wrap it in a REST API. We'll use Flask to begin with and different examples will show how to implement the same ideas with more full featured frameworks.
 
