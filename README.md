@@ -151,6 +151,10 @@ Examples that interact with large language models with billions of parameters th
 - [Local Llama 3 chat demo](/llm//llama-3/hello-llama-3.ipynb)
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
 
+### Phi-3
+
+- [Phi-3 demo](/llm/phi-3/hello-world/README.md)
+
 ## Deployment
 
 Various tasks that deal with using trained models
