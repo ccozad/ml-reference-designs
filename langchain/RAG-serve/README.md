@@ -206,8 +206,8 @@ For more details see https://www.trychroma.com
 
 ## Python Virtual Environment
 
- - Move to the RAG folder
-   - `cd <RAG>`
+ - Move to the RAG-serve folder
+   - `cd <RAG-serve>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
    - On Windows: `python -m venv .venv`
