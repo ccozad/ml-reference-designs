@@ -245,7 +245,7 @@ Messages are printed to console when different end points are accessed.
 Example server output
 
 ```text
-lask run --port 5001
+flask run --port 5001
 Initializing vectorstore...
 Initializing storage
  * Debug mode: off
