@@ -102,10 +102,10 @@ We'll define the following operations against these resources
 
 - **Reference**
   - List all References `GET <server>/references`
-  - Create a reference `POST <server>/references`
+  - Create a Reference `POST <server>/references`
 - **Interaction**
   - List all Interactions `GET <server>/interactions`
-  - Create an interaction `POST <server>/interactions`
+  - Create an Interaction `POST <server>/interactions`
 
 ### Reference Data Format
 
