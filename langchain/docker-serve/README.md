@@ -21,13 +21,13 @@ Paid model access should cost a few cents of usage fees.
 
 ## Containers
 
-AA container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
+A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
 
-One standard for containers is the open source Docker container. A Docker container consist of a plain text Docker file with the name `Dockerfile` (no extension) that can be built to form a binary container image. 
+One standard for containers is the open source Docker container. A Docker container consists of a plain text Docker file with the name `Dockerfile` (no extension) that can be built to form a binary file. That binary software unit is called an image and when the image is run alongside storage and networking it is called a container or container instance. 
 
 ## Dockerfile format
 
-Docker files provide the steps to build a docker image. We'll use a few different instructions for our example.
+Docker files provide the steps to build a docker image. We'll use a few different instructions for our example. A full reference of possible commands in a Docker file can be found here: https://docs.docker.com/reference/dockerfile/ 
 
 ### Base image
 
@@ -73,6 +73,8 @@ RUN groupadd -g 999 appuser && \
     useradd -r -u 999 -g appuser appuser
 USER appuser
 ```
+
+Further reading: https://medium.com/@mccode/processes-in-containers-should-not-run-as-root-2feae3f0df3b
 
 ### Expose network ports
 
