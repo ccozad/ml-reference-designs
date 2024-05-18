@@ -86,7 +86,7 @@ EXPOSE 5001
 
 ### Start up command
 
-The container will run a command we specify as the previously set user from the current container working directory. In our case we wank to run our Flask app with a specific host address and port to listen on.
+The container will run a command we specify as the previously set user from the current container working directory. In our case we want to run our Flask app with a specific host address and port to listen on.
 
 ```dockerfile
 CMD ["flask", "run", "--host", "0.0.0.0", "--port", "5001"]
