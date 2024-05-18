@@ -42,7 +42,7 @@ FROM python:latest
 The `WORKDIR` command sets the working directory in the container for all commands that follow. This allows us to shorten the number of commands needed to build the image. Setting the working directory also has the side effect of creating the directory if it doesn't already exist.
 
 ```dockerfile
-FROM python:latest
+WORKDIR /app
 ```
 
 ### Copy files
