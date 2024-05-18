@@ -162,3 +162,4 @@ Various tasks that deal with using trained models
 - [Kaggle predict home prices, batch evaluate blind test data](/regression/kaggle-predict-house-price-evaluation.ipynb)
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
 - [Serve index and RAG pipelines over HTTP using Flask](/langchain/RAG-serve/README.md)
+- [Run LLM pipeline Python code in a container using Docker](/langchain/docker-serve/README.md)
