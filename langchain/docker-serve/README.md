@@ -86,7 +86,7 @@ EXPOSE 5001
 
 ### Start up command
 
-The container will run a command we specifiy as the previously speficied user from the current container working directory. In our case we wank to run our Flask app with a specific host address and port to listen on.
+The container will run a command we specify as the previously set user from the current container working directory. In our case we wank to run our Flask app with a specific host address and port to listen on.
 
 ```dockerfile
 CMD ["flask", "run", "--host", "0.0.0.0", "--port", "5001"]
@@ -121,7 +121,7 @@ Containers are built by executing each command and generating a final binary ima
 
 ## Run a container
 
-Docker includes mechanism to run a single container or a composition of containers through Ddocker Compose. Other technologies such as Kubernetes allow complex container arrangements to run in unison with additional features such as auto scaling, health monitoring and high availability compute.
+Docker includes mechanism to run a single container or a composition of containers through Docker Compose. Other technologies such as Kubernetes allow complex container arrangements to run in unison with additional features such as auto scaling, health monitoring and high availability compute.
 
 When a container is run, other important options can be specified such as
 
@@ -197,7 +197,7 @@ CONTAINER ID   IMAGE       COMMAND                  CREATED       STATUS       P
 
  ## Test the container
 
- The containeized version should behave exactly the same as the stand alone build referenced in the introduction. The same exact `curl` commands can be used to test the language chain inside the container.
+ The containerized version should behave exactly the same as the stand alone build referenced in the introduction. The same exact `curl` commands can be used to test the language chain inside the container.
 
 ## End the container
 

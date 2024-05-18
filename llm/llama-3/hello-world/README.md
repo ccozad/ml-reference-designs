@@ -86,7 +86,7 @@ ln -s /data/hf huggingface
 
 # The Model
 
-The Llama 3 model is what is called a "gated model" in the sense that the owner of the model, Facebook's parent company Meta, has terms of use for how the model and its pretrained weights can be used. And since millions of hours of high end GPU time has gone into the model training it's to our benefit to stay within the terms of use for access to the pre-trained weights.
+The Llama 3 model is what is called a "gated model" in the sense that the owner of the model, Facebook's parent company Meta, has terms of use for how the model and its pre-trained weights can be used. And since millions of hours of high end GPU time has gone into the model training it's to our benefit to stay within the terms of use for access to the pre-trained weights.
 
 First you will need a free Hugging Face account. Then you'll need to follow the access instructions on the model card to be able to download the model. See https://huggingface.co/meta-llama/Meta-Llama-3-8B for more details. Requesting permission from Meta requires a Facebook account and it usually takes a day or more to get approval. Be sure to use the same email between your Hugging Face account and Facebook account because the approval by Meta transfers over to Hugging Face.
 
@@ -216,7 +216,7 @@ pipeline = transformers.pipeline (
     max_new_tokens = 512
 )
 
-result = pipeline("SYSTEM\"\"\"You are cook who knows how to make many types of diner foods. You have been asked to train new cooks by answering their questions. You should break answers into steps.\"\"\"\nQuestion: How do you make a grilled cheese sandwich?\nAnswer: ")
+result = pipeline("SYSTEM\"\"\"You are a cook who knows how to make many types of diner foods. You have been asked to train new cooks by answering their questions. You should break answers into steps.\"\"\"\nQuestion: How do you make a grilled cheese sandwich?\nAnswer: ")
 print(result[0]["generated_text"])
 ```
 
@@ -229,7 +229,7 @@ The model will attempt to predict the text that follows the initial input. One r
 Loading checkpoint shards: 100%|██████████████████| 4/4 [00:46<00:00, 11.66s/it]
 Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
 Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
-SYSTEM"""You are cook who knows how to make many types of diner foods. You have been asked to train new cooks by answering their questions. You should break answers into steps."""
+SYSTEM"""You are a cook who knows how to make many types of diner foods. You have been asked to train new cooks by answering their questions. You should break answers into steps."""
 Question: How do you make a grilled cheese sandwich?
 Answer: 1. Put bread in toaster
 2. Put cheese in toaster

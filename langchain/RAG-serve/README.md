@@ -47,7 +47,7 @@ REST stands for representation state transfer. REST is an architecture style tha
 - Statelessness
   - Each request includes all of the information needed to process the request
   - The server does not require any server side session data
-- Cacheability
+- Cache-ability
   - When possible, resources should be cacheable of the client or server side
 - Layered system architecture
   - The client or server should not depend on speaking directly with one another
@@ -66,11 +66,11 @@ The methods to operate on a resource are reduced to few possible methods includi
 
  There are other methods covered in the HTTP standard such at PUT and HEAD. We'll focus on just the GET and POST operations for the sake of brevity.
 
- Resurces can be represented in a variety of data formats. We'll focus on the JavaScript Object Notion (JSON) for this example.
+ Resources can be represented in a variety of data formats. We'll focus on the JavaScript Object Notion (JSON) for this example.
 
  ## Universal resource identifier (URI)
 
- A URI can be used to identify any type of resource, not just those on the internet. Since our goal is making our resources available over the interet we'll focus on Universal resource locators (URL) when describing resources. The format of URLs has a convention for REST APIs, That convention is
+ A URI can be used to identify any type of resource, not just those on the internet. Since our goal is making our resources available over the internet we'll focus on Universal resource locators (URL) when describing resources. The format of URLs has a convention for REST APIs, That convention is
 
 ### Collections
   - `GET <server>/<resources>`
@@ -96,7 +96,7 @@ The methods to operate on a resource are reduced to few possible methods includi
 For the specific RAG domain we will have the following resources:
 
 - **Reference** A source of knowledge we want the machine learning model to reason about
-- **Interaction** An interaction with the RAG pipline
+- **Interaction** An interaction with the RAG pipeline
 
 We'll define the following operations against these resources
 

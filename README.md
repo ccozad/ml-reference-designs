@@ -56,7 +56,7 @@ Workbook examples that include LLMs models are more complex than other examples 
 
 **Llama 3**
  - Download the model weights (requires an access request that is granted by Meta staff, may take 24 hours or more to be approved) https://huggingface.co/meta-llama/Meta-Llama-3-8B
- - Model weights are GBs of data, store them in a drive with suffient space
+ - Model weights are GBs of data, store them in a drive with sufficient space
  - Clone the model code https://github.com/meta-llama/llama3
  - Change to the directory with the model code and pip install the model and dependencies `pip install -e .`
 
@@ -92,7 +92,7 @@ Various recipes for common feature engineering tasks.
 - [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
 - [Convert class labels to numbers](/feature-engineering/convert_class_to_numeric.ipynb)
 - [Imbalanced classification](/feature-engineering/imbalanced_classification.ipynb)
-- [Choose fourier features](/feature-engineering/choosing_fourier_features.ipynb)
+- [Choose Fourier features](/feature-engineering/choosing_fourier_features.ipynb)
 - [Kaggle predict home price feature prep](/regression/kaggle-predict-house-price-data-prep.ipynb)
 
 ## Image Processing
