@@ -13,7 +13,7 @@ Solution Components used
  - Vectorstore: Chroma, local instance (Open source)
  - Web Framework: Flask
  - Container: Docker
- - Container Monitoring: Cocker CLI, Docker Desktop
+ - Container Monitoring: Docker CLI, Docker Desktop
 
 Paid model access should cost a few cents of usage fees.
 
