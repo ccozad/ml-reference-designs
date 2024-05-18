@@ -132,7 +132,7 @@ When a container is run, other important options can be specified such as
 
 ## Container registry
 
-An online collection of container images that supports the Docker Hub protocols is called a container registry. Content on Docker Hub is public without a private subscriptions. Various cloud providers offer private instances of container registries.
+An online collection of container images that supports the Docker Hub protocols is called a container registry. Content on Docker Hub is public without a private subscription. Various cloud providers offer private instances of container registries.
 
 Examples: 
 - https://hub.docker.com
