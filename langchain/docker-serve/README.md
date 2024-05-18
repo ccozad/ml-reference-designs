@@ -119,7 +119,7 @@ CMD ["flask", "run", "--host", "0.0.0.0", "--port", "5001"]
 
 Containers are built by executing each command and generating a final binary image that is identified by a name and tag. Each command generates a layer identified by a unique hash. This allows the docker engine to cache intermediate layers that haven't changed since the last build. Tags act as aliases where they refer to same hash which allows image repositories to avoid storing duplicates of the same binary content.
 
-### Run a container
+## Run a container
 
 Docker includes mechanism to run a single container or a composition of containers through Ddocker Compose. Other technologies such as Kubernetes allow complex container arrangements to run in unison with additional features such as auto scaling, health monitoring and high availability compute.
 
@@ -129,6 +129,16 @@ When a container is run, other important options can be specified such as
 - Networking
 - Environment variables
 - CPU and memory limits
+
+## Container registry
+
+An online collection of container images that supports the Docker Hub protocols is called a container registry. Content on Docker Hub is public without a private subscriptions. Various cloud providers offer private instances of container registries.
+
+Examples: 
+- https://hub.docker.com
+- https://azure.microsoft.com/en-us/products/container-registry
+- https://aws.amazon.com/ecr/
+- https://cloud.google.com/artifact-registry
 
 # Dependencies
 
