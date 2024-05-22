@@ -1,0 +1,8 @@
+python-dotenv
+langchain
+langchain-community
+sentence_transformers
+langchain-chroma
+langchain-aws
+beautifulsoup4
+boto3
