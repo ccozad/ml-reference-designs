@@ -84,7 +84,7 @@ You will need an AWS account with a credit card activated. While Bedrock is very
 
 ## Amazon Bedrock foundation model access
 
-Each foundation model must be individually requested to be granted access. You will need to state your intended usage for compliance with the terms of use a given LLM family. This sample uses the Llama 3 8B model from Meta.
+Each foundation model must be individually requested to be granted access. You will need to state your intended usage for compliance with the terms of use for a given LLM family. This sample uses the Llama 3 8B model from Meta.
 
 ## AWS user with Bedrock access
 
