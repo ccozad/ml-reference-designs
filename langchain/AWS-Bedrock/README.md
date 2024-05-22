@@ -32,6 +32,10 @@ vectorstore = Chroma(
     persist_directory=".")
 ```
 
+Further reading
+ - https://api.python.langchain.com/en/latest/embeddings/langchain_community.embeddings.huggingface.HuggingFaceEmbeddings.html
+ - https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+
 ## AWS Bedrock
 
 Hosting state of the art large language models (LLMs) requires servers with large amounts of RAM, storage and advanced GPU cards. These server configurations are expensive to run for consumers when provisioned on a dedicated server so AWS created a fully hosted solution that allows for usage based pricing. AWS Bedrock allows access to a number of foundation models from many popular publishers such as Meta, Anthropic, AI21 and AWS. You typically need to request access to models before you can make calls. In this example we use the Llama 3 8B model from Meta. Other foundation models you have access to can be readily referenced by model ID in the Bedrock set up code in the `rag_pipeline.py` implementation.
