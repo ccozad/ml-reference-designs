@@ -23,7 +23,7 @@ retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k
 retrieved_docs = retriever.invoke(query)
 print(f"Retrieved {len(retrieved_docs)} documents")
 
-# Initialize the Bedrock client with the Meta's Llama 3 8b model
+# Initialize the Bedrock client with Meta's Llama 3 8b model
 print("Initializing Bedrock client...")
 llm = BedrockLLM(model_id="meta.llama3-8b-instruct-v1:0")
 
