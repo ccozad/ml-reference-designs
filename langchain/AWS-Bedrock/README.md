@@ -16,7 +16,9 @@ Paid model access should cost a few cents of usage fees.
 
 ## Hugging Face Embeddings
 
-There are many options for creating embeddings. Paid options include OpenAI and open source options include models created by the Hugging Face community. The key idea for an embedding model is that the same model or algorithm has to be used to index information and retrieve the information later. Most open source models can be loaded dynamically upon first use. As your systems begin to move from development to production it is advisable to store off the models and model weights in case there is a network issue or the model is no longer distributed. The `~/.cache` folder is used on MacOS, other operating systems should have a similar location with the home directory or user directory on Windows.
+There are many options for creating embeddings. Paid options include OpenAI and open source options include models created by the Hugging Face community. The key idea for an embedding model is that the same model or algorithm has to be used to index information and retrieve the information later. 
+
+Most open source models can be loaded dynamically to the local machine upon first use. As your systems begin to move from development to production, it is advisable to store off the models and model weights in case there is a network issue or the model is no longer distributed. The `~/.cache` folder is used on MacOS, other operating systems should have a similar location with the home directory or user directory on Windows.
 
 The vectorstore code is almost exactly as it was in the OpenAI example except now we provide a Hugging Face embedding implementation.
 
