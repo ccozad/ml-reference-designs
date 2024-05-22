@@ -2,12 +2,12 @@
 
 This examples builds on the concepts shown in [Retrieval Augmented Generation Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/langchain/RAG/README.md)
 
-Instead of using OpenAI services, we'll use an open source embedding model from Hugging Face and a foundation model accessed through the AWS Bedrock service.
+Instead of using OpenAI services, we'll use an open source embedding model from Hugging Face and a foundation model accessed through the Amazon Bedrock service.
 
 Pipeline Components used
  - Prompt Template: based on https://smith.langchain.com/hub/rlm/rag-prompt
  - Embedding Model: Hugging Face Embeddings, all-MiniLM-L6-v2 model, local access
- - Large Language Model: AWS Bedrock, foundation model `meta.llama3-8b-instruct-v1:0`, remote access (Requires paid account)
+ - Large Language Model: Amazon Bedrock, foundation model `meta.llama3-8b-instruct-v1:0`, remote access (Requires paid account)
  - Vectorstore: Chroma, local instance (Open source)
 
 Paid model access should cost a few cents of usage fees.
@@ -36,11 +36,11 @@ Further reading
  - https://api.python.langchain.com/en/latest/embeddings/langchain_community.embeddings.huggingface.HuggingFaceEmbeddings.html
  - https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
 
-## AWS Bedrock
+## Amazon Bedrock
 
-Hosting state of the art large language models (LLMs) requires servers with large amounts of RAM, storage and advanced GPU cards. These server configurations are expensive to run for consumers when provisioned on a dedicated server so AWS created a fully hosted solution that allows for usage based pricing. AWS Bedrock allows access to a number of foundation models from many popular publishers such as Meta, Anthropic, AI21 and AWS. You typically need to request access to models before you can make calls. In this example we use the Llama 3 8B model from Meta. Other foundation models you have access to can be readily referenced by model ID in the Bedrock set up code in the `rag_pipeline.py` implementation.
+Hosting state of the art large language models (LLMs) requires servers with large amounts of RAM, storage and advanced GPU cards. These server configurations are expensive to run for consumers when provisioned on a dedicated server so Amazon created a fully hosted solution that allows for usage based pricing. Amazon Bedrock allows access to a number of foundation models from many popular publishers such as Meta, Anthropic, AI21 and AWS. You typically need to request access to models before you can make calls. In this example we use the Llama 3 8B model from Meta. Other foundation models you have access to can be readily referenced by model ID in the Bedrock set up code in the `rag_pipeline.py` implementation.
 
-We initialize our LLM hosted on AWS Bedrock as follows.
+We initialize our LLM hosted on Amazon Bedrock as follows.
 
 ```python
 from langchain_aws import BedrockLLM
@@ -50,9 +50,13 @@ print("Initializing Bedrock client...")
 llm = BedrockLLM(model_id="meta.llama3-8b-instruct-v1:0")
 ```
 
-The Provider detail page has information on specific model ID strings.
+The Provider detail page in the Bedrock area of the AWS console has information on specific model ID strings.
 
 If you want to see what goes into setting up a Llama 3B 8B model from scratch without Bedrock, please refer to [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md).
+
+Further reading:
+ - https://aws.amazon.com/bedrock/
+ - https://aws.amazon.com/bedrock/llama/
 
 ## LangChain Composition
 
@@ -69,7 +73,7 @@ Further reading:
 All of the dependencies listed below need to be in place before running the code.
 
  - Paid AWS account
- - AWS Bedrock foundation model access
+ - Amazon Bedrock foundation model access
  - AWS user with Bedrock access
  - ChromaDB
  - Python virtual environment
@@ -78,7 +82,7 @@ All of the dependencies listed below need to be in place before running the code
 
 You will need an AWS account with a credit card activated. While Bedrock is very economical to use, it is not available on the AWS free tier.
 
-## AWS Bedrock foundation model access
+## Amazon Bedrock foundation model access
 
 Each foundation model must be individually requested to be granted access. You will need to state your intended usage for compliance with the terms of use a given LLM family. This sample uses the Llama 3 8B model from Meta.
 
