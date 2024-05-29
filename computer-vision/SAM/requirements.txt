@@ -1,0 +1,6 @@
+python-dotenv
+opencv-python
+pycocotools
+matplotlib 
+onnxruntime 
+onnx
