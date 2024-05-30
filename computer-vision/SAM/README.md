@@ -4,13 +4,17 @@ Segmentation is the computer vision task of identifying the pixel level boundary
 
 Meta AI Research has developed a foundation model called the Segment Anything Model or SAM that make high quality, zero shot segmentaton masks on unfamiliar objects and images. The model was trained on over a billion segmentation masks across ~11 million images.
 
+An example of a segmented image:
+
+![Segmented Image](/images/sam-example.png?raw=true "Segmented Image")
+
 # Dependencies
 
 All of the dependencies listed below need to be in place before running the code.
 
  - Access to GPU and CUDA drivers
- - PyTorch and TorchVision with CUDA support
  - Python virtual environment
+ - PyTorch and TorchVision with CUDA support
  - Install segment anything
  - Download SAM checkpoint
  - Environment Variables
@@ -37,20 +41,6 @@ Built on Tue_Aug_15_22:09:35_Pacific_Daylight_Time_2023
 Cuda compilation tools, release 12.2, V12.2.14
 ```
 
-## PyTorch and Torchvision with CUDA support
-
-PyTorch and TorchVision with CUDA support can be installed by using the command generator on the PyTorch website. This is a giant download (> 2 GB) so it is recommended you install this dependency outside of the virtual environment. After you finish your installation you can check that everything works by running the `check_env.py` script.
-
-Example output for the `check_env.py` script
-
-```
-CUDA is available: True
-Number of devices: 1
-Current device: 0
-Active device: <torch.cuda.device object at 0x000002675729BF40>
-Device name: NVIDIA GeForce RTX 3060
-```
-
 ## Python Virtual Environment
 
  - Move to the RAG folder
@@ -69,6 +59,20 @@ Device name: NVIDIA GeForce RTX 3060
    - On Windows: `python <script_name>.py`
  - Deactivate virtual environment
    - `deactivate`
+
+## PyTorch and Torchvision with CUDA support
+
+PyTorch and TorchVision with CUDA support can be installed by using the command generator on the PyTorch website. After you finish your installation you can check that everything works by running the `check_env.py` script.
+
+Example output for the `check_env.py` script
+
+```
+CUDA is available: True
+Number of devices: 1
+Current device: 0
+Active device: <torch.cuda.device object at 0x000002675729BF40>
+Device name: NVIDIA GeForce RTX 3060
+```
 
 ## Install Segment Anything
 

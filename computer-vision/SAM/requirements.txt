@@ -4,3 +4,4 @@ pycocotools
 matplotlib 
 onnxruntime 
 onnx
+numpy
