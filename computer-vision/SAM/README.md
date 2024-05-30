@@ -4,8 +4,10 @@ Segmentation is the computer vision task of identifying the pixel level boundary
 
 Meta AI Research has developed a foundation model called the Segment Anything Model or SAM that make high quality, zero shot segmentaton masks on unfamiliar objects and images. The model was trained on over a billion segmentation masks across ~11 million images.
 
-An example of a segmented image:
+An input image with several chickens
+![Chickens](/computer-vision/SAM/chickens.jpg?raw=true "Chickens")
 
+A segmented version of the same image:
 ![Segmented Image](/images/sam-example.png?raw=true "Segmented Image")
 
 # Dependencies
