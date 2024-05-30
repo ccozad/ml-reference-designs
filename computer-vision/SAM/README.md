@@ -4,11 +4,8 @@ Segmentation is the computer vision task of identifying the pixel level boundary
 
 Meta AI Research has developed a foundation model called the Segment Anything Model or SAM that make high quality, zero shot segmentaton masks on unfamiliar objects and images. The model was trained on over a billion segmentation masks across ~11 million images.
 
-An input image with several chickens
-![Chickens](/computer-vision/SAM/chickens.jpg?raw=true "Chickens")
-
-A segmented version of the same image:
-![Segmented Image](/images/sam-example.png?raw=true "Segmented Image")
+An example of segmentation on an image:
+![Segmented Image](/images/sam-example.jpg?raw=true "Segmented Image")
 
 # Dependencies
 
@@ -96,4 +93,22 @@ Create a file named `.env` with the contents shown below. Replace the values bas
 ```
 CHECKPOINT=<path to your checkpoint>
 MODEL_TYPE=<vit_h | vit_l | vit_b>
+```
+
+# Running the code
+
+Run `python sam_test.py` to use the Segment Anything Model to process the example image of chickens. An output image will be written to the same directory.
+
+Example output of running the reference will look like the following.
+
+```
+python sam_test.py
+Loading Checkpoint...
+Loading Model Type...
+Loading Image...
+Initializing SAM registry...
+Generating masks...
+Drawing masks...
+Combining images with segmentation masks...
+Saving output image...
 ```
