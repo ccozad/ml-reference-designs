@@ -1,6 +1,15 @@
 # Introduction
 
-This repo contains a set of reference designs for various ML topics.
+This repo contains a set of reference designs for various ML topics. A few examples of the types of things you can learn here:
+
+Direct a large language model to answer based only on context from documents
+![RAG Pipeline](/images/rag-pipeline.png?raw=true "RAG Pipeline")
+
+Intelligently select complex objects in images
+![Segmented Image](/images/sam-example.jpg?raw=true "Segmented Image")
+
+Predict future values in data that varies over time
+![Time Series Prediction](/images/time-series-prediction.png?raw=true "Time Series Prediction")
 
 # Industry domain problems
 
@@ -22,6 +31,7 @@ Examples in this repo cover the following industry domain problems:
    - Deploy machine learning models to production
    - Compose workflows involving large language models (LLMs)
    - Store and search for embedding data in vectorstores
+   - Intelligently select complex objects in images
  - Transportation
    - Seasonal airline traffic prediction
  - Zoology
