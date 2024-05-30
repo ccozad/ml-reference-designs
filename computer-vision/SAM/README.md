@@ -2,7 +2,7 @@
 
 Segmentation is the computer vision task of identifying the pixel level boundary or mask of an object in an image.
 
-Meta AI Research has developed a foundation model called the Segment Anything Model or SAM that make high quality, zero shot segmentaton masks on unfamiliar objects and images. The model was trained on over a billion segmentation masks across ~11 million images.
+Meta AI Research has developed a foundation model called the Segment Anything Model or SAM that make high quality, zero shot segmentation masks on unfamiliar objects and images. The model was trained on over a billion segmentation masks across ~11 million images.
 
 An example of segmentation on an image:
 ![Segmented Image](/images/sam-example.jpg?raw=true "Segmented Image")
