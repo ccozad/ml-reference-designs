@@ -151,6 +151,9 @@ Various examples that deal with processing image data.
 
 Examples that interact with large language models with billions of parameters that are often training across many commercial grade GPUs for many millions of hours.
 
+### Claude 3.5
+ - [Claude 3.5 Hello World](/llm/claude-3-5/)
+
 ### LangChain
 - [LangChain Terminology](/langchain/terminology.md)
 - [RAG based Q&A](/langchain/RAG/README.md)
