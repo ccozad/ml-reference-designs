@@ -2,11 +2,17 @@
 
 This example adds simple tool calling to Claude 3.5 model interactions shown in the [Claude 3.5 Hello World Example](/llm/claude-3-5/hello-world/README.md)
 
+ ![Tool Calling](/images/tool-calling.png?raw=true "Tool Calling")
+
 Tool calling involves the model processing natural language in context and suggesting a tool to call. Tool descriptions provided to the model explain in natural language when to use the tool, when not to use the tool and how to call the tool, including any information about named parameters. 
 
 All tool execution is handled by the client and the results of running the tool are passed back to the model for further processing.
 
 Tool calling is a useful pattern to extend the capabilities of a natural language model beyond the foundation model training material to include new information, dynamic data and data housed in traditional databases and APIs.
+
+Pipeline Components used
+ - Framework: Anthropic library
+ - Large Language Model: Anthropic, `claude-3-5-sonnet-20240620`, remote access (Requires paid account)
 
 ## New information
 
