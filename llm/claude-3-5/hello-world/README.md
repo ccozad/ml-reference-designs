@@ -1,6 +1,6 @@
 # Introduction
 
-Anthropic offers a number of state of the art LLMs that are competitive in features to market leader OpenAI. This example shows the very basic code to call the Claude 3.5 model. Other examples will show more advanced usage, such as tool calling.
+Anthropic offers a number of state of the art LLMs that are competitive in features to market leader OpenAI. This example shows the very basic code to call the Claude 3.5 model. Other examples will show more advanced usage, such as [Claude 3.5 Tool Calling](/llm/claude-3-5/tool-calling/README.md)
 
 # Resources
 
