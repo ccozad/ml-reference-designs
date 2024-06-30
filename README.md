@@ -32,6 +32,7 @@ Examples in this repo cover the following industry domain problems:
    - Compose workflows involving large language models (LLMs)
    - Store and search for embedding data in vectorstores
    - Intelligently select complex objects in images
+   - Expand capabilities of large language models with custom tool calling
  - Transportation
    - Seasonal airline traffic prediction
  - Zoology
@@ -153,6 +154,7 @@ Examples that interact with large language models with billions of parameters th
 
 ### Claude 3.5
  - [Claude 3.5 Hello World](/llm/claude-3-5/)
+ - [Claude 3.5 Tool Calling](/llm/claude-3-5/tool-calling/README.md)
 
 ### LangChain
 - [LangChain Terminology](/langchain/terminology.md)
