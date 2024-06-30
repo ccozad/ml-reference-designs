@@ -4,7 +4,7 @@ This example adds simple tool calling to Claude 3.5 model interactions shown in 
 
  ![Tool Calling](/images/tool-calling.png?raw=true "Tool Calling")
 
-Tool calling involves the model processing natural language in context and suggesting a tool to call. Tool descriptions provided to the model explain in natural language when to use the tool, when not to use the tool and how to call the tool, including any information about named parameters. 
+Tool calling involves the model processing natural language in context and suggesting a tool to call. Tool descriptions provided to the model explains in natural language when to use the tool, when not to use the tool and how to call the tool, including any information about named parameters. 
 
 All tool execution is handled by the client and the results of running the tool are passed back to the model for further processing.
 
@@ -130,7 +130,7 @@ if message.stop_reason == "tool_use":
 ```
 ## The model performs additional processing on the tool output
 
-Once the model receives the tool response further reasoning can be performed such as calling other tools or elaborating on the output. In our example the model gave expanded commentary as its knowledge base included information about the author an the subject of the quote.
+Once the model receives the tool response further reasoning can be performed such as calling other tools or elaborating on the output. In our example the model gave expanded commentary as its knowledge base included information about the author and the subject of the quote.
 
 ```text
 Thank you for your patience. I've retrieved an inspiring quote for you:
