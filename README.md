@@ -42,7 +42,7 @@ Examples in this repo cover the following industry domain problems:
 
 ## Jupyter requirement
 
-Most of the examples in this repo are meant to be run interactively using Jupyter-Lab or Jupiter-Notebooks. See https://jupyter.org/install
+Some of the examples in this repo are meant to be run interactively using Jupyter-Lab or Jupiter-Notebooks. See https://jupyter.org/install
 
 Examples that only have script files will have a README file with instructions.
 
@@ -153,7 +153,7 @@ Various examples that deal with processing image data.
 Examples that interact with large language models with billions of parameters that are often training across many commercial grade GPUs for many millions of hours.
 
 ### Claude 3.5
- - [Claude 3.5 Hello World](/llm/claude-3-5/)
+ - [Claude 3.5 Hello World](/llm/claude-3-5/hello-world/)
  - [Claude 3.5 Tool Calling](/llm/claude-3-5/tool-calling/README.md)
 
 ### LangChain
@@ -165,7 +165,7 @@ Examples that interact with large language models with billions of parameters th
 
 ### Llama 3
 
-- [Local Llama 3 chat demo](/llm//llama-3/hello-llama-3.ipynb)
+- [Local Llama 3 chat demo](/llm/llama-3/hello-llama-3.ipynb)
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
 
 ### Phi-3
