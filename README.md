@@ -84,7 +84,7 @@ For additional background see https://www.linkedin.com/pulse/how-use-virtual-env
 
 Various simple examples for getting started with different frameworks
 
-- [Terminology](/general/terminology.ipynb) ![Static Badge](https://img.shields.io/badge/File_Type-Jupyter_Notebook-blue)
+- [Terminology](/general/terminology.ipynb) ![Static Badge](https://img.shields.io/badge/Jupyter_Notebook-blue)
 - PyTorch
   - [Hello World](/pytorch/getting-started/pytorch_hello_world.ipynb)
   - [GPU](/pytorch/getting-started/pytorch_gpu.ipynb)
@@ -170,7 +170,7 @@ Examples that interact with large language models with billions of parameters th
 
 ### Phi-3
 
-- [Phi-3 demo](/llm/phi-3/hello-world/)![Static Badge](https://img.shields.io/badge/File_Type-Python-Script-orange)
+- [Phi-3 demo](/llm/phi-3/hello-world/)![Static Badge](https://img.shields.io/badge/Python_Script-orange)
 
 ## Deployment
 
