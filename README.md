@@ -84,69 +84,69 @@ For additional background see https://www.linkedin.com/pulse/how-use-virtual-env
 
 Various simple examples for getting started with different frameworks
 
-- [Terminology](/getting-started/terminology.ipynb)
+- [Terminology](/general/terminology.ipynb)
 - PyTorch
-  - [Hello World](/getting-started/pytorch_hello_world.ipynb)
-  - [GPU](/getting-started/pytorch_gpu.ipynb)
-  - [Tensor operations](/getting-started/pytorch_tensor_operations.ipynb)
-  - [Auto differentiation](/getting-started/pytorch_auto_differentiation.ipynb)
-  - [Getting help](/getting-started/pytorch_getting_help.ipynb)
+  - [Hello World](/pytorch/getting-started/pytorch_hello_world.ipynb)
+  - [GPU](/pytorch/getting-started/pytorch_gpu.ipynb)
+  - [Tensor operations](/pytorch/getting-started/pytorch_tensor_operations.ipynb)
+  - [Auto differentiation](/pytorch/getting-started/pytorch_auto_differentiation.ipynb)
+  - [Getting help](/pytorch/getting-started/pytorch_getting_help.ipynb)
 - TensorFlow
-  - [Hello World](/getting-started/tensorflow_hello_world.ipynb)
-  - [GPU (Linux only)](/getting-started/tensorflow_gpu.ipynb)
+  - [Hello World](/tensor-flow/getting-started/tensorflow_hello_world.ipynb)
+  - [GPU (Linux only)](/tensor-flow/getting-started/tensorflow_gpu.ipynb)
 
 ## Feature Engineering
 
 Various recipes for common feature engineering tasks.
 
-- [Pandas essentials](/feature-engineering/pandas_essentials.ipynb)
-- [Handle missing data](/feature-engineering/handle_missing_data.ipynb)
-- [Convert class labels to numbers](/feature-engineering/convert_class_to_numeric.ipynb)
-- [Imbalanced classification](/feature-engineering/imbalanced_classification.ipynb)
-- [Choose Fourier features](/feature-engineering/choosing_fourier_features.ipynb)
-- [Kaggle predict home price feature prep](/regression/kaggle-predict-house-price-data-prep.ipynb)
+- [Pandas essentials](/general/pandas_essentials.ipynb)
+- [Handle missing data](/general/handle_missing_data.ipynb)
+- [Convert class labels to numbers](/general/convert_class_to_numeric.ipynb)
+- [Imbalanced classification](/general/imbalanced_classification.ipynb)
+- [Choose Fourier features](/general/choosing_fourier_features.ipynb)
+- [Kaggle predict home price feature prep](/pytorch/home-prices/kaggle-predict-house-price-data-prep.ipynb)
 
 ## Image Processing
 
 Recipes for working with images
 
-- [OpenCV essentials](/computer-vision/opencv_essentials.ipynb)
-- [OpenCV basic image manipulation](/computer-vision/opencv_basic_image_manipulation.ipynb)
-- [OpenCV annotate images](/computer-vision/opencv_annotate_images.ipynb)
-- [OpenCV image enhancement](/computer-vision/opencv_image_enhancement.ipynb)
+- [OpenCV essentials](/opencv/opencv_essentials.ipynb)
+- [OpenCV basic image manipulation](/opencv/opencv_basic_image_manipulation.ipynb)
+- [OpenCV annotate images](/opencv/opencv_annotate_images.ipynb)
+- [OpenCV image enhancement](/opencv/opencv_image_enhancement.ipynb)
 
 ## Regression
 
 Various examples that deal with predicting a value based on inputs
 
-- [Synthetic regression with PyTorch](/regression/pytorch_synthetic_regression.ipynb)
-- [Kaggle predict home prices with PyTorch](/regression/kaggle-predict-house-prices.ipynb)
+- [Synthetic regression with PyTorch](/pytorch/synthetic-regression/pytorch_synthetic_regression.ipynb)
+- [Kaggle predict home prices with PyTorch](/pytorch/home-prices/kaggle-predict-house-prices.ipynb)
 
 ## Classification
 
 Various examples that deal with placing inputs into one or more categories
 
-- [Classify breast cancer diagnosis with PyTorch](/feature-engineering/imbalanced_classification.ipynb)
-- [Image classification with PyTorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
+- [Classify breast cancer diagnosis with PyTorch](/general/imbalanced_classification.ipynb)
+- [Image classification with PyTorch and Fashion MNIST](/pytorch/fashion-mnist/pytorch-fashionMNIST.ipynb)
 
 ## Clustering
 
 Various examples that deal with grouping data points by a similarity metric.
-- [Cluster seed types using K-Means and scikit-learn](/clustering/kmeans_clustering.ipynb)
-- [Cluster penguin species using DBSCAN and scikit-learn](/clustering/dbscan_clustering.ipynb)
+- [Cluster seed types using K-Means and scikit-learn](/scikit-learn/clustering/kmeans_clustering.ipynb)
+- [Cluster penguin species using DBSCAN and scikit-learn](/scikit-learn/clustering/dbscan_clustering.ipynb)
 
 ## Time Series
 
 Various examples that deal with time based data
 
-- [Forecast seasonal airline traffic using scikit-learn](/feature-engineering/choosing_fourier_features.ipynb)
+- [Forecast seasonal airline traffic using scikit-learn](/general/choosing_fourier_features.ipynb)
 
 ## Computer Vision
 
 Various examples that deal with processing image data.
 
-- [Image classification with PyTorch and Fashion MNIST](/computer-vision/pytorch-fashionMNIST.ipynb)
-- [Image segmentation using the Meta Segment Anything Model and OpenCV](/computer-vision/SAM/README.md)
+- [Image classification with PyTorch and Fashion MNIST](/pytorch/fashion-mnist/pytorch-fashionMNIST.ipynb)
+- [Image segmentation using the Meta Segment Anything Model and OpenCV](/SAM/README.md)
 
 ## Large Language Models
 
@@ -157,11 +157,11 @@ Examples that interact with large language models with billions of parameters th
  - [Claude 3.5 Tool Calling](/llm/claude-3-5/tool-calling/README.md)
 
 ### LangChain
-- [LangChain Terminology](/langchain/terminology.md)
-- [RAG based Q&A](/langchain/RAG/README.md)
-  - [Index web page data using BeautifulSoup, OpenAI Embeddings and Chroma](/langchain/RAG/index_pipeline.py)
-  - [Retrieval Augmented Generation (RAG) Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/langchain/RAG/rag_pipeline.py)
-  - [RAG Q&A pipeline using Hugging Face Embeddings, Amazon Bedrock with Meta Llama 3 foundation model and Chroma](/langchain/AWS-Bedrock/README.md)
+- [LangChain Terminology](/lang-chain/terminology.md)
+- [RAG based Q&A](/lang-chain/RAG/README.md)
+  - [Index web page data using BeautifulSoup, OpenAI Embeddings and Chroma](/lang-chain/RAG/index_pipeline.py)
+  - [Retrieval Augmented Generation (RAG) Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/lang-chain/RAG/rag_pipeline.py)
+  - [RAG Q&A pipeline using Hugging Face Embeddings, Amazon Bedrock with Meta Llama 3 foundation model and Chroma](/lang-chain/AWS-Bedrock/README.md)
 
 ### Llama 3
 
@@ -176,7 +176,7 @@ Examples that interact with large language models with billions of parameters th
 
 Various tasks that deal with using trained models
 
-- [Kaggle predict home prices, batch evaluate blind test data](/regression/kaggle-predict-house-price-evaluation.ipynb)
+- [Kaggle predict home prices, batch evaluate blind test data](/pytorch/home-prices/kaggle-predict-house-price-evaluation.ipynb)
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
-- [Serve index and RAG pipelines over HTTP using Flask](/langchain/RAG-serve/README.md)
-- [Run LLM pipeline Python code in a container using Docker](/langchain/docker-serve/README.md)
+- [Serve index and RAG pipelines over HTTP using Flask](/lang-chain/RAG-serve/README.md)
+- [Run LLM pipeline Python code in a container using Docker](/lang-chain/docker-serve/README.md)

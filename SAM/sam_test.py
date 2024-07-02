@@ -51,7 +51,7 @@ image_alpha[:, :, 3] = 255
 segments = draw_segments(masks)
 
 print("Combining images with segmentation masks...")
-combined_image = cv2.addWeighted(image_alpha, 1, segments, 0.45, 0)
+combined_image = cv2.addWeighted(image_alpha, 1, segments, 0.95, 0)
 
 print("Saving output image...")
 cv2.imwrite("output.jpg", cv2.cvtColor(combined_image, cv2.COLOR_RGB2BGR))
