@@ -103,7 +103,7 @@ Various recipes for common feature engineering tasks.
 - [Handle missing data](/general/handle_missing_data.ipynb)
 - [Convert class labels to numbers](/general/convert_class_to_numeric.ipynb)
 - [Imbalanced classification](/general/imbalanced_classification.ipynb)
-- [Choose Fourier features](/general/choosing_fourier_features.ipynb)
+- [Choose Fourier features](/scikit-learn/time-series/choosing_fourier_features.ipynb)
 - [Kaggle predict home price feature prep](/pytorch/home-prices/kaggle-predict-house-price-data-prep.ipynb)
 
 ## Image Processing
@@ -139,7 +139,7 @@ Various examples that deal with grouping data points by a similarity metric.
 
 Various examples that deal with time based data
 
-- [Forecast seasonal airline traffic using scikit-learn](/general/choosing_fourier_features.ipynb)
+- [Forecast seasonal airline traffic using scikit-learn](/scikit-learn/time-series/choosing_fourier_features.ipynb)
 
 ## Computer Vision
 
