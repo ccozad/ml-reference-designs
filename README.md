@@ -146,7 +146,7 @@ Various examples that deal with time based data
 Various examples that deal with processing image data.
 
 - [Image classification with PyTorch and Fashion MNIST](/pytorch/fashion-mnist/pytorch-fashionMNIST.ipynb)
-- [Image segmentation using the Meta Segment Anything Model and OpenCV](/SAM/README.md)
+- [Image segmentation using the Meta Segment Anything Model and OpenCV](/SAM/)
 
 ## Large Language Models
 
@@ -154,14 +154,14 @@ Examples that interact with large language models with billions of parameters th
 
 ### Claude 3.5
  - [Claude 3.5 Hello World](/llm/claude-3-5/hello-world/)
- - [Claude 3.5 Tool Calling](/llm/claude-3-5/tool-calling/README.md)
+ - [Claude 3.5 Tool Calling](/llm/claude-3-5/tool-calling/)
 
 ### LangChain
 - [LangChain Terminology](/lang-chain/terminology.md)
-- [RAG based Q&A](/lang-chain/RAG/README.md)
+- [RAG based Q&A](/lang-chain/RAG/)
   - [Index web page data using BeautifulSoup, OpenAI Embeddings and Chroma](/lang-chain/RAG/index_pipeline.py)
   - [Retrieval Augmented Generation (RAG) Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/lang-chain/RAG/rag_pipeline.py)
-  - [RAG Q&A pipeline using Hugging Face Embeddings, Amazon Bedrock with Meta Llama 3 foundation model and Chroma](/lang-chain/AWS-Bedrock/README.md)
+  - [RAG Q&A pipeline using Hugging Face Embeddings, Amazon Bedrock with Meta Llama 3 foundation model and Chroma](/lang-chain/AWS-Bedrock/)
 
 ### Llama 3
 
@@ -170,13 +170,13 @@ Examples that interact with large language models with billions of parameters th
 
 ### Phi-3
 
-- [Phi-3 demo](/llm/phi-3/hello-world/README.md)
+- [Phi-3 demo](/llm/phi-3/hello-world/)
 
 ## Deployment
 
 Various tasks that deal with using trained models
 
 - [Kaggle predict home prices, batch evaluate blind test data](/pytorch/home-prices/kaggle-predict-house-price-evaluation.ipynb)
-- [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
-- [Serve index and RAG pipelines over HTTP using Flask](/lang-chain/RAG-serve/README.md)
-- [Run LLM pipeline Python code in a container using Docker](/lang-chain/docker-serve/README.md)
+- [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/)
+- [Serve index and RAG pipelines over HTTP using Flask](/lang-chain/RAG-serve/)
+- [Run LLM pipeline Python code in a container using Docker](/lang-chain/docker-serve/)
