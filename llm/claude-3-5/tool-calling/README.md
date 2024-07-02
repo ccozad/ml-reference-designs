@@ -174,8 +174,8 @@ ANTHROPIC_API_KEY=<your key>
 
 ## Python virtual environment
 
- - Move to the hello world folder
-   - `cd <llm/claude-3-5/hello-world>`
+ - Move to the tool calling folder
+   - `cd <llm/claude-3-5/tool-calling>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
    - On Windows: `python -m venv .venv`
