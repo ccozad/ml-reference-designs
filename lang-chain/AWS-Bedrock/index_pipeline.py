@@ -32,7 +32,7 @@ print(f"Number of splits: {len(splits)}")
 print(f"Length of first split: {len(splits[0].page_content)}")
 print(f"Metadata of second split: {splits[1].metadata}")
 
-# Create a Chroma object with the OpenAI embeddings.
+# Create a Chroma object with the Hugging Face embeddings.
 print("Adding splits to embedding vectorstore...")
 vectorstore = Chroma.from_documents(
     documents=splits, 
