@@ -111,7 +111,7 @@ For more details see https://www.trychroma.com
 
 ## Python Virtual Environment
 
- - Move to the RAG folder
+ - Move to the AWS-Bedrock folder
    - `cd <AWS-Bedrock>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
