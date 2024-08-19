@@ -32,6 +32,7 @@ Create a file named `.env` in the project directory and add the following conten
 VECTOR_STORE_ADDRESS=
 VECTOR_STORE_KEY=
 VECTOR_STORE_NAME=
+OPENAI_API_KEY=
 ```
 
 ## Python Virtual Environment
