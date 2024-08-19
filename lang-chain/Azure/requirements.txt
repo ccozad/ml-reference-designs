@@ -1,0 +1,7 @@
+python-dotenv
+langchain
+langchain-community
+sentence_transformers
+azure-search-documents
+azure-identity
+beautifulsoup4
