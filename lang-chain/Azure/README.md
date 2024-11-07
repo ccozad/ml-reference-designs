@@ -35,9 +35,9 @@ VECTOR_STORE_NAME=
 OPENAI_API_KEY=
 ```
 
-## Python Virtual Environment
+## Python virtual environment
 
- - Move to the RAG folder
+ - Move to the Azure folder
    - `cd <Azure>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`

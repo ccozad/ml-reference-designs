@@ -19,6 +19,8 @@ Examples in this repo cover the following industry domain problems:
    - Receipt processing
  - Botany
    - Group observations into n groups based on equal variance
+- Hospitality
+   - Sentiment analysis
  - Customer Service
    - Context aware chat bots
  - Medical
@@ -30,7 +32,7 @@ Examples in this repo cover the following industry domain problems:
  - Technology
    - Deploy machine learning models to production
    - Compose workflows involving large language models (LLMs)
-   - Store and search for embedding data in vectorstores
+   - Store and search for embedding data in vector stores
    - Intelligently select complex objects in images
    - Expand capabilities of large language models with custom tool calling
  - Transportation
@@ -46,7 +48,7 @@ Some of the examples in this repo are meant to be run interactively using Jupyte
 
 Examples that only have script files will have a README file with instructions.
 
-## Virtual environment
+## Python Virtual environment
 
 To avoid conflicts with your local environment, create a virtual environment and run the notebook within this environment.
 
@@ -60,6 +62,10 @@ python -m ipykernel install --user --name=virtualenv
 ```
 
 Most advances in machine learning are happing on Linux targeting Nvidia GPUs with CUDA support. Some advanced models such as Llama 3 may not work well (or at all) on Windows machines.
+
+## JavaScript environment
+
+Some examples are targeted at NodeJS. There are no specific versions of Node needed but you can always use `nvm` to keep your environments tidy. See https://github.com/nvm-sh/nvm for more details.
 
 ### Working with LLMs
 
@@ -128,6 +134,7 @@ Various examples that deal with placing inputs into one or more categories
 
 - [Classify breast cancer diagnosis with PyTorch](/general/imbalanced_classification.ipynb)
 - [Image classification with PyTorch and Fashion MNIST](/pytorch/fashion-mnist/pytorch-fashionMNIST.ipynb)
+- [Sentiment analysis in JavaScript using transformers](/huggingface/sentiment-analysis-js/)
 
 ## Clustering
 
