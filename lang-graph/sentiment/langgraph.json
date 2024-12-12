@@ -1,0 +1,10 @@
+{
+    "dockerfile_lines": [],
+    "graphs": {
+      "sentiment": "./sentiment.py:graph"
+    },
+    "python_version": "3.11",
+    "dependencies": [
+      "."
+    ]
+  }
