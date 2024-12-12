@@ -11,6 +11,8 @@ Intelligently select complex objects in images
 Predict future values in data that varies over time
 ![Time Series Prediction](/images/time-series-prediction.png?raw=true "Time Series Prediction")
 
+![Positive Sentiment Trace](/images/positive-sentiment-trace.png?raw=true "Positive Sentiment Trace")
+
 # Industry domain problems
 
 Examples in this repo cover the following industry domain problems:
@@ -170,10 +172,15 @@ Examples that interact with large language models with billions of parameters th
   - [Retrieval Augmented Generation (RAG) Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/lang-chain/RAG/rag_pipeline.py)
   - [RAG Q&A pipeline using Hugging Face Embeddings, Amazon Bedrock with Meta Llama 3 foundation model and Chroma](/lang-chain/AWS-Bedrock/)
 
+### LangGraph
+- [LangGraph simple graph, sentiment response](/lang-graph/sentiment/)
+
 ### Llama 3
 
 - [Local Llama 3 chat demo](/llm/llama-3/hello-llama-3.ipynb)
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
+
+## Small Language Models
 
 ### Phi-3
 

@@ -1,51 +1,65 @@
-import random 
+from transformers import pipeline
 from typing import Literal
 from typing_extensions import TypedDict
 from langgraph.graph import StateGraph, START, END
 
 # State
-class State(TypedDict):
-    graph_state: str
+class InputState(TypedDict):
+    user_review: str
+
+class OutputState(TypedDict):
+    company_response: str
+
+class OverallState(TypedDict):
+    label: str
+    score: float
+    user_review: str
+    company_response: str
 
 # Conditional edge
-def decide_sentiment(state) -> Literal["positive", "negative"]:
-    
-    # Often, we will use state to decide on the next node to visit
-    user_input = state['graph_state'] 
-    
-    # Here, let's just do a 50 / 50 split between nodes 2, 3
-    if random.random() < 0.5:
-
-        # 50% of the time, we return Node 2
+def decide_sentiment(state: OverallState) -> Literal["positive", "negative"]:
+    if state["label"] == "POSITIVE":
         return "positive"
-    
-    # 50% of the time, we return Node 3
-    return "negative"
+    else:
+        return "negative"
 
 # Nodes
-def check_sentiment(state):
+def check_sentiment(state: InputState) -> OverallState:
     print("---Check Sentiment---")
-    print(f"User input: {state['graph_state']}")
+    print("Input State:")
+    print(f"User review: {state['user_review']}")
+
+    user_review = state['user_review'] 
+    classifier = pipeline(task="sentiment-analysis")
+    preds = classifier(user_review)
+    preds = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in preds]
+
     return {
-        "graph_state":state['graph_state']
+        "user_review": state['user_review'],
+        "label": preds[0]["label"],
+        "score": preds[0]["score"],
+        "company_response": ""
     }
 
-def positive(state):
+def positive(state: OverallState) -> OutputState:
     print("---Positive---")
-    print(f"User input: {state['graph_state']}")
+    print("Overall State:")
+    print(f"Label: {state['label']}")
+    print(f"Score: {state['score']}")
+    print(f"User review: {state['user_review']}")
+
     return {
-        "graph_state":state['graph_state']
+        "company_response": "Thank you for your positive feedback!",
     }
 
-def negative(state):
+def negative(state: OverallState) -> OutputState:
     print("---Negative---")
-    print(f"User input: {state['graph_state']}")
     return {
-        "graph_state":state['graph_state'],
+       "company_response": "We're sorry to hear that you're not satisfied. Please contact us at (555) 555-5555"
     }
 
 # Build graph
-builder = StateGraph(State)
+builder = StateGraph(OverallState,input=InputState,output=OutputState)
 builder.add_node("check_sentiment", check_sentiment)
 builder.add_node("positive", positive)
 builder.add_node("negative", negative)
