@@ -166,13 +166,14 @@ Examples that interact with large language models with billions of parameters th
  - [Claude 3.5 Tool Calling](/llm/claude-3-5/tool-calling/)
 
 ### LangChain
-- [LangChain Terminology](/lang-chain/terminology.md)
+- [LangChain terminology](/lang-chain/terminology.md)
 - [RAG based Q&A](/lang-chain/RAG/)
   - [Index web page data using BeautifulSoup, OpenAI Embeddings and Chroma](/lang-chain/RAG/index_pipeline.py)
   - [Retrieval Augmented Generation (RAG) Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/lang-chain/RAG/rag_pipeline.py)
   - [RAG Q&A pipeline using Hugging Face Embeddings, Amazon Bedrock with Meta Llama 3 foundation model and Chroma](/lang-chain/AWS-Bedrock/)
 
 ### LangGraph
+- [LangGraph terminology](/lang-graph/terminology.md)
 - [LangGraph simple graph, sentiment response](/lang-graph/sentiment/)
 
 ### Llama 3
