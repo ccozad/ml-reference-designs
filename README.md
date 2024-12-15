@@ -195,3 +195,8 @@ Various tasks that deal with using trained models
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/)
 - [Serve index and RAG pipelines over HTTP using Flask](/lang-chain/RAG-serve/)
 - [Run LLM pipeline Python code in a container using Docker](/lang-chain/docker-serve/)
+
+# Further Reading
+
+- [Attention Is All You Need](https://arxiv.org/pdf/1706.03762)
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)
