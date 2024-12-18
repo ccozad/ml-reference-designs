@@ -185,7 +185,7 @@ Examples that interact with large language models with billions of parameters th
 
 ### Phi-3
 
-- [Phi-3 demo](/llm/phi-3/hello-world/)
+- [Phi-3 demo](/slm/phi-3/hello-world/)
 
 ## Deployment
 
@@ -201,3 +201,4 @@ Various tasks that deal with using trained models
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762)
 - [Let's build ChatGPT: from scratch, in code, spelled out, Andrej Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY)
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)
+- [SmolLM - blazingly fast and remarkably powerful](https://huggingface.co/blog/smollm)

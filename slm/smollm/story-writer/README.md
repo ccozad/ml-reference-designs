@@ -1,22 +1,19 @@
 # Introduction
 
-Microsoft's Phi-3 models are marketed as small language models that can run on average consumer hardware, even on devices like phones.
+SmolLM is a small language model that outperforms similar sized models. It focuses on English language generation and is made by the team at HuggingFace
 
-https://news.microsoft.com/source/features/ai/the-phi-3-small-language-models-with-big-potential/
-
-https://huggingface.co/docs/transformers/main/en/model_doc/phi3
+[SmolLM - blazingly fast and remarkably powerful](https://huggingface.co/blog/smollm)
 
 # Dependencies
 
 All of the dependencies listed below need to be in place before running the code.
 
  - Python virtual environment
- - Install PyTorch
 
 ## Python virtual environment
 
- - Move to the llm\phi-3\hello-world folder
-   - `cd <llm\phi-3\hello-world>`
+ - Move to the slm\smollm\story-writer folder
+   - `cd <slm\smollm\story-writer>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
    - On Windows: `python -m venv .venv`
@@ -32,13 +29,11 @@ All of the dependencies listed below need to be in place before running the code
  - Deactivate virtual environment
    - `deactivate`
 
-## Install PyTorch
-
-Follow the instructions at https://pytorch.org/get-started/locally/
-
 # Running the code
 
-`python hello.py`
+Two random animals are picked by the code for the story.
+
+`python generate-story.py`
 
 Example output:
 ```text
