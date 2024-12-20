@@ -54,6 +54,13 @@ Examples that only have script files will have a README file with instructions.
 
 To avoid conflicts with your local environment, create a virtual environment and run the notebook within this environment.
 
+### Selecting the new kernel
+
+Then select the virtualenv kernel after launching Jupyter Lab with the command `jupyter lab`
+
+### Additional resources
+For additional background see https://www.linkedin.com/pulse/how-use-virtual-environment-inside-jupyter-lab-sina-khoshgoftar
+
 ### Windows
 ```
 python -m venv .venv
@@ -63,13 +70,13 @@ pip install -r requirements.txt
 python -m ipykernel install --user --name=virtualenv
 ```
 
-Most advances in machine learning are happing on Linux targeting Nvidia GPUs with CUDA support. Some advanced models such as Llama 3 may not work well (or at all) on Windows machines.
+Most advances in machine learning are happening on Linux targeting Nvidia GPUs with CUDA support. Some advanced models such as Llama 3 may not work well (or at all) on Windows machines.
 
 ## JavaScript environment
 
 Some examples are targeted at NodeJS. There are no specific versions of Node needed but you can always use `nvm` to keep your environments tidy. See https://github.com/nvm-sh/nvm for more details.
 
-### Working with LLMs
+## Working with LLMs
 
 Workbook examples that include LLMs models are more complex than other examples and require additional setup work.
 
@@ -78,13 +85,6 @@ Workbook examples that include LLMs models are more complex than other examples 
  - Model weights are GBs of data, store them in a drive with sufficient space
  - Clone the model code https://github.com/meta-llama/llama3
  - Change to the directory with the model code and pip install the model and dependencies `pip install -e .`
-
-### Selecting the new kernel
-
-Then select the virtualenv kernel after launching Jupyter Lab with the command `jupyter lab`
-
-### Additional resources
-For additional background see https://www.linkedin.com/pulse/how-use-virtual-environment-inside-jupyter-lab-sina-khoshgoftar
 
 # Contents
 
