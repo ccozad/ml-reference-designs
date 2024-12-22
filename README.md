@@ -199,6 +199,7 @@ Various tasks that deal with using trained models
 
 # Further Reading
 
+- [Agents in Software Engineering: Survey, Landscape, and Vision](https://github.com/DeepSoftwareAnalytics/Awesome-Agent4SE)
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762)
 - [Let's build ChatGPT: from scratch, in code, spelled out, Andrej Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY)
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)
