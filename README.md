@@ -202,5 +202,6 @@ Various tasks that deal with using trained models
 - [Agents in Software Engineering: Survey, Landscape, and Vision](https://github.com/DeepSoftwareAnalytics/Awesome-Agent4SE)
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762)
 - [Let's build ChatGPT: from scratch, in code, spelled out, Andrej Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY)
+- [Model Context Protocol](https://github.com/modelcontextprotocol)
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)
 - [SmolLM Github](https://github.com/huggingface/smollm)
