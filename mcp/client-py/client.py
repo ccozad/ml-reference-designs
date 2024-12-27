@@ -56,15 +56,16 @@ class MCPClient:
             }
         ]
 
-        print("\nProcessing message:", messages)
+        print("\n[Calling Claude with query]:", query)
 
         response = await self.session.list_tools()
-        print("\nAvailable tools:", [tool.name for tool in response.tools])
         available_tools = [{ 
             "name": tool.name,
             "description": tool.description,
             "input_schema": tool.inputSchema
         } for tool in response.tools]
+
+        print("\nAvailable tools:", available_tools)
 
         # Initial Claude API call
         response = self.anthropic.messages.create(
@@ -74,24 +75,23 @@ class MCPClient:
             tools=available_tools
         )
 
-        print("\nInitial response from Claude:", response.content[0].text)
-
         # Process response and handle tool calls
         tool_results = []
         final_text = []
 
         for content in response.content:
-            print("\Content", content)
             if content.type == 'text':
-                print("\nText content:", content.text)
+                print("\n[Text response from Claude]:", content.text)
                 final_text.append(content.text)
             elif content.type == 'tool_use':
-                print("\nTool content:", content.name, content.input)
+                print("\n[Tool use response from Claude]:", content.name, content.input)
                 tool_name = content.name
                 tool_args = content.input
                 
                 # Execute tool call
+                print(f"\n[Calling tool {tool_name} with args {tool_args}]")
                 result = await self.session.call_tool(tool_name, tool_args)
+                print("\n[Tool result]:", result.content)
                 tool_results.append({"call": tool_name, "result": result})
                 final_text.append(f"[Calling tool {tool_name} with args {tool_args}]")
 
@@ -112,9 +112,11 @@ class MCPClient:
                     max_tokens=1000,
                     messages=messages,
                 )
+                print("\n[Response from Claude]:", response.content[0].text)
 
                 final_text.append(response.content[0].text)
 
+        print("\nFinal text:", final_text)
         return "\n".join(final_text)
     
     async def chat_loop(self):
