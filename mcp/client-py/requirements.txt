@@ -1,0 +1,3 @@
+mcp
+anthropic
+python-dotenv

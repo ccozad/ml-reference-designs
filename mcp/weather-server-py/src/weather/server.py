@@ -77,3 +77,23 @@ def format_alert(feature: dict) -> str:
         f"Headline: {props.get('headline', 'No headline')}\n"
         "---"
     )
+
+async def main():
+    # Run the server using stdin/stdout streams
+    async with mcp.server.stdio.stdio_server() as (read_stream, write_stream):
+        await server.run(
+            read_stream,
+            write_stream,
+            InitializationOptions(
+                server_name="weather",
+                server_version="0.1.0",
+                capabilities=server.get_capabilities(
+                    notification_options=NotificationOptions(),
+                    experimental_capabilities={},
+                ),
+            ),
+        )
+
+# This is needed if you'd like to connect to a custom client
+if __name__ == "__main__":
+    asyncio.run(main())
