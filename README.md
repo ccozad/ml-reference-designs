@@ -190,12 +190,14 @@ Examples that interact with large language models with billions of parameters th
 
 ## Deployment
 
-Various tasks that deal with using trained models
+Various tasks that deal with deploying AI systems
 
 - [Kaggle predict home prices, batch evaluate blind test data](/pytorch/home-prices/kaggle-predict-house-price-evaluation.ipynb)
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/)
-- [Serve index and RAG pipelines over HTTP using Flask](/lang-chain/RAG-serve/)
 - [Run LLM pipeline Python code in a container using Docker](/lang-chain/docker-serve/)
+- [Serve index and RAG pipelines over HTTP using Flask](/lang-chain/RAG-serve/)
+- [Use the Model Context Protocol (MCP) with a custom LLM client and data access server](/mcp/client-py/)
+
 
 # Further Reading
 

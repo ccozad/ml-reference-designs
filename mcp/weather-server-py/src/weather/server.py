@@ -62,7 +62,7 @@ async def make_nws_request(client: httpx.AsyncClient, url: str) -> dict[str, Any
     try:
         response = await client.get(url, headers=headers, timeout=30.0)
         response.raise_for_status()
-        return response.text
+        return response.json()
     except Exception:
         return None
 
