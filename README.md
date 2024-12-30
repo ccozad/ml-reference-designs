@@ -119,7 +119,7 @@ Various recipes for common feature engineering tasks.
 Recipes for working with images
 
 - [OpenCV essentials](/opencv/opencv_essentials.ipynb)
-- [OpenCV basic image manipulation](/opencv/opencv_basic_image_manipulation.ipynb)
+- [OpenCV basic image manipulation](/opencv/opencv_basic_image_manipulation.md)
 - [OpenCV annotate images](/opencv/opencv_annotate_images.md)
 - [OpenCV image enhancement](/opencv/opencv_image_enhancement.ipynb)
 
