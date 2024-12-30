@@ -31,7 +31,7 @@ cv2.line(image_line, (500, 500), (300, 200), (0, 0, 255), thickness=2, lineType=
 
 plt.imshow(image_line[:, :, ::-1])
 ```
-![Lines drawn using OpenCV code](/images/opencv/opencv-source-image.png?raw=true "Lines drawn using OpenCV code")
+![Lines drawn using OpenCV code](/images/opencv/opencv-lines.png?raw=true "Lines drawn using OpenCV code")
 
 
 
