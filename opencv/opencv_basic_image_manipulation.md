@@ -138,7 +138,7 @@ resized_cropped_region = cv2.resize(cropped_region, dsize=dim, interpolation=cv2
 plt.imshow(resized_cropped_region)
 ```
 
-![Flower resize](/images/opencv/opencv-flower-crop-resize.png?raw=true "Flower resize")
+![Flower crop](/images/opencv/opencv-flower-crop.png?raw=true "Flower crop")
 
 ```python
 resized_cropped_region_2x = resized_cropped_region_2x[:, :, ::-1]
