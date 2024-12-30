@@ -138,3 +138,49 @@ resized_cropped_region = cv2.resize(cropped_region, dsize=dim, interpolation=cv2
 plt.imshow(resized_cropped_region)
 ```
 
+![Flower resize](/images/opencv/opencv-flower-crop-resize.png?raw=true "Flower resize")
+
+```python
+resized_cropped_region_2x = resized_cropped_region_2x[:, :, ::-1]
+cv2.imwrite("resized_cropped_region_2x.png", resized_cropped_region_2x)
+Image(filename="resized_cropped_region_2x.png")
+```
+
+![Flower resize medium](/images/opencv/opencv-flower-resize-medium.png?raw=true "Flower resize medium")
+
+
+```python
+cropped_region = cropped_region[:, :, ::-1]
+cv2.imwrite("cropped_region.png", cropped_region)
+Image(filename="cropped_region.png")
+```
+
+![Flower resize small](/images/opencv/opencv-flower-resize-small.png?raw=true "Flower resize small")
+
+
+# Flip images
+
+```python
+image_flowers_rgb_flipped_horiz = cv2.flip(image_flowers_rgb, 1)
+image_flowers_rgb_flipped_vert = cv2.flip(image_flowers_rgb, 0)
+image_flowers_rgb_flipped_both = cv2.flip(image_flowers_rgb, -1)
+
+plt.figure(figsize=(18,5))
+
+plt.subplot(141)
+plt.imshow(image_flowers_rgb_flipped_horiz)
+plt.title("Horizontal Flip")
+
+plt.subplot(142)
+plt.imshow(image_flowers_rgb_flipped_vert)
+plt.title("Vertical Flip")
+
+plt.subplot(143)
+plt.imshow(image_flowers_rgb_flipped_both)
+plt.title("Both Flipped")
+
+plt.subplot(144)
+plt.imshow(image_flowers_rgb)
+plt.title("Original")
+```
+![Flower flip](/images/opencv/opencv-flower-flip.png?raw=true "Flower flip")
