@@ -109,3 +109,32 @@ plt.imshow(cropped_region)
 ```
 ![Flower crop](/images/opencv/opencv-flower-crop.png?raw=true "Flower crop")
 
+# Resizing images
+
+```python
+resized_cropped_region_2x = cv2.resize(cropped_region, None, fx=2, fy=2)
+plt.imshow(resized_cropped_region_2x)
+```
+
+![Flower resize](/images/opencv/opencv-flower-crop-resize.png?raw=true "Flower resize")
+
+```python
+desired_width = 100
+desired_height = 200
+dim = (desired_width, desired_height)
+
+resized_cropped_region = cv2.resize(cropped_region, dsize=dim, interpolation=cv2.INTER_AREA)
+plt.imshow(resized_cropped_region)
+```
+![Flower resize stretch](/images/opencv/opencv-flower-crop-resize2.png?raw=true "Flower resize stretch")
+
+```python
+desired_width = 100
+aspect_ratio = desired_width / cropped_region.shape[1]
+desired_height = int(cropped_region.shape[0] * aspect_ratio)
+dim = (desired_width, desired_height)
+
+resized_cropped_region = cv2.resize(cropped_region, dsize=dim, interpolation=cv2.INTER_AREA)
+plt.imshow(resized_cropped_region)
+```
+
