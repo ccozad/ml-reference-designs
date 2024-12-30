@@ -91,3 +91,21 @@ print(cb_image_copy)
 ```
 
 ![Checkerboard pattern modified](/images/opencv/opencv-checkerboard-modified.png?raw=true "Checkerboard Pattern modified")
+
+# Cropping images
+
+```python
+image_flowers_bgr = cv2.imread("data/flowers.png", cv2.IMREAD_COLOR)
+image_flowers_rgb = image_flowers_bgr[:, :, ::-1]
+
+plt.imshow(image_flowers_rgb)
+```
+
+![Flower](/images/opencv/opencv-flower.png?raw=true "Flower")
+
+```python
+cropped_region = image_flowers_rgb[200:300, 100:200]
+plt.imshow(cropped_region)
+```
+![Flower crop](/images/opencv/opencv-flower-crop.png?raw=true "Flower crop")
+
