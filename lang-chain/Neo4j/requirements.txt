@@ -1,0 +1,4 @@
+python-dotenv
+langchain
+langchain-anthropic
+langchain_neo4j
