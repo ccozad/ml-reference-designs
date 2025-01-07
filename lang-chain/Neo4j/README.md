@@ -2,7 +2,9 @@
 
 Neo4j is an enterprise grade, high speed, native graph database that stores information about nodes and edges.
 
-In this example we'll show several ways to use Neo4j in language chains including conversation memory, knowledge graph queries, semantic search and as a vector store.
+In this example we'll show how to do retrieval augmented generation with a knowledge graph.
+
+ ![Graph RAG Pipeline](/images/graph-rag-pipeline.png?raw=true "Graph RAG Pipeline")
 
 # Dependencies
 
@@ -55,6 +57,7 @@ Create a file named `.env` with the contents shown below
 NEO4J_URI=<address>
 NEO4J_USER=<user>
 NEO4J_PASSWORD=<password>
+ANTHROPIC_API_KEY=<funded key>
 ```
 
 # Example output
@@ -81,6 +84,42 @@ The relationships:
 (:Person)-[:WROTE]->(:Movie)
 (:Person)-[:FOLLOWS]->(:Person)
 (:Person)-[:REVIEWED]->(:Movie)
+```
+
+## cypher_generation.py
+
+```
+python3 cypher_generation.py
+
+Query:
+What is the tagline of the movie Top Gun?
+
+Graph Schema:
+Node properties:
+Movie {title: STRING, tagline: STRING, released: INTEGER}
+Person {born: INTEGER, name: STRING}
+Relationship properties:
+ACTED_IN {roles: LIST}
+REVIEWED {summary: STRING, rating: INTEGER}
+The relationships:
+(:Person)-[:ACTED_IN]->(:Movie)
+(:Person)-[:DIRECTED]->(:Movie)
+(:Person)-[:PRODUCED]->(:Movie)
+(:Person)-[:WROTE]->(:Movie)
+(:Person)-[:FOLLOWS]->(:Person)
+(:Person)-[:REVIEWED]->(:Movie)
+
+
+> Entering new GraphCypherQAChain chain...
+Generated Cypher:
+cypher
+MATCH (m:Movie {title: 'Top Gun'})
+RETURN m.tagline
+
+Full Context:
+[{'m.tagline': 'I feel the need, the need for speed.'}]
+
+> Finished chain.
 ```
 
 # Resources

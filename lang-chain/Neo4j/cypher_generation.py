@@ -42,7 +42,10 @@ cypher_chain = GraphCypherQAChain.from_llm(
 )
 
 query = "What is the tagline of the movie Top Gun?"
-print("Query:")
+print("\nQuery:")
 print(query)
+
+print("\nGraph Schema:")
+print(graph.schema)
 
 cypher_chain.invoke({"query": "What is the tagline of the movie Top Gun?"})
