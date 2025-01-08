@@ -169,6 +169,7 @@ Examples that interact with large language models with billions of parameters th
 - [LangChain terminology](/lang-chain/terminology.md)
 - [RAG based Q&A](/lang-chain/RAG/)
   - [Index web page data using BeautifulSoup, OpenAI Embeddings and Chroma](/lang-chain/RAG/index_pipeline.py)
+  - [Neo4j Graph RAG](/lang-chain/Neo4j/)
   - [Retrieval Augmented Generation (RAG) Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/lang-chain/RAG/rag_pipeline.py)
   - [RAG Q&A pipeline using Hugging Face Embeddings, Amazon Bedrock with Meta Llama 3 foundation model and Chroma](/lang-chain/AWS-Bedrock/)
 
