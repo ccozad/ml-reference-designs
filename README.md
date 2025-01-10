@@ -92,7 +92,7 @@ Workbook examples that include LLMs models are more complex than other examples 
 
 Various simple examples for getting started with different frameworks
 
-- [Terminology](/general/terminology.ipynb)
+- [Terminology](/general/terminology.md)
 - PyTorch
   - [Hello World](/pytorch/getting-started/pytorch_hello_world.ipynb)
   - [GPU](/pytorch/getting-started/pytorch_gpu.ipynb)
