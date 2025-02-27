@@ -88,4 +88,14 @@ Key details:
 - `@tool` decorator
 - Type hints on inputs and function return value
 - Descriptive docstring
-- Sensible function name  
+- Sensible function name
+
+# Thought, Action, Observation
+
+## Core concepts
+
+Agents work in a continious cycle of thinking, acting and observing
+
+1. Thought - The language model decides the next step
+2. Action - The agent takes an action by calling tools with parameters
+3. Observation - The model reflects on the response from the tool
