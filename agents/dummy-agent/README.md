@@ -13,7 +13,7 @@ You will need all of the following dependencies to run this example:
 
 Log in to Hugging Face and retrieve your token from https://hf.co/settings/tokens
 
-Add the following line to your environment file:
+Create an environment file named `.env`. Add the following line to your environment file:
 
 ```ini
 HF_TOKEN=<your token>
