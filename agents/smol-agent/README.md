@@ -1,6 +1,6 @@
 # Introduction
 
-The SmolAgent framework is one of the many options that abstraction instruct interactions with a model, the agent loop of think, act and observe. 
+The SmolAgent framework is one of the many options that abstract instruct interactions with a model and the agent loop of "think, act and observe". 
 
 ![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
 
