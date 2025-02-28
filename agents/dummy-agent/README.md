@@ -69,3 +69,13 @@ Run the command `python chat.py` and you will get output
 ```text
 Paris.
 ```
+
+## Weather agent
+
+This example simulates what a chat would look like for an agent that can call out to a weather tool.
+
+Run the command `python weather_agent.py` and you will get output
+
+```text
+Final Answer: The current weather in London is sunny with low temperatures.
+```
