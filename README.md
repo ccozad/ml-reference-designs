@@ -14,6 +14,7 @@ Intelligently select complex objects in images
 Predict future values in data that varies over time
 ![Time Series Prediction](/images/time-series-prediction.png?raw=true "Time Series Prediction")
 
+Form graphs to model decisions and loops with AI
 ![Positive Sentiment Trace](/images/positive-sentiment-trace.png?raw=true "Positive Sentiment Trace")
 
 # Industry domain problems
