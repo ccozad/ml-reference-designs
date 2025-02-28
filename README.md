@@ -2,21 +2,6 @@
 
 This repo contains a set of reference designs for various ML topics. A few examples of the types of things you can learn here:
 
-Leverage agents that use a large language model as the brain to direct tools that interact with the real world.
-![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
-
-Direct a large language model to answer based only on context from documents
-![RAG Pipeline](/images/rag-pipeline.png?raw=true "RAG Pipeline")
-
-Intelligently select complex objects in images
-![Segmented Image](/images/sam-example.jpg?raw=true "Segmented Image")
-
-Predict future values in data that varies over time
-![Time Series Prediction](/images/time-series-prediction.png?raw=true "Time Series Prediction")
-
-Form graphs to model decisions and loops with AI
-![Positive Sentiment Trace](/images/positive-sentiment-trace.png?raw=true "Positive Sentiment Trace")
-
 # Industry domain problems
 
 Examples in this repo cover the following industry domain problems:
@@ -43,6 +28,7 @@ Examples in this repo cover the following industry domain problems:
    - Store and search for embedding data in vector stores
    - Intelligently select complex objects in images
    - Expand capabilities of large language models with custom tool calling
+   - Create AI agents that can interact with the real world
  - Transportation
    - Seasonal airline traffic prediction
  - Zoology
@@ -57,6 +43,9 @@ An Agent is a system that leverages an AI model to interact with its environment
  - [Overview](/agents/)
  - [Dummy Agent](/agents/dummy-agent/) A bare bones agent with mocked tool calls 
  - [Smol Agent](/agents/smol-agent/) A template for using the SmolAgent framework with a Gradio web interface
+
+Leverage agents that use a large language model as the brain to direct tools that interact with the real world.
+![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
 
 ## Getting Started
 
@@ -120,12 +109,18 @@ Various examples that deal with time based data
 
 - [Forecast seasonal airline traffic using scikit-learn](/scikit-learn/time-series/choosing_fourier_features.ipynb)
 
+Predict future values in data that varies over time
+![Time Series Prediction](/images/time-series-prediction.png?raw=true "Time Series Prediction")
+
 ## Computer Vision
 
 Various examples that deal with processing image data.
 
 - [Image classification with PyTorch and Fashion MNIST](/pytorch/fashion-mnist/pytorch-fashionMNIST.ipynb)
 - [Image segmentation using the Meta Segment Anything Model and OpenCV](/segment-anything-model/)
+
+Intelligently select complex objects in images
+![Segmented Image](/images/sam-example.jpg?raw=true "Segmented Image")
 
 ## Large Language Models
 
@@ -143,9 +138,15 @@ Examples that interact with large language models with billions of parameters th
   - [Retrieval Augmented Generation (RAG) Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/lang-chain/RAG/rag_pipeline.py)
   - [RAG Q&A pipeline using Hugging Face Embeddings, Amazon Bedrock with Meta Llama 3 foundation model and Chroma](/lang-chain/AWS-Bedrock/)
 
+Direct a large language model to answer based only on context from documents
+![RAG Pipeline](/images/rag-pipeline.png?raw=true "RAG Pipeline")
+
 ### LangGraph
 - [LangGraph terminology](/lang-graph/terminology.md)
 - [LangGraph simple graph, sentiment response](/lang-graph/sentiment/)
+
+Form graphs to model decisions and loops with AI
+![Positive Sentiment Trace](/images/positive-sentiment-trace.png?raw=true "Positive Sentiment Trace")
 
 ### Llama 3
 
