@@ -1,0 +1,4 @@
+smolagents
+pandas
+smolagents[gradio]
+python-dotenv

@@ -2,6 +2,9 @@
 
 This repo contains a set of reference designs for various ML topics. A few examples of the types of things you can learn here:
 
+Leverage agents thatuse a large language model as the brain to direct tools that interact with the real world.
+![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
+
 Direct a large language model to answer based only on context from documents
 ![RAG Pipeline](/images/rag-pipeline.png?raw=true "RAG Pipeline")
 
@@ -52,6 +55,7 @@ An Agent is a system that leverages an AI model to interact with its environment
  
  - [Overview](/agents/)
  - [Dummy Agent](/agents/dummy-agent/) An bare bones agent with mocked tool calls 
+ - [Smol Agent](/agents/smol-agent/) A template for using the SmolAgent framework with a Gradio web interface
 
 ## Getting Started
 
