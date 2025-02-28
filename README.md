@@ -2,7 +2,7 @@
 
 This repo contains a set of reference designs for various ML topics. A few examples of the types of things you can learn here:
 
-Leverage agents thatuse a large language model as the brain to direct tools that interact with the real world.
+Leverage agents that use a large language model as the brain to direct tools that interact with the real world.
 ![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
 
 Direct a large language model to answer based only on context from documents
