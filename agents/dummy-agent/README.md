@@ -6,10 +6,10 @@ Based on this notebook from the Hugging Face agent course https://huggingface.co
 
 You will need all of the following dependencies to run this example:
 
- - Hugging Face Token
+ - Hugging Face token
  - Python virtual environment
 
-## Anthropic API Key
+## Hugging Face token
 
 Log in to Hugging Face and retrieve your token from https://hf.co/settings/tokens
 
