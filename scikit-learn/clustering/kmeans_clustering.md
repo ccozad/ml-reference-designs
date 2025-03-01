@@ -86,3 +86,9 @@ sns.scatterplot(
 ```
 
 ![K-means clustering for seeds](/images/kmeans/seeds-kmeans.png?raw=true "K-means clustering for seeds")
+
+# Further Reading
+
+- [Scikit Learn, unsupervised learning, clustering](https://scikit-learn.org/stable/modules/clustering.html)
+- [k-means clustering with Python](https://www.datacamp.com/tutorial/k-means-clustering-python)
+- [k-means handout, Stanford University](https://stanford.edu/~cpiech/cs221/handouts/kmeans.html)
