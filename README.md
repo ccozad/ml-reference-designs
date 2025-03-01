@@ -107,6 +107,9 @@ Various examples that deal with grouping data points by a similarity metric.
 - [Cluster seed types using K-Means and scikit-learn](/scikit-learn/clustering/kmeans_clustering.ipynb)
 - [Cluster penguin species using DBSCAN and scikit-learn](/scikit-learn/clustering/dbscan_clustering.ipynb)
 
+Group items that are similar using only their attributes
+![K-means clustering for seeds](/images/kmeans/seeds-kmeans.png?raw=true "K-means clustering for seeds")
+
 ## Time Series
 
 Various examples that deal with time based data
