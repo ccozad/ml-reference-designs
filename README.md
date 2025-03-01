@@ -12,6 +12,8 @@ Examples in this repo cover the following industry domain problems:
    - Group observations into n groups based on equal variance
  - Customer Service
    - Context aware chat bots
+ - Event Planning
+   - Generate music playlists
  - Games
    - AI controlled NPCs 
  - Hospitality
@@ -43,6 +45,8 @@ An Agent is a system that leverages an AI model to interact with its environment
  - [Overview](/agents/)
  - [Dummy Agent](/agents/dummy-agent/) A bare bones agent with mocked tool calls 
  - [Smol Agent](/agents/smol-agent/) A template for using the SmolAgent framework with a Gradio web interface
+ - [Code Agents](/agents/code-agents/) Use the SmolAgent framework to create agents that generate code to call tools and perform calculations.
+   - [Playlist Agent](/agents/code-agents/playlist_agent.py) Search the internet and generate a music playlist for a wedding
 
 Leverage agents that use a large language model as the brain to direct tools that interact with the real world.
 ![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
