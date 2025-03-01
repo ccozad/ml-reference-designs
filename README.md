@@ -86,6 +86,9 @@ Recipes for working with images
 - [OpenCV annotate images](/opencv/opencv_annotate_images.md)
 - [OpenCV image enhancement](/opencv/opencv_image_enhancement.ipynb)
 
+Increase the effectiveness of OCR by preprocessing images
+![Adaptive threshold](/images/image-processing/adaptive-threshold.png?raw=true "Adaptive threshold")
+
 ## Regression
 
 Various examples that deal with predicting a value based on inputs
