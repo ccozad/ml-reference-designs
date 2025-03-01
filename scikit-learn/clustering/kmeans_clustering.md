@@ -18,8 +18,8 @@ df["Class"] = df["Class"].astype(int)
 df.head()
 ```
 
-| Area | Perimeter | Compactness | Length | Width | Asymetry Coefficient | Length of Kernel Groove | Class |
-| ---- | --------- | ----------- | ------ | ----- | -------------------- | ----------------------- | ----- |
+| Index | Area | Perimeter | Compactness | Length | Width | Asymetry Coefficient | Length of Kernel Groove | Class |
+| ----- | ---- | --------- | ----------- | ------ | ----- | -------------------- | ----------------------- | ----- |
 | 0 | 15.26 | 14.84 | 0.8710 | 5.763 | 3.312 | 2.221 | 5.220 | 1 |
 | 1 | 14.88 | 14.57 | 0.8811 | 5.554 | 3.333 | 1.018 | 4.956 | 1 |
 | 2 | 14.29 | 14.09 | 0.9050 | 5.291 | 3.337 | 2.699 | 4.825 | 1 |
