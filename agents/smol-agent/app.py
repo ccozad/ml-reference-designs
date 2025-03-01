@@ -2,7 +2,6 @@ import dotenv
 dotenv.load_dotenv()
 from smolagents import CodeAgent, HfApiModel,load_tool,tool
 import datetime
-import requests
 from zoneinfo import ZoneInfo
 import yaml
 from tools.final_answer import FinalAnswerTool
@@ -40,10 +39,6 @@ model = HfApiModel(
     model_id='Qwen/Qwen2.5-Coder-32B-Instruct',# it is possible that this model may be overloaded
     custom_role_conversions=None,
 )
-
-
-# Import tool from Hub
-image_generation_tool = load_tool("agents-course/text-to-image", trust_remote_code=True)
 
 with open("prompts.yaml", 'r') as stream:
     prompt_templates = yaml.safe_load(stream)
