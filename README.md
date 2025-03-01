@@ -104,7 +104,7 @@ Various examples that deal with placing inputs into one or more categories
 ## Clustering
 
 Various examples that deal with grouping data points by a similarity metric.
-- [Cluster seed types using K-Means and scikit-learn](/scikit-learn/clustering/kmeans_clustering.ipynb)
+- [Cluster seed types using K-Means and scikit-learn](/scikit-learn/clustering/kmeans_clustering.md)
 - [Cluster penguin species using DBSCAN and scikit-learn](/scikit-learn/clustering/dbscan_clustering.ipynb)
 
 Group items that are similar using only their attributes
