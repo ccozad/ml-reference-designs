@@ -36,9 +36,59 @@ HF_TOKEN=<your token>
 
 # Running the code
 
+## Menu agent
+
+Run the command `python menu_agent.py`. This will start a sequence that calls a custom tool and uses the model's built-in knowledge to form the menu.
+
+```text
+python menu_agent.py
+╭─────────────────────────────────────────────────────────────────────── New run ───────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                       │
+│ Prepare a formal menu for the party.                                                                                                                  │
+│                                                                                                                                                       │
+╰─ HfApiModel - Qwen/Qwen2.5-Coder-32B-Instruct ────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ─ Executing parsed code: ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+  occasion = "formal party"                                                                                                                              
+  menu_suggestion = suggest_menu(occasion=occasion)                                                                                                      
+  print(menu_suggestion)                                                                                                                                 
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+Execution logs:
+3-course dinner with wine and dessert.
+
+Out: None
+[Step 0: Duration 3.53 seconds| Input tokens: 2,066 | Output tokens: 66]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ─ Executing parsed code: ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+  # Define the courses for the formal menu                                                                                                               
+  appetizer = "Crab Cakes with Lemon Butter Dipping Sauce"                                                                                               
+  main_course = "Grilled Rack of Lamb with Red Wine Reduction and Garlic Mashed Potatoes"                                                                
+  dessert = "Chocolate Lava Cake with Vanilla Ice Cream"                                                                                                 
+                                                                                                                                                         
+  # Combine the courses into a formal menu                                                                                                               
+  formal_menu = f"**Formal Dinner Menu**\n\n**Appetizer:** {appetizer}\n**Main Course:** {main_course}\n**Dessert:** {dessert}"                          
+                                                                                                                                                         
+  print(formal_menu)                                                                                                                                     
+  final_answer(formal_menu)                                                                                                                              
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+Execution logs:
+**Formal Dinner Menu**
+
+**Appetizer:** Crab Cakes with Lemon Butter Dipping Sauce
+**Main Course:** Grilled Rack of Lamb with Red Wine Reduction and Garlic Mashed Potatoes
+**Dessert:** Chocolate Lava Cake with Vanilla Ice Cream
+
+Out - Final answer: **Formal Dinner Menu**
+
+**Appetizer:** Crab Cakes with Lemon Butter Dipping Sauce
+**Main Course:** Grilled Rack of Lamb with Red Wine Reduction and Garlic Mashed Potatoes
+**Dessert:** Chocolate Lava Cake with Vanilla Ice Cream
+[Step 1: Duration 8.17 seconds| Input tokens: 4,296 | Output tokens: 228]
+```
+
 ## Playlist agent
 
-Run the command `python playlist_agent.py`. This will initialize.
+Run the command `python playlist_agent.py`. This will start a squence that searches the internet for playlists and summarizes findings.
 
 ```text
 python playlist_agent.py
