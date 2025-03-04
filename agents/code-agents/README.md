@@ -36,6 +36,63 @@ HF_TOKEN=<your token>
 
 # Running the code
 
+## Duration agent
+
+Run the command `python duration_agent.py`. This will generate code to add up the times listed in the prompt.
+
+```text
+python duration_agent.py
+╭────────────────────────────────────────────────── New run ──────────────────────────────────────────────────╮
+│                                                                                                             │
+│ We need to prepare for a party. Here are the tasks:                                                         │
+│     1. Prepare the drinks - 30 minutes                                                                      │
+│     2. Decorate the mansion - 60 minutes                                                                    │
+│     3. Set up the menu - 45 minutes                                                                         │
+│     4. Prepare the music and playlist - 45 minutes                                                          │
+│                                                                                                             │
+│     If we start right now, at what time will the party be ready?                                            │
+│                                                                                                             │
+╰─ HfApiModel - Qwen/Qwen2.5-Coder-32B-Instruct ──────────────────────────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ─ Executing parsed code: ──────────────────────────────────────────────────────────────────────────────────── 
+  from datetime import datetime, timedelta                                                                     
+                                                                                                               
+  # Time durations for each task in minutes                                                                    
+  preparing_drinks_time = 30                                                                                   
+  decorating_mansion_time = 60                                                                                 
+  setting_up_menu_time = 45                                                                                    
+  preparing_music_playlist_time = 45                                                                           
+                                                                                                               
+  # Total time required in minutes                                                                             
+  total_time_minutes = preparing_drinks_time + decorating_mansion_time + setting_up_menu_time +                
+  preparing_music_playlist_time                                                                                
+  # Convert total time to a timedelta                                                                          
+  total_time = timedelta(minutes=total_time_minutes)                                                           
+                                                                                                               
+  # Get current time                                                                                           
+  current_time = datetime.now()                                                                                
+                                                                                                               
+  # Calculate the end time                                                                                     
+  end_time = current_time + total_time                                                                         
+                                                                                                               
+  # Format the end_time as a string in a tool call                                                             
+  end_time_formatted = end_time.strftime("%Y-%m-%d %H:%M:%S")                                                  
+                                                                                                               
+  print("The party will be ready at:", end_time_formatted)                                                     
+ ───────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+Execution logs:
+The party will be ready at: 2025-03-04 01:01:21
+
+Out: None
+[Step 0: Duration 17.95 seconds| Input tokens: 2,096 | Output tokens: 218]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ─ Executing parsed code: ──────────────────────────────────────────────────────────────────────────────────── 
+  final_answer("2025-03-04 01:01:21")                                                                          
+ ───────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+Out - Final answer: 2025-03-04 01:01:21
+[Step 1: Duration 4.07 seconds| Input tokens: 4,694 | Output tokens: 290]
+```
+
 ## Menu agent
 
 Run the command `python menu_agent.py`. This will start a sequence that calls a custom tool and uses the model's built-in knowledge to form the menu.
