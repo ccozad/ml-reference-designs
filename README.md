@@ -16,6 +16,8 @@ Examples in this repo cover the following industry domain problems:
    - Generate music playlists
    - Generate menus for specific occasions
    - Calculate the total time needed for setup
+ - Fitness
+   - Generate a strength training program
  - Games
    - AI controlled NPCs 
  - Hospitality
@@ -51,6 +53,8 @@ An Agent is a system that leverages an AI model to interact with its environment
    - [Duration Agent](/agents/code-agents/duration_agent.py) Generate code that uses authorized imports to add up the times listed in the prompt.
    - [Menu Agent](/agents/code-agents/menu_agent.py) Call a custom tool to generate a menu prompt and populate using the model's built in knowledge
    - [Playlist Agent](/agents/code-agents/playlist_agent.py) Search the internet and generate a music playlist for a wedding
+ - [Workout Agents](/agents/workout-agents/) Use the SmolAgent framework to perform fitness related planning tasks
+   - [Strength Plan Agent](/agents/workout-agents/strength_plan_agent.py) An agent that considers how many reps you can do at a given weight and generates a strength training program
 
 Leverage agents that use a large language model as the brain to direct tools that interact with the real world.
 ![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
