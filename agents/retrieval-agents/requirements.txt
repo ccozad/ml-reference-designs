@@ -1,2 +1,4 @@
 smolagents
 python-dotenv
+langchain-community
+rank_bm25

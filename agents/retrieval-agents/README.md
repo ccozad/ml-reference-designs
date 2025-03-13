@@ -389,3 +389,64 @@ This fitness plan combines the best elements from a 12-week full-body transforma
 ### Conclusion
 This comprehensive plan provides a structured approach to transforming your body, both physically and mentally. Stick with the plan, stay motivated, and celebrate your progress along the way.
 ```
+
+## NIST Cyber Security Retrieval Agent
+
+```text
+python nist_csf_retrieval_agent.py
+╭────────────────────────────────────────────────── New run ──────────────────────────────────────────────────╮
+│                                                                                                             │
+│ List security practices related to commuinication in the organization. Use only information from the NIST   │
+│ Cyber Security Framework. If you don't have the information, please say you don't know.                     │
+│                                                                                                             │
+╰─ HfApiModel - Qwen/Qwen2.5-Coder-32B-Instruct ──────────────────────────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ─ Executing parsed code: ──────────────────────────────────────────────────────────────────────────────────── 
+  communication_security_practices = nist_cybersecurity_retriever(query="security practices related to communication in the organization")
+  print(communication_security_practices)
+ ───────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+Execution logs:
+
+Retrieved practices:
+
+
+===== Practice 0 =====
+Lines of communication across the organization are established for cybersecurity risks, including risks from   
+suppliers and other third parties
+
+===== Practice 1 =====
+Outcomes, capabilities, and services that the organization depends on are understood and communicated
+
+===== Practice 2 =====
+Critical objectives, capabilities, and services that external stakeholders depend on or expect from the        
+organization are understood and communicated
+
+===== Practice 3 =====
+Risk management objectives are established and agreed to by organizational stakeholders
+
+===== Practice 4 =====
+Cybersecurity risk management activities and outcomes are included in enterprise risk management processes     
+
+Out: None
+[Step 1: Duration 4.47 seconds| Input tokens: 2,115 | Output tokens: 78]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ─ Executing parsed code: ──────────────────────────────────────────────────────────────────────────────────── 
+  communication_security_practices = [
+      "Lines of communication across the organization are established for cybersecurity risks, including 
+  risks from suppliers and other third parties",
+      "Outcomes, capabilities, and services that the organization depends on are understood and communicated",
+      "Critical objectives, capabilities, and services that external stakeholders depend on or expect from the organization are understood and communicated",
+      "Risk management objectives are established and agreed to by organizational stakeholders", 
+      "Cybersecurity risk management activities and outcomes are included in enterprise risk management processes"
+  ]
+  final_answer(communication_security_practices)
+ ───────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+Out - Final answer: ['Lines of communication across the organization are established for cybersecurity risks,  
+including risks from suppliers and other third parties', 'Outcomes, capabilities, and services that the        
+organization depends on are understood and communicated', 'Critical objectives, capabilities, and services that
+external stakeholders depend on or expect from the organization are understood and communicated', 'Risk        
+management objectives are established and agreed to by organizational stakeholders', 'Cybersecurity risk       
+management activities and outcomes are included in enterprise risk management processes']
+[Step 2: Duration 7.96 seconds| Input tokens: 4,529 | Output tokens: 230]
+['Lines of communication across the organization are established for cybersecurity risks, including risks from suppliers and other third parties', 'Outcomes, capabilities, and services that the organization depends on are understood and communicated', 'Critical objectives, capabilities, and services that external stakeholders depend on or expect from the organization are understood and communicated', 'Risk management objectives are established and agreed to by organizational stakeholders', 'Cybersecurity risk management activities and outcomes are included in enterprise risk management processes']
+```
