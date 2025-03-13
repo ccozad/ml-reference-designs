@@ -55,6 +55,8 @@ An Agent is a system that leverages an AI model to interact with its environment
    - [Playlist Agent](/agents/code-agents/playlist_agent.py) Search the internet and generate a music playlist for a wedding
  - [Workout Agents](/agents/workout-agents/) Use the SmolAgent framework to perform fitness related planning tasks
    - [Strength Plan Agent](/agents/workout-agents/strength_plan_agent.py) An agent that considers how many reps you can do at a given weight and generates a strength training program
+- [Retrieval Agents](/agents/retrieval-agents/) Retrieve data from specialized systems using the SmolAgent framework.
+   - [Basic Retrieval Agent](/agents/retrieval-agents/basic_retrieval_agent.py) Search the internet using Duck Duck Go and form a total body fitness plan
 
 Leverage agents that use a large language model as the brain to direct tools that interact with the real world.
 ![AI Agent](/images/ai-agents.png?raw=true "AI Agent")

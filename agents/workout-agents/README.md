@@ -38,7 +38,7 @@ HF_TOKEN=<your token>
 
 ## Strength training plan agent
 
-Run the command `strength_plan_agent.py` to generate a strength training program based on number of reps for a given weight.
+Run the command `python strength_plan_agent.py` to generate a strength training program based on number of reps for a given weight.
 
 ```text
 python strength_plan_agent.py
