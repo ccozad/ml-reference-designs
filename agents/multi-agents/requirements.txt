@@ -1,0 +1,6 @@
+python-dotenv
+smolagents[litellm]
+matplotlib
+geopandas
+shapely
+kaleido
