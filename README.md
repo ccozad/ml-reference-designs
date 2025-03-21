@@ -58,6 +58,8 @@ An Agent is a system that leverages an AI model to interact with its environment
 - [Retrieval Agents](/agents/retrieval-agents/) Retrieve data from specialized systems using the SmolAgent framework.
    - [Basic Retrieval Agent](/agents/retrieval-agents/basic_retrieval_agent.py) Search the internet using Duck Duck Go and form a total body fitness plan
    - [NIST CSF Retrieval Agent](/agents/retrieval-agents/nist_csf_retrieval_agent.py) Use semantic search (search by meaning) against specialized NIST Cyber Security Framework practices
+ - [Multi-agents](/agents/multi-agents/) Multiple agents working together
+   - [Park Planner Multi-Agent](/agents/multi-agents/park_planner_multi_agent.py) Search the internet for national parks and calculate travel time by cargo plane. One agent can search the internet and the other agent does planning and distance calculations
 
 Leverage agents that use a large language model as the brain to direct tools that interact with the real world.
 ![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
