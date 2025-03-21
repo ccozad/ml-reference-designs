@@ -9,10 +9,6 @@ model = HfApiModel(model_id="Qwen/Qwen2.5-Coder-32B-Instruct")
 search_tool = DuckDuckGoSearchTool()
 visit_webpage_tool = VisitWebpageTool()
 
-model = HfApiModel(
-    "Qwen/Qwen2.5-Coder-32B-Instruct", max_tokens=8096
-)
-
 web_agent = CodeAgent(
     model=model,
     tools=[

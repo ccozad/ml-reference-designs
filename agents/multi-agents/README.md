@@ -473,7 +473,7 @@ CodeAgent | Qwen/Qwen2.5-Coder-32B-Instruct
 ╰─ HfApiModel - Qwen/Qwen2.5-Coder-32B-Instruct ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ────────────────────────────────────────────────────────────────────────────────── Initial plan ───────────────────────────────────────────────────────────────────────────────────
 Here is the plan of action that I will follow to solve the task:
-```
+
 1. Assign the task to `web_agent` to find and compile a list of all US national parks along with their geographical coordinates.
 2. Once the list of US national parks and their coordinates is obtained, iterate through the list and for each park, use the `calculate_cargo_travel_time` tool to calculate the   
 travel time from Sacramento, CA (38.581667, -121.494444) to the park's coordinates.
@@ -482,13 +482,11 @@ travel time from Sacramento, CA (38.581667, -121.494444) to the park's coordinat
 5. Use the `final_answer` tool to return the compiled pandas dataframe.
 
 <end_plan>
-```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Output message of the LLM: ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Thought: The first step is to assign the task to the `web_agent` to find and compile a list of all US national parks along with their geographical coordinates.
 ```                                                                                                                                                                                
-Code:                                                                                                                                                                              
-```py                                                                                                                                                                              
+Code:                                                                                                                                                                                                                                                                                                                                                            
 task_description = "Find and compile a list of all US national parks along with their geographical coordinates. Return the data in a structured format, such as a list of          
 dictionaries where each dictionary contains the name of the park and its coordinates (latitude and longitude)."                                                                    
 web_agent(task=task_description)                                                                                                                                                   
@@ -546,8 +544,7 @@ Output message of the LLM: ─────────────────�
 Thought: I have received the list of US national parks along with their coordinates. Now, I will iterate through this list and use the `calculate_cargo_travel_time` tool to       
 calculate the travel time from Sacramento, CA (38.581667, -121.494444) to each park's coordinates. Then, I will store this information in a pandas dataframe.                      
                                                                                                                                                                                    
-Code:                                                                                                                                                                              
-```py                                                                                                                                                                              
+Code:                                                                                                                                                                                                                                                                                                                                                           
 import pandas as pd                                                                                                                                                                
                                                                                                                                                                                    
 # Coordinates of Sacramento, CA
@@ -686,7 +683,7 @@ Sacramento, CA. Now, I will pass this dataframe to the `final_answer` tool to re
 Code:                                                                                                                                                                              
 ```py                                                                                                                                                                              
 final_answer(df)                                                                                                                                                                   
-```<end_code>                                                                                                                                                                      
+<end_code>                                                                                                                                                                      
  ─ Executing parsed code: ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
   final_answer(df)                                                                                                                                                                 
  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
