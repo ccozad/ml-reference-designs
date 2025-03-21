@@ -485,12 +485,10 @@ travel time from Sacramento, CA (38.581667, -121.494444) to the park's coordinat
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Output message of the LLM: ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Thought: The first step is to assign the task to the `web_agent` to find and compile a list of all US national parks along with their geographical coordinates.
-```                                                                                                                                                                                
 Code:                                                                                                                                                                                                                                                                                                                                                            
 task_description = "Find and compile a list of all US national parks along with their geographical coordinates. Return the data in a structured format, such as a list of          
 dictionaries where each dictionary contains the name of the park and its coordinates (latitude and longitude)."                                                                    
 web_agent(task=task_description)                                                                                                                                                   
-```                                                                                                                                                                                
 <end_code>                                                                                                                                                                         
  ─ Executing parsed code: ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
   Code:                                                                                                                                                                            
@@ -507,11 +505,9 @@ properly.
                                                                                                                                                                                    
 Thought: I'll reformat the task description and call the `web_agent` tool again to retrieve the list of US national parks along with their coordinates.
 Code:                                                                                                                                                                              
-```py                                                                                                                                                                              
 task_description = "Find and compile a list of all US national parks along with their geographical coordinates. Return the data in a structured format, such as a list of
 dictionaries where each dictionary contains the name of the park and its latitude and longitude."                                                                                  
 web_agent(task=task_description)
-```                                                                                                                                                                                
 <end_code>                                                                                                                                                                         
  ─ Executing parsed code: ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
   task_description = "Find and compile a list of all US national parks along with their geographical coordinates. Return the data in a structured format, such as a list of        
@@ -593,8 +589,7 @@ for park in national_parks_data:
                                                                                                                                                                                    
 # Convert results to DataFrame
 df = pd.DataFrame(results)
-print(df)                                                                                                                                                                          
-```                                                                                                                                                                                
+print(df)
 <end_code>                                                                                                                                                                         
  ─ Executing parsed code: ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
   import pandas as pd                                                                                                                                                              
@@ -681,7 +676,6 @@ Thought: The pandas dataframe has been successfully created and printed, contain
 Sacramento, CA. Now, I will pass this dataframe to the `final_answer` tool to return the result.
                                                                                                                                                                                    
 Code:                                                                                                                                                                              
-```py                                                                                                                                                                              
 final_answer(df)                                                                                                                                                                   
 <end_code>                                                                                                                                                                      
  ─ Executing parsed code: ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
