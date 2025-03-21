@@ -37,6 +37,7 @@ Examples in this repo cover the following industry domain problems:
    - Create AI agents that can interact with the real world
  - Transportation
    - Seasonal airline traffic prediction
+   - Search the internet for locations, calculate travel times to all destinations
  - Zoology
    - Group observations based on data density
 
