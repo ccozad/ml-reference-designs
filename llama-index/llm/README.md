@@ -1,30 +1,24 @@
-# Introduction
-
-The SmolAgent framework is one of the many options that abstract instruct interactions with a model and the agent loop of "think, act and observe". Based on https://huggingface.co/learn/agents-course/unit1/tutorial 
-
-![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
-
 # Dependencies
 
 You will need all of the following dependencies to run this example:
 
- - Hugging Face token
+ - OpenAI token
  - Python virtual environment
 
 ## Hugging Face token
 
-Log in to Hugging Face and retrieve your token from https://hf.co/settings/tokens
+Log in to OpenAI and generate an API key.
 
 Create an environment file named `.env`. Add the following line to your environment file:
 
 ```ini
-HF_TOKEN=<your token>
+OPENAI_API_KEY=<your key>
 ```
 
 ## Python Virtual Environment
 
- - Move to the smol-agent folder
-   - `cd <agents/smol-agent>`
+ - Move to the llm folder
+   - `cd <llama-index/llm>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
    - On Windows: `python -m venv .venv`
@@ -42,8 +36,8 @@ HF_TOKEN=<your token>
 
 # Running the code
 
-## Gradio app
-
-This example shows how to run a Smol Agent based AI in a browser using Gradio
-
-Run the command `python app.py`. This will start the Gradio web server running on local host. Open the local host address in a browser to interact like in the screen shot above.
+```
+python app.py
+Question:  What are some shape namees in geometry?
+Answer:  Some shape names in geometry include circle, triangle, square, rectangle, pentagon, hexagon, octagon, and sphere.
+```

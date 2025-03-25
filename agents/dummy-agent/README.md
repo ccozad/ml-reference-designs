@@ -21,7 +21,7 @@ HF_TOKEN=<your token>
 
 ## Python Virtual Environment
 
- - Move to the hello world folder
+ - Move to the dummy-agent folder
    - `cd <agents/dummy-agent>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`

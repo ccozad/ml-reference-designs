@@ -17,7 +17,7 @@ HF_TOKEN=<your token>
 
 ## Python Virtual Environment
 
- - Move to the hello world folder
+ - Move to the multi-agents folder
    - `cd <agents/multi-agents>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
