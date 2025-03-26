@@ -177,6 +177,10 @@ Form graphs to model decisions and loops with AI
 - [Local Llama 3 chat demo](/llm/llama-3/hello-llama-3.ipynb)
 - [Run Llama 3 on an AWS EC2 instance](/llm/llama-3/hello-world/README.md)
 
+### Llama Index
+
+- [Call ChatGPT](/llama-index/llm/)
+
 ## Small Language Models
 
 ### Phi-3
