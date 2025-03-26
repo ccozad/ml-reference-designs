@@ -179,7 +179,7 @@ Form graphs to model decisions and loops with AI
 
 ### Llama Index
 
-- [Call ChatGPT](/llama-index/llm/)
+- [Call ChatGPT with a prompt template](/llama-index/llm/)
 
 ## Small Language Models
 
