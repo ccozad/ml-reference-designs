@@ -2,7 +2,9 @@
 
 This example shows how an assistant can be used to make travel arrangement. The work is based on a detailed tutorial by LangGraph https://langchain-ai.github.io/langgraph/tutorials/customer-support/customer-support/ 
 
- - The zero-shot agent represents how a fully automated workflow might go. The agent may take expensive actions like booking a flight without user approval. 
+ - The zero-shot agent represents how a fully automated workflow might go. The agent may take expensive actions like booking a flight without user approval.
+ - The confirmation agent asks the user if it is ok to proceed before each action. This agent asks for confirmation after EVERY action, even non destructive actions
+ - The smart confirm agent only asks for confirmation on actions that write to the database.
 
 # Dependencies
 
@@ -194,4 +196,67 @@ Your seat assignment of 18E in economy class remains the same. Please let me kno
 Since this was just a change of flight date/time and not a new booking, your ticket number will stay the same as before. Feel free to check your updated flight details online as well using this ticket number.
 
 Travel safely and have a great trip!
+```
+
+## Confirmation agent
+
+Run the command `python confirmation agent`
+
+```text
+python confirmation_agent.py
+
+1. Initializing the database...
+ - Database exists locally.
+2. Initializing the LLM...
+ - LLM initialized.
+3. Initializing the assistant...
+4. Running the assistant...
+================================ Human Message =================================
+
+Hi there, what time is my flight?
+================================== Ai Message ==================================
+
+[{'text': "To check the details of your upcoming flight, I'll need to fetch your ticket information first. Let me invoke the tool to retrieve your tickets and associated flight details:", 'type': 'text'}, {'id': 'toolu_01GZPoqPT1BQjx4HBu8VHB24', 'input': {}, 'name': 'fetch_user_flight_information', 'type': 'tool_use'}]
+Tool Calls:
+  fetch_user_flight_information (toolu_01GZPoqPT1BQjx4HBu8VHB24)
+ Call ID: toolu_01GZPoqPT1BQjx4HBu8VHB24
+  Args:
+Do you approve of the above actions? Type 'y' to continue; otherwise, explain your requested change.
+
+y
+================================ Human Message =================================
+
+Am I allowed to update my flight to something sooner? I want to leave later today.
+================================== Ai Message ==================================
+
+[{'text': 'Okay, let me first check the company policies to see if updating flights on short notice is permitted:', 'type': 'text'}, {'id': 'toolu_01PN4jBY2HWaTHxHNX1Rj5bQ', 'input': {'query': 'updating flights on short notice'}, 'name': 'lookup_policy', 'type': 'tool_use'}]
+Tool Calls:
+  lookup_policy (toolu_01PN4jBY2HWaTHxHNX1Rj5bQ)
+ Call ID: toolu_01PN4jBY2HWaTHxHNX1Rj5bQ
+  Args:
+    query: updating flights on short notice
+Do you approve of the above actions? Type 'y' to continue; otherwise, explain your requested change.
+
+y
+================================ Human Message =================================
+
+Update my flight to sometime next week then
+================================== Ai Message ==================================
+
+[{'text': 'Okay, let me search for available flights for you next week instead:', 'type': 'text'}, {'id': 'toolu_014Z8LmfvQR43mfJMBMP9vfd', 'input': {'start_time': '2025-04-07', 'end_time': '2025-04-14'}, 'name': 'search_flights', 'type': 'tool_use'}]
+Tool Calls:
+  search_flights (toolu_014Z8LmfvQR43mfJMBMP9vfd)
+ Call ID: toolu_014Z8LmfvQR43mfJMBMP9vfd
+  Args:
+    start_time: 2025-04-07
+    end_time: 2025-04-14
+Do you approve of the above actions? Type 'y' to continue; otherwise, explain your requested change.
+
+no, I changed my mind
+================================ Human Message =================================
+
+That's all for today, thanks!
+================================== Ai Message ==================================
+
+You're welcome! Thank you for reaching out to Swiss Airlines. I'm glad I could provide some information about our policies for updating and canceling flights, even though we didn't end up needing to make any changes this time. Feel free to contact us again whenever you need assistance with booking, changing reservations, or have any other questions. We're always happy to help make your travel experience smooth and enjoyable. Have a great rest of your day!
 ```
