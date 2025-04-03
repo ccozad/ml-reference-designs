@@ -1,6 +1,6 @@
 # Introduction
 
-This example shows how an assistant can be used to make travel arrangement. The work is based on a detailed tutorial by LangGraph https://langchain-ai.github.io/langgraph/tutorials/customer-support/customer-support/ 
+This example shows how an assistant can be used to make travel arrangements. The work is adapted from a detailed tutorial by LangGraph https://langchain-ai.github.io/langgraph/tutorials/customer-support/customer-support/  The main adjustments involve getting the code to run using stand alone python files instead of a notebook.
 
  - The `zero-shot agent` represents how a fully automated workflow might go. The agent may take expensive actions like booking a flight without user approval.
  - The `confirmation agent` asks the user if it is ok to proceed before each action. This agent asks for confirmation after EVERY action, even non destructive actions
