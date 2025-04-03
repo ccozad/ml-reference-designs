@@ -21,7 +21,7 @@ def download_database(db_url: str, local_file: str, backup_file:str, overwrite: 
 
 
 # Convert the flights to present time for our tutorial
-def update_dates(file):
+def update_dates(file, backup_file):
     shutil.copy(backup_file, file)
     conn = sqlite3.connect(file)
     cursor = conn.cursor()

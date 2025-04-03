@@ -1,16 +1,21 @@
+import dotenv
+dotenv.load_dotenv()
 import requests
 import shutil
 import uuid
+import re
+import openai
+from datetime import datetime
+from langchain_anthropic import ChatAnthropic
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, StateGraph, START
 from langgraph.prebuilt import tools_condition
+from langchain_core.prompts import ChatPromptTemplate
 from utils.database import database_exists, download_database, update_dates
-from utils.vectorstore import VectorStoreRetriever
 from utils.utils import _print_event, create_tool_node_with_fallback
-from tools.swiss_air_policy import SwissAirPolicy
-from tools.mock_flights import MockFlights
-from zero_shot.state import State
-from zero_shot.assistant import Assistant
+from tools.swiss_air_policy import lookup_policy
+from tools.mock_flights import fetch_user_flight_information, search_flights, update_ticket_to_new_flight, cancel_ticket
+from zero_shot.assistant import Assistant, State
 
 # 1. Initialize the database
 print("\n1. Initializing the database...")
@@ -27,36 +32,14 @@ else:
     download_database(db_url, local_file, backup_file, overwrite=False)
     print(" - Database downloaded.")
     print(" - Updating dates...")
-    update_dates(local_file)
+    update_dates(local_file, backup_file)
     print(" - Dates updated.")
 
-# 2. Initialize the vectorstore
-print("\n2. Initializing the vectorstore...")
-# URL of the FAQ file 
-faq_url = "https://storage.googleapis.com/benchmarks-artifacts/travel-db/swiss_faq.md"
-# Download the FAQ file
-response = requests.get(faq_url)
-response.raise_for_status()
-faq_text = response.text
 
-docs = [{"page_content": txt} for txt in re.split(r"(?=\n##)", faq_text)]
-retriever = VectorStoreRetriever.from_docs(docs, openai.Client())
-print(" - Vectorstore initialized.")
-
-# 3. Initialize the tools
-print("\n3. Initializing the tools...")
-# Initialize the policy tool
-print(" - Initializing the policy tool...")
-policy = SwissAirPolicy(retriever)
-print(" - Policy tool initialized.")
-# Initialize the LLM
-print(" - Initializing the LLM...")
+# 2. Initialize the LLM
+print("2. Initializing the LLM...")
 llm = ChatAnthropic(model="claude-3-sonnet-20240229", temperature=1)
 print(" - LLM initialized.")
-# Initialize the flight tools
-print(" - Initializing the flight tools...")
-flights = MockFlights(local_file)
-print(" - Flight tools initialized.")
 
 primary_assistant_prompt = ChatPromptTemplate.from_messages(
     [
@@ -75,16 +58,16 @@ primary_assistant_prompt = ChatPromptTemplate.from_messages(
 
 tools = [
     # Swiss Air policy tool
-    policy.lookup_policy,
+    lookup_policy,
     # Flight tools
-    flights.fetch_user_flight_information,
-    flights.search_flights,
-    flights.update_ticket_to_new_flight,
-    flights.cancel_ticket
+    fetch_user_flight_information,
+    search_flights,
+    update_ticket_to_new_flight,
+    cancel_ticket
 ]
 
-# 4. Initialize the assistant
-print("\n4. Initializing the assistant...")
+# 3. Initialize the assistant
+print("3. Initializing the assistant...")
 assistant_runnable = primary_assistant_prompt | llm.bind_tools(tools)
 
 builder = StateGraph(State)
@@ -105,8 +88,8 @@ builder.add_edge("tools", "assistant")
 memory = MemorySaver()
 graph = builder.compile(checkpointer=memory)
 
-# 5. Run the assistant
-print("\n5. Running the assistant...")
+# 4. Run the assistant
+print("4. Running the assistant...")
 questions = [
     "Hi there, what time is my flight?",
     "Am I allowed to update my flight to something sooner? I want to leave later today.",

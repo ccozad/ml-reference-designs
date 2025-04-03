@@ -1,7 +1,11 @@
-from langchain_anthropic import ChatAnthropic
-from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import Runnable, RunnableConfig
+from typing import Annotated
+from typing_extensions import TypedDict
+from langgraph.graph.message import AnyMessage, add_messages
+
+class State(TypedDict):
+    messages: Annotated[list[AnyMessage], add_messages]
 
 class Assistant:
     def __init__(self, runnable: Runnable):
