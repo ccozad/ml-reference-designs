@@ -6,6 +6,100 @@ This example shows how an assistant can be used to make travel arrangement. The 
  - The `confirmation agent` asks the user if it is ok to proceed before each action. This agent asks for confirmation after EVERY action, even non destructive actions
  - The `smart confirm agent` only asks for confirmation on actions that write to the database.
 
+ Simplified exchange for smart confirm agent:
+
+ ```text
+python smart_confirm_agent.py
+
+1. Initializing the database...
+2. Initializing the LLM...
+3. Initializing the assistant...
+4. Running the assistant...
+================================ Human Message =================================
+
+Hi there, what time is my flight?
+
+================================== Ai Message ==================================
+
+Let me check the details of your upcoming flight:
+
+================================= Tool Message =================================
+
+Name: fetch_user_flight_information
+
+================================== Ai Message ==================================
+
+Based on the flight information retrieved, your flight LX0112 from CDG to BSL is scheduled to depart at 1:26 AM on April 3rd, 2025.
+
+================================ Human Message =================================
+
+Am I allowed to update my flight to something sooner? I want to leave later today.
+
+================================== Ai Message ==================================
+
+Let me first check the company policies on updating flights:
+
+================================= Tool Message =================================
+
+Name: lookup_policy
+
+================================== Ai Message ==================================
+
+Based on the policy details, it seems you should be able to update your flight to an earlier one today, as long as your ticket number starts with 724 (which it does) and the new flight has availability. There are some restrictions like not being able to change origin/destination, but changing the flight time should be allowed.\n\nLet me search for some earlier flight options from CDG to BSL today:
+
+================================= Tool Message =================================
+
+Name: search_flights
+
+================================== Ai Message ==================================
+
+The search only returned your originally scheduled flight LX0112 at 1:26 AM. Let me try expanding the search window:
+
+================================= Tool Message =================================
+
+Name: search_flights
+
+================================== Ai Message ==================================
+
+Unfortunately it still seems there are no earlier flights today from CDG to BSL. The only available option appears to be your originally scheduled LX0112 flight at 1:26 AM on April 3rd.
+
+Let me know if you would still like to update to an earlier flight, or if you have any other questions!
+
+================================ Human Message =================================
+
+Update my flight to sometime next week then
+
+================================== Ai Message ==================================
+
+Okay, let's look for flights from CDG to BSL next week
+
+================================= Tool Message =================================
+
+Name: search_flights
+
+================================== Ai Message ==================================
+
+There are several flight options from CDG to BSL next week. Which day and time would you prefer to fly? I can then update your ticket to that new flight.
+
+================================ Human Message =================================
+
+The next available option is great
+
+================================== Ai Message ==================================
+
+Got it, let's update your ticket to the next available flight from CDG to BSL:
+
+Do you approve of the above actions? Type 'y' to continue; otherwise, explain your requested change.
+
+no, I changed my mind
+================================ Human Message =================================
+
+That's all for today, thanks!
+================================== Ai Message ==================================
+
+You're welcome! Thank you for reaching out to Swiss Airlines. Have a great rest of your day, and a pleasant flight next week. Don't hesitate to contact us again if you need any further assistance with your travel plans. Safe travels!
+ ```
+
 # Dependencies
 
 You will need all of the following dependencies to run this example:
