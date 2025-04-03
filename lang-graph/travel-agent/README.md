@@ -2,9 +2,9 @@
 
 This example shows how an assistant can be used to make travel arrangement. The work is based on a detailed tutorial by LangGraph https://langchain-ai.github.io/langgraph/tutorials/customer-support/customer-support/ 
 
- - The zero-shot agent represents how a fully automated workflow might go. The agent may take expensive actions like booking a flight without user approval.
- - The confirmation agent asks the user if it is ok to proceed before each action. This agent asks for confirmation after EVERY action, even non destructive actions
- - The smart confirm agent only asks for confirmation on actions that write to the database.
+ - The `zero-shot agent` represents how a fully automated workflow might go. The agent may take expensive actions like booking a flight without user approval.
+ - The `confirmation agent` asks the user if it is ok to proceed before each action. This agent asks for confirmation after EVERY action, even non destructive actions
+ - The `smart confirm agent` only asks for confirmation on actions that write to the database.
 
 # Dependencies
 
@@ -48,7 +48,6 @@ OPENAI_API_KEY=<your key>
 ## Zero shot agent
 
 Run the command `python zero_shot_agent.py`
-
 
 ``` text
 python zero_shot_agent.py
@@ -259,4 +258,146 @@ That's all for today, thanks!
 ================================== Ai Message ==================================
 
 You're welcome! Thank you for reaching out to Swiss Airlines. I'm glad I could provide some information about our policies for updating and canceling flights, even though we didn't end up needing to make any changes this time. Feel free to contact us again whenever you need assistance with booking, changing reservations, or have any other questions. We're always happy to help make your travel experience smooth and enjoyable. Have a great rest of your day!
+```
+
+## Smart confirm agent
+
+Run the command `python smart_confirm_agent.py`
+
+```text
+python smart_confirm_agent.py
+
+1. Initializing the database...
+ - Database does not exist locally. Downloading...
+ - Database downloaded.
+ - Updating dates...
+ - Dates updated.
+2. Initializing the LLM...
+ - LLM initialized.
+3. Initializing the assistant...
+4. Running the assistant...
+================================ Human Message =================================
+
+Hi there, what time is my flight?
+================================== Ai Message ==================================
+
+[{'text': 'Let me check the details of your upcoming flight:', 'type': 'text'}, {'id': 'toolu_01RhkKhveXL3YhTLtmrtUAex', 'input': {}, 'name': 'fetch_user_flight_information', 'type': 'tool_use'}]
+Tool Calls:
+  fetch_user_flight_information (toolu_01RhkKhveXL3YhTLtmrtUAex)
+ Call ID: toolu_01RhkKhveXL3YhTLtmrtUAex
+  Args:
+================================= Tool Message =================================
+Name: fetch_user_flight_information
+
+[{"ticket_no": "7240005432906569", "book_ref": "C46E9F", "flight_id": 19250, "flight_no": "LX0112", "departure_airport": "CDG", "arrival_airport": "BSL", "scheduled_departure": "2025-04-03 01:26:55.919049-04:00", "scheduled_arrival": "2025-04-03 02:56:55.919049-04:00", "seat_no": "18E", "fare_conditions": "Economy"}]
+================================== Ai Message ==================================
+
+Based on the flight information retrieved, your flight LX0112 from CDG to BSL is scheduled to depart at 1:26 AM on April 3rd, 2025.
+================================ Human Message =================================
+
+Am I allowed to update my flight to something sooner? I want to leave later today.
+================================== Ai Message ==================================
+
+[{'text': 'Let me first check the company policies on updating flights:', 'type': 'text'}, {'id': 'toolu_01WPgmYkJVnQ29Vkp8MaNjH8', 'input': {'query': 'updating flights'}, 'name': 'lookup_policy', 'type': 'tool_use'}]
+Tool Calls:
+  lookup_policy (toolu_01WPgmYkJVnQ29Vkp8MaNjH8)
+ Call ID: toolu_01WPgmYkJVnQ29Vkp8MaNjH8
+  Args:
+    query: updating flights
+================================= Tool Message =================================
+Name: lookup_policy
+
+
+## Booking and Cancellation
+
+1. How can I change my booking?
+        * The ticket number must start with 724 (SWISS ticket no./plate).
+        * The ticket was not paid for by barter or voucher (there are exceptions to voucher payments; if the ticket was paid for in full by voucher, then it may be possible to rebook online under certain circumstances. If it is not possible to rebook online because of the payment method, then you will be informed accordingly during the rebooking process).
+        * There must be an active flight booking for your ticket. It is not possible to rebook open tickets or tickets without the corresponding flight segments online at the moment.
+        * It is currently only possible to rebook outbound (one-way) tickets or return tickets with single flight routes (point-to-point).
+2. Which tickets/bookings cannot be rebooked online currently?
+        * Bookings containing flight segments with other airlines
+        * Bookings containing reservations, where a ticket has not yet been issued
+        * Bookings with several valid tickets for the same person and route
+        * Tickets with a status other than O (open) (A)
+        * Bookings with segments with a status other than OK (e.g. containing flight segments with the status Waitlist) (HK|RR)
+        * Tickets that do not display the tariff calculation (IT tickets)
+        * Bookings that contain special services (e.g. transportation of animals/transportation of medica ... (truncated)
+================================== Ai Message ==================================
+
+[{'text': 'Based on the policy details, it seems you should be able to update your flight to an earlier one today, as long as your ticket number starts with 724 (which it does) and the new flight has availability. There are some restrictions like not being able to change origin/destination, but changing the flight time should be allowed.\n\nLet me search for some earlier flight options from CDG to BSL today:', 'type': 'text'}, {'id': 'toolu_01Ax6b33v5gee1QM45rDNKLa', 'input': {'departure_airport': 'CDG', 'arrival_airport': 'BSL', 'start_time': '2025-04-03 00:00:00', 'end_time': '2025-04-03 23:59:59'}, 'name': 'search_flights', 'type': 'tool_use'}]
+Tool Calls:
+  search_flights (toolu_01Ax6b33v5gee1QM45rDNKLa)
+ Call ID: toolu_01Ax6b33v5gee1QM45rDNKLa
+  Args:
+    departure_airport: CDG
+    arrival_airport: BSL
+    start_time: 2025-04-03 00:00:00
+    end_time: 2025-04-03 23:59:59
+================================= Tool Message =================================
+Name: search_flights
+
+[{"flight_id": 19250, "flight_no": "LX0112", "scheduled_departure": "2025-04-03 01:26:55.919049-04:00", "scheduled_arrival": "2025-04-03 02:56:55.919049-04:00", "departure_airport": "CDG", "arrival_airport": "BSL", "status": "On Time", "aircraft_code": "SU9", "actual_departure": null, "actual_arrival": null}]
+================================== Ai Message ==================================
+
+[{'text': 'The search only returned your originally scheduled flight LX0112 at 1:26 AM. Let me try expanding the search window:', 'type': 'text'}, {'id': 'toolu_01TKVcipBt57BYjBmaSoz1QM', 'input': {'departure_airport': 'CDG', 'arrival_airport': 'BSL', 'start_time': '2025-04-02 12:00:00', 'end_time': '2025-04-04 12:00:00'}, 'name': 'search_flights', 'type': 'tool_use'}]
+Tool Calls:
+  search_flights (toolu_01TKVcipBt57BYjBmaSoz1QM)
+ Call ID: toolu_01TKVcipBt57BYjBmaSoz1QM
+  Args:
+    departure_airport: CDG
+    arrival_airport: BSL
+    start_time: 2025-04-02 12:00:00
+    end_time: 2025-04-04 12:00:00
+================================= Tool Message =================================
+Name: search_flights
+
+[{"flight_id": 19233, "flight_no": "LX0112", "scheduled_departure": "2025-04-04 01:26:55.919049-04:00", "scheduled_arrival": "2025-04-04 02:56:55.919049-04:00", "departure_airport": "CDG", "arrival_airport": "BSL", "status": "On Time", "aircraft_code": "SU9", "actual_departure": null, "actual_arrival": null}, {"flight_id": 19250, "flight_no": "LX0112", "scheduled_departure": "2025-04-03 01:26:55.919049-04:00", "scheduled_arrival": "2025-04-03 02:56:55.919049-04:00", "departure_airport": "CDG", "arrival_airport": "BSL", "status": "On Time", "aircraft_code": "SU9", "actual_departure": null, "actual_arrival": null}]
+================================== Ai Message ==================================
+
+Unfortunately it still seems there are no earlier flights today from CDG to BSL. The only available option appears to be your originally scheduled LX0112 flight at 1:26 AM on April 3rd.
+
+Let me know if you would still like to update to an earlier flight, or if you have any other questions!
+================================ Human Message =================================
+
+Update my flight to sometime next week then
+================================== Ai Message ==================================
+
+[{'text': "Okay, let's look for flights from CDG to BSL next week:", 'type': 'text'}, {'id': 'toolu_013eqK44VWxKCK3NSSYJFub2', 'input': {'departure_airport': 'CDG', 'arrival_airport': 'BSL', 'start_time': '2025-04-07 00:00:00', 'end_time': '2025-04-14 23:59:59'}, 'name': 'search_flights', 'type': 'tool_use'}]
+Tool Calls:
+  search_flights (toolu_013eqK44VWxKCK3NSSYJFub2)
+ Call ID: toolu_013eqK44VWxKCK3NSSYJFub2
+  Args:
+    departure_airport: CDG
+    arrival_airport: BSL
+    start_time: 2025-04-07 00:00:00
+    end_time: 2025-04-14 23:59:59
+================================= Tool Message =================================
+Name: search_flights
+
+[{"flight_id": 19232, "flight_no": "LX0112", "scheduled_departure": "2025-04-07 01:26:55.919049-04:00", "scheduled_arrival": "2025-04-07 02:56:55.919049-04:00", "departure_airport": "CDG", "arrival_airport": "BSL", "status": "Scheduled", "aircraft_code": "SU9", "actual_departure": null, "actual_arrival": null}, {"flight_id": 19238, "flight_no": "LX0112", "scheduled_departure": "2025-04-11 01:26:55.919049-04:00", "scheduled_arrival": "2025-04-11 02:56:55.919049-04:00", "departure_airport": "CDG", "arrival_airport": "BSL", "status": "Scheduled", "aircraft_code": "SU9", "actual_departure": null, "actual_arrival": null}, {"flight_id": 19242, "flight_no": "LX0112", "scheduled_departure": "2025-04-12 01:26:55.919049-04:00", "scheduled_arrival": "2025-04-12 02:56:55.919049-04:00", "departure_airport": "CDG", "arrival_airport": "BSL", "status": "Scheduled", "aircraft_code": "SU9", "actual_departure": null, "actual_arrival": null}, {"flight_id": 19243, "flight_no": "LX0112", "scheduled_departure": "2025-04-14 01:26:55.919049-04:00", "scheduled_arrival": "2025-04-14 02:56:55.919049-04:00", "departure_airport": "CDG", "arrival_airport": "BSL", "status": "Scheduled", "aircraft_code": "SU9", "actual_departure": null, "actual_arrival": null}, {"flight_id": 19251, "flight_no": "LX0112", "scheduled_departure": "2025-04-10 01:26:55.919049-04:00", "scheduled_arrival": "2025-04-10 02:5 ... (truncated)
+================================== Ai Message ==================================
+
+There are several flight options from CDG to BSL next week. Which day and time would you prefer to fly? I can then update your ticket to that new flight.
+================================ Human Message =================================
+
+The next available option is great
+================================== Ai Message ==================================
+
+[{'text': "Got it, let's update your ticket to the next available flight from CDG to BSL:", 'type': 'text'}, {'id': 'toolu_01FQtGKEk6iNC3XKKztTKGFy', 'input': {'ticket_no': '7240005432906569', 'new_flight_id': 19232}, 'name': 'update_ticket_to_new_flight', 'type': 'tool_use'}]
+Tool Calls:
+  update_ticket_to_new_flight (toolu_01FQtGKEk6iNC3XKKztTKGFy)
+ Call ID: toolu_01FQtGKEk6iNC3XKKztTKGFy
+  Args:
+    ticket_no: 7240005432906569
+    new_flight_id: 19232
+Do you approve of the above actions? Type 'y' to continue; otherwise, explain your requested change.
+
+no, I changed my mind
+================================ Human Message =================================
+
+That's all for today, thanks!
+================================== Ai Message ==================================
+
+You're welcome! Thank you for reaching out to Swiss Airlines. Have a great rest of your day, and a pleasant flight next week. Don't hesitate to contact us again if you need any further assistance with your travel plans. Safe travels!
 ```

@@ -84,6 +84,7 @@ builder = StateGraph(State)
 def user_info(state: State):
     return {"user_info": fetch_user_flight_information.invoke({})}
 
+
 builder.add_node("fetch_user_info", user_info)
 builder.add_edge(START, "fetch_user_info")
 builder.add_node("assistant", Assistant(assistant_runnable))
@@ -130,6 +131,7 @@ questions = [
     "Hi there, what time is my flight?",
     "Am I allowed to update my flight to something sooner? I want to leave later today.",
     "Update my flight to sometime next week then",
+    "The next available option is great",
     "That's all for today, thanks!",
 ]
 thread_id = str(uuid.uuid4())

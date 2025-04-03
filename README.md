@@ -38,6 +38,7 @@ Examples in this repo cover the following industry domain problems:
  - Transportation
    - Seasonal airline traffic prediction
    - Search the internet for locations, calculate travel times to all destinations
+   - Manage flights
  - Zoology
    - Group observations based on data density
 
@@ -61,6 +62,10 @@ An Agent is a system that leverages an AI model to interact with its environment
    - [NIST CSF Retrieval Agent](/agents/retrieval-agents/nist_csf_retrieval_agent.py) Use semantic search (search by meaning) against specialized NIST Cyber Security Framework practices
  - [Multi-agents](/agents/multi-agents/) Multiple agents working together
    - [Park Planner Multi-Agent](/agents/multi-agents/park_planner_multi_agent.py) Search the internet for national parks and calculate travel time by cargo plane. One agent can search the internet and the other agent does planning and distance calculations
+ - [Travel Agents](/lang-graph/travel-agent/) Use LangGraph to work with natural language to work with flight reservations and look up company travel policies
+   - [Zero-shot Agent](/lang-graph/travel-agent/zero_shot_agent.py) Perform all of the steps at once without confirmation by the user
+   - [Confirmation Agent](/lang-graph/travel-agent/confirmation_agent.py) Confirm with the user before every tool call
+   - [Smart Confirm Agent](/lang-graph/travel-agent/smart_confirm_agent.py) Only confirm with the user before writing to the database
 
 Leverage agents that use a large language model as the brain to direct tools that interact with the real world.
 ![AI Agent](/images/ai-agents.png?raw=true "AI Agent")
@@ -168,6 +173,7 @@ Direct a large language model to answer based only on context from documents
 ### LangGraph
 - [LangGraph terminology](/lang-graph/terminology.md)
 - [LangGraph simple graph, sentiment response](/lang-graph/sentiment/)
+- [LangGraph travel agent](/lang-graph/travel-agent/)
 
 Form graphs to model decisions and loops with AI
 ![Positive Sentiment Trace](/images/positive-sentiment-trace.png?raw=true "Positive Sentiment Trace")
