@@ -1,6 +1,7 @@
 # Introduction
 
-Browser Use is a YCombinator backed startup with an open source library that can control a browser windo using 
+Browser Use is a YCombinator backed startup with an open source library that can control a browser window using Playright and an agentic AI controlled by a language model.
+
 https://github.com/browser-use/browser-use
 
 # Dependencies
@@ -9,6 +10,7 @@ You will need all of the following dependencies to run this example:
 
  - OpenAI API token
  - Python virtual environment
+ - Install Chromium plugin for Playwright
 
 ## OpenAI API token
 
@@ -38,6 +40,12 @@ OPENAI_API_KEY=<your token>
    - On Windows: `python <script_name>.py`
  - Deactivate virtual environment
    - `deactivate`
+
+## Install Chromium plugin for Playwright
+
+Playright was installed with the requirements.txt file.
+
+Run the command `playwright install chromium` to install the plugin used to control the browser.
 
 # Run the code
 
