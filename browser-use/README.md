@@ -99,7 +99,9 @@ INFO     [agent] 🛠️  Action 2/2: {"extract_content":{"goal":"Find and extra
 es of five Toyota Corolla cars."}}
 INFO     [controller] 🔍  Scrolled down the page by one page
 INFO     [controller] 📄  Extracted from page
-: ```json
+```
+
+```json
 {
     "Toyota Corolla Prices": [
         {
@@ -126,6 +128,7 @@ INFO     [controller] 📄  Extracted from page
 }
 ```
 
+```text
 INFO     [agent] 📍 Step 5
 INFO     [agent] 👍 Eval: Success - Five car prices were extracted successfully.
 INFO     [agent] 🧠 Memory: Extracted 5 prices. Task completed successfully.
