@@ -4,6 +4,8 @@ Browser Use is a YCombinator backed startup with an open source library that can
 
 https://github.com/browser-use/browser-use
 
+[![Browser Use Demo - Gather Car Prices](https://img.youtube.com/vi/rDLlWlCFW6A/0.jpg)](https://www.youtube.com/watch?v=rDLlWlCFW6A)
+
 # Dependencies
 
 You will need all of the following dependencies to run this example:

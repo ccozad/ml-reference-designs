@@ -2,47 +2,16 @@
 
 This repo contains a set of reference designs for various ML topics. A few examples of the types of things you can learn here:
 
-# Industry domain problems
-
-Examples in this repo cover the following industry domain problems:
-
- - Accounting
-   - Receipt processing
- - Botany
-   - Group observations into n groups based on equal variance
- - Customer Service
-   - Context aware chat bots
- - Event Planning
-   - Generate music playlists
-   - Generate menus for specific occasions
-   - Calculate the total time needed for setup
- - Fitness
-   - Generate a strength training program
- - Games
-   - AI controlled NPCs 
- - Hospitality
-   - Sentiment analysis
- - Medical
-   - Breast cancer diagnosis
- - Real Estate
-   - Price prediction
- - Retail
-   - Product image classification
- - Technology
-   - Deploy machine learning models to production
-   - Compose workflows involving large language models (LLMs)
-   - Store and search for embedding data in vector stores
-   - Intelligently select complex objects in images
-   - Expand capabilities of large language models with custom tool calling
-   - Create AI agents that can interact with the real world
- - Transportation
-   - Seasonal airline traffic prediction
-   - Search the internet for locations, calculate travel times to all destinations
-   - Manage flights
- - Zoology
-   - Group observations based on data density
-
 # Contents
+
+## Broswer Use [FEATURED]
+
+Browser Use is an open source library that allows language models to interact with browser windows and page contents
+
+- [Overview and Setup](/browser-use/)
+- [Gather Car Prices](/browser-use/find_car_prices.py)
+
+[![Browser Use Demo - Gather Car Prices](https://img.youtube.com/vi/rDLlWlCFW6A/0.jpg)](https://www.youtube.com/watch?v=rDLlWlCFW6A)
 
 ## Agents [FEATURED]
 
@@ -257,3 +226,43 @@ Workbook examples that include LLMs models are more complex than other examples 
 - [Model Context Protocol](https://github.com/modelcontextprotocol)
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)
 - [SmolLM Github](https://github.com/huggingface/smollm)
+
+# Industry domain problems
+
+Examples in this repo cover the following industry domain problems:
+
+ - Accounting
+   - Receipt processing
+ - Botany
+   - Group observations into n groups based on equal variance
+ - Customer Service
+   - Context aware chat bots
+ - Event Planning
+   - Generate music playlists
+   - Generate menus for specific occasions
+   - Calculate the total time needed for setup
+ - Fitness
+   - Generate a strength training program
+ - Games
+   - AI controlled NPCs 
+ - Hospitality
+   - Sentiment analysis
+ - Medical
+   - Breast cancer diagnosis
+ - Real Estate
+   - Price prediction
+ - Retail
+   - Product image classification
+ - Technology
+   - Deploy machine learning models to production
+   - Compose workflows involving large language models (LLMs)
+   - Store and search for embedding data in vector stores
+   - Intelligently select complex objects in images
+   - Expand capabilities of large language models with custom tool calling
+   - Create AI agents that can interact with the real world
+ - Transportation
+   - Seasonal airline traffic prediction
+   - Search the internet for locations, calculate travel times to all destinations
+   - Manage flights
+ - Zoology
+   - Group observations based on data density
