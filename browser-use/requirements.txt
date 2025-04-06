@@ -1,0 +1,3 @@
+browser-use
+playright
+pytest-playwright
