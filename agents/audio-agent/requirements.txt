@@ -1,6 +1,6 @@
 openai
 openai-agents
-'openai-agents[voice]'
+openai-agents[voice]
 numpy
 sounddevice
 python-dotenv
