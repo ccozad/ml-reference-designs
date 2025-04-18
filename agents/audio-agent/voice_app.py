@@ -3,6 +3,7 @@ dotenv.load_dotenv()
 import os
 # Run the tests
 import asyncio
+import tempfile
 
 from agents import Agent, function_tool, WebSearchTool, FileSearchTool
 from agents.extensions.handoff_prompt import prompt_with_handoff_instructions
@@ -10,6 +11,7 @@ from agents import Runner, trace
 
 import numpy as np
 import sounddevice as sd
+import soundfile as sf
 from agents.voice import TTSModelSettings, VoicePipeline, VoicePipelineConfig, SingleAgentVoiceWorkflow, AudioInput
 
 # Define custom TTS model settings with the desired instructions
@@ -86,12 +88,14 @@ Based on the user's intent, route to:
 )
 
 async def voice_assistant_optimized():
-    samplerate = sd.query_devices(kind='input')['default_samplerate']
+    samplerate = 24000 # Had problems with other samplerates, so using OpenAI's default
     print(f"Using samplerate: {samplerate}")
     voice_pipeline_config = VoicePipelineConfig(tts_settings=custom_tts_settings)
 
     while True:
-        pipeline = VoicePipeline(workflow=SingleAgentVoiceWorkflow(triage_agent), config=voice_pipeline_config)
+        pipeline = VoicePipeline(
+            workflow=SingleAgentVoiceWorkflow(triage_agent), 
+            config=voice_pipeline_config)
 
         # Check for input to either provide voice or exit
         cmd = input("Press Enter to speak your query (or type 'esc' to exit): ")
@@ -101,8 +105,14 @@ async def voice_assistant_optimized():
         print("Listening...")
         recorded_chunks = []
 
+        def callback(indata, frames, time, status):
+            """This is called (from a separate thread) for each audio block."""
+            if status:
+                print(status, file=sys.stderr)
+            recorded_chunks.append(indata.copy())
+
          # Start streaming from microphone until Enter is pressed
-        with sd.InputStream(samplerate=samplerate, channels=2, dtype='float32', callback=lambda indata, frames, time, status: recorded_chunks.append(indata.copy())):
+        with sd.InputStream(samplerate=samplerate, channels=1, dtype='int16', callback=callback):
             input()
 
         # Concatenate chunks into single buffer
@@ -114,14 +124,14 @@ async def voice_assistant_optimized():
         with trace("ACME App Optimized Voice Assistant"):
             result = await pipeline.run(audio_input)
 
-         # Transfer the streamed result into chunks of audio
+        # Transfer the streamed result into chunks of audio
         response_chunks = []
         async for event in result.stream():
             if event.type == "voice_stream_event_audio":
                 response_chunks.append(event.data)
         response_audio = np.concatenate(response_chunks, axis=0)
 
-        # Play response
+        ## Play response
         print("Assistant is responding...")
         sd.play(response_audio, samplerate=samplerate)
         sd.wait()
