@@ -35,6 +35,10 @@ An Agent is a system that leverages an AI model to interact with its environment
    - [Zero-shot Agent](/lang-graph/travel-agent/zero_shot_agent.py) Perform all of the steps at once without confirmation by the user
    - [Confirmation Agent](/lang-graph/travel-agent/confirmation_agent.py) Confirm with the user before every tool call
    - [Smart Confirm Agent](/lang-graph/travel-agent/smart_confirm_agent.py) Only confirm with the user before writing to the database
+ - [Audio Agent](/agents/audio-agent/) Use OpenAI Agents library to process voice data with multi-agent pipelines.
+
+Debug AI Agent Execution using the Trace feature
+![OpenAI Trace Example](/images/openai-trace.png?raw=true "OpenAI Trace Example")
 
 Leverage agents that use a large language model as the brain to direct tools that interact with the real world.
 ![AI Agent](/images/ai-agents.png?raw=true "AI Agent")

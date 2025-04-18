@@ -118,9 +118,12 @@ async def voice_assistant_optimized():
         # Concatenate chunks into single buffer
         recording = np.concatenate(recorded_chunks, axis=0)
 
+        print("Recording finished. Processing...")
+
         # Input the buffer and await the result
         audio_input = AudioInput(buffer=recording)
 
+        print("Processing your query...")
         with trace("ACME App Optimized Voice Assistant"):
             result = await pipeline.run(audio_input)
 

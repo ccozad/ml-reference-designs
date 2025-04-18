@@ -2,6 +2,8 @@
 
 Based on a voice agent cookbook recipe by OpenAI https://cookbook.openai.com/examples/agents_sdk/app_assistant_voice_agents
 
+![OpenAI Trace Example](/images/openai-trace.png?raw=true "OpenAI Trace Example")
+
 # Dependencies
 
 You will need all of the following dependencies to run this example:
@@ -56,6 +58,12 @@ VECTOR_STORE_ID=<id>
 
 # Running the Code
 
+## Text App
+
+The core of our workflow works witext in and text out. The voice processing will use the same core workflow.
+
+Run the code using the command `python text_app.py`
+
 ```
 python text_app.py
 User: What's my ACME account balance doc? My user ID is 1234567890
@@ -66,8 +74,6 @@ The Automated Dynamite Dispenser has a capacity to hold 10 sticks of dynamite, a
 ---
 User: Hmmm, what about duck hunting gear - what's trending right now?
 Staying updated with the latest advancements in duck hunting gear can significantly enhance your hunting experience. Here are some trending items for 2025:
-
-
 
 **Sitka Delta Zip Waders**
 These waders feature reinforced shins and knees with rugged foam pads, providing durability for challenging terrains. The GORE-TEX material ensures you stay dry throughout the season. ([blog.gritroutdoors.com](https://blog.gritroutdoors.com/must-have-duck-hunting-gear-for-a-winning-season/?utm_source=openai))
@@ -86,4 +92,22 @@ This backpack-style blind bag offers comfort and efficiency, featuring durable z
 
 Incorporating these items into your gear can enhance your comfort, efficiency, and success during the hunting season.
 ---
+```
+
+## Voice App
+
+Run the command `python voice_app.py`
+
+```
+python voice_app.py
+Using samplerate: 24000
+Press Enter to speak your query (or type 'esc' to exit): 
+Listening...
+
+Recording finished. Processing...
+Processing your query...
+Assistant is responding...
+---
+Press Enter to speak your query (or type 'esc' to exit): esc
+Exiting...
 ```
