@@ -3,4 +3,5 @@ openai-agents
 openai-agents[voice]
 numpy
 sounddevice
+soundfile
 python-dotenv
