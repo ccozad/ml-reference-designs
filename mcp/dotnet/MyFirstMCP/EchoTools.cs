@@ -2,7 +2,7 @@ using ModelContextProtocol.Server;
 using System.ComponentModel;
 
 [McpServerToolType]
-public static class EchoTool
+public static class EchoTools
 {
     [McpServerTool, Description("Echoes the message back to the client.")]
     public static string Echo(string message) => $"Hello from C#: {message}";
