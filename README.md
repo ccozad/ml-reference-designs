@@ -159,6 +159,7 @@ Form graphs to model decisions and loops with AI
 ### Llama Index
 
 - [Call ChatGPT with a prompt template](/llama-index/llm/)
+- [Use a Hugging Face inference API](/llama-index/hello-hf/)
 
 ## Small Language Models
 
