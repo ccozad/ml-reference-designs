@@ -3,3 +3,4 @@
 __pycache__/
 .gradio
 data/
+persona_chroma_db/

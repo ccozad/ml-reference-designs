@@ -160,6 +160,10 @@ Form graphs to model decisions and loops with AI
 
 - [Call ChatGPT with a prompt template](/llama-index/llm/)
 - [Use a Hugging Face inference API](/llama-index/hello-hf/)
+- [Use a query engine to access data in documents](/llama-index/query-engine/)
+  - [Load data](/llama-index/query-engine/load_data.py)
+  - [Generate index](/llama-index/query-engine/generate_index.py)
+  - [Query index](/llama-index/query-engine/query_index.py)
 
 ## Small Language Models
 
