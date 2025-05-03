@@ -1,3 +1,8 @@
+# Introduction
+
+https://blog.futuresmart.ai/building-a-production-ready-rag-chatbot-with-fastapi-and-langchain
+
+
 # Dependencies
 
 You will need all of the following dependencies to run this example:
