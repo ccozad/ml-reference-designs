@@ -1,7 +1,5 @@
 # Introduction
-https://huggingface.co/blog/gradio-mcp
-
-![Gradio MCP Server](/images/gradio-mcp.png?raw=true "Gradio MCP Server")
+https://www.gradio.app/guides/quickstart
 
 # Dependencies
 
@@ -11,8 +9,8 @@ You will need all of the following dependencies to run this example:
 
 ## Python Virtual Environment
 
- - Move to the gradio hello-world folder
-   - `cd <mcp/gradio/hello-world>`
+ - Move to the code-agents folder
+   - `cd <gradio/simple-ui>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
    - On Windows: `python -m venv .venv`
