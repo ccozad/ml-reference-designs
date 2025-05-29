@@ -1,19 +1,15 @@
+# Introduction
+https://huggingface.co/blog/gradio-mcp
+
+![Gradio MCP Server](/images/gradio-mcp.png?raw=true "Gradio MCP Server")
+
+
 # Dependencies
 
 You will need all of the following dependencies to run this example:
 
  - Hugging Face token
  - Python virtual environment
-
-## Hugging Face token
-
-Log in to Hugging Face and retrieve your token from https://hf.co/settings/tokens
-
-Create an environment file named `.env`. Add the following line to your environment file:
-
-```ini
-HF_TOKEN=<your token>
-```
 
 ## Python Virtual Environment
 
@@ -36,3 +32,9 @@ HF_TOKEN=<your token>
 
 # Running the code
 
+python app.py
+* Running on local URL:  http://127.0.0.1:7860
+* To create a public link, set `share=True` in `launch()`.
+
+🔨 MCP server (using SSE) running at: http://127.0.0.1:7860/gradio_api/mcp/sse
+Keyboard interruption in main thread... closing server.
