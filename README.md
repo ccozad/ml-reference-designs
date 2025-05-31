@@ -185,6 +185,16 @@ Various tasks that deal with deploying AI systems
 - [Use the Model Context Protocol (MCP) with a custom LLM client and data access server](/mcp/client-py/)
 - [Dotnet MCP Server with VS Code and Github Co-pilot](/mcp/dotnet/)
 
+# Further Reading
+
+- [Agents in Software Engineering: Survey, Landscape, and Vision](https://github.com/DeepSoftwareAnalytics/Awesome-Agent4SE)
+- [Attention Is All You Need](https://arxiv.org/pdf/1706.03762)
+- [Let's build ChatGPT: from scratch, in code, spelled out, Andrej Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY)
+- [Model Context Protocol](https://github.com/modelcontextprotocol)
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)
+- [SmolLM Github](https://github.com/huggingface/smollm)
+- [12 Factor Agent](https://github.com/humanlayer/12-factor-agents)
+
 # Setup
 
 ## Jupyter requirement
@@ -228,17 +238,6 @@ Workbook examples that include LLMs models are more complex than other examples 
  - Model weights are GBs of data, store them in a drive with sufficient space
  - Clone the model code https://github.com/meta-llama/llama3
  - Change to the directory with the model code and pip install the model and dependencies `pip install -e .`
-
-
-# Further Reading
-
-- [Agents in Software Engineering: Survey, Landscape, and Vision](https://github.com/DeepSoftwareAnalytics/Awesome-Agent4SE)
-- [Attention Is All You Need](https://arxiv.org/pdf/1706.03762)
-- [Let's build ChatGPT: from scratch, in code, spelled out, Andrej Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY)
-- [Model Context Protocol](https://github.com/modelcontextprotocol)
-- [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)
-- [SmolLM Github](https://github.com/huggingface/smollm)
-- [12 Factor Agent](https://github.com/humanlayer/12-factor-agents)
 
 # Industry domain problems
 
