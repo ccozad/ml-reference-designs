@@ -238,6 +238,7 @@ Workbook examples that include LLMs models are more complex than other examples 
 - [Model Context Protocol](https://github.com/modelcontextprotocol)
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)
 - [SmolLM Github](https://github.com/huggingface/smollm)
+- [12 Factor Agent](https://github.com/humanlayer/12-factor-agents)
 
 # Industry domain problems
 
