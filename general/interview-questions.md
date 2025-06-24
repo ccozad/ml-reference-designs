@@ -11,3 +11,8 @@ Tokenization is the process of splitting text into smaller units called token. F
 Resources:
  - https://learn.microsoft.com/en-us/dotnet/ai/conceptual/understanding-tokens
  - https://huggingface.co/learn/llm-course/en/chapter2/4 
+
+## Explain the concept of temperature in LLM text generation
+
+Resources:
+ - https://www.ibm.com/think/topics/llm-temperature
