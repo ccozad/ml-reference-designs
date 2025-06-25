@@ -16,3 +16,5 @@ Resources:
 
 Resources:
  - https://www.ibm.com/think/topics/llm-temperature
+
+## How does prompting influence the output of a LLM?
