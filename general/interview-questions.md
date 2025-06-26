@@ -18,3 +18,8 @@ Resources:
  - https://www.ibm.com/think/topics/llm-temperature
 
 ## How does prompting influence the output of a LLM?
+
+Large language models are non deterministic systems. Small changes in the input text can produce varrying results.This input text, called a prompt may consist of user queries, relevant content, system instructions and other relevant information.
+
+Resources:
+ - https://huggingface.co/docs/transformers/v4.49.0/en/tasks/prompting
