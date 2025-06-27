@@ -23,3 +23,6 @@ Large language models are non deterministic systems. Small changes in the input 
 
 Resources:
  - https://huggingface.co/docs/transformers/v4.49.0/en/tasks/prompting
+
+## What are some platforms for AI development?
+
