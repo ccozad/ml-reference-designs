@@ -26,3 +26,5 @@ Resources:
 
 ## What are some platforms for AI development?
 
+## Explain what self attention is in a LLM
+
