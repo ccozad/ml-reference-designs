@@ -28,3 +28,7 @@ Resources:
 
 ## Explain what self attention is in a LLM
 
+Resources
+ - https://www.ibm.com/think/topics/self-attention
+ - https://arxiv.org/abs/1706.03762v7
+
