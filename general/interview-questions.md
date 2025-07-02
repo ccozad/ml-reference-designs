@@ -32,3 +32,4 @@ Resources
  - https://www.ibm.com/think/topics/self-attention
  - https://arxiv.org/abs/1706.03762v7
 
+## What is the Transformer architecture, and how is it used in LLMs?
