@@ -33,3 +33,11 @@ Resources
  - https://arxiv.org/abs/1706.03762v7
 
 ## What is the Transformer architecture, and how is it used in LLMs?
+
+## What is fine-tuning in the context of LLMs, and why is it important?
+
+## What are some common challenges associated with using LLMs?
+
+## Explain the concept of "few-shot learning" in LLMs and its advantages.
+
+## How can you incorporate external knowledge into an LLM?
