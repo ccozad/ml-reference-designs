@@ -37,6 +37,9 @@ Resources
 
 ## What is the Transformer architecture, and how is it used in LLMs?
 
+Resources
+ - https://machinelearningmastery.com/the-transformer-model/
+
 ## What is fine-tuning in the context of LLMs, and why is it important?
 
 Resources
