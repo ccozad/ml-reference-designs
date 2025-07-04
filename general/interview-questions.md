@@ -28,13 +28,19 @@ Resources:
 
 ## Explain what self attention is in a LLM
 
+The self-attention mechanism enables the model to weigh the importance of different elements in an input sequence and dynamically adjust their influence on the output
+
 Resources
  - https://www.ibm.com/think/topics/self-attention
  - https://arxiv.org/abs/1706.03762v7
+ - https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html
 
 ## What is the Transformer architecture, and how is it used in LLMs?
 
 ## What is fine-tuning in the context of LLMs, and why is it important?
+
+Resources
+ - https://www.datacamp.com/tutorial/fine-tuning-large-language-models
 
 ## What are some common challenges associated with using LLMs?
 
