@@ -46,4 +46,6 @@ Resources
 
 ## Explain the concept of "few-shot learning" in LLMs and its advantages.
 
+There are some cases where collecting a large labeled dataset is impractical. Few-shot learning tries to address this by providing a few examples (or shots) of the required task at the beginning of the input prompts. This helps the model have a better context of the task without an extensive fine-tuning process.
+
 ## How can you incorporate external knowledge into an LLM?
