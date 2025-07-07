@@ -1,6 +1,6 @@
 # Introduction
 
-This article has a list of common interview questions and resources for finding answers.
+This article has a list of common interview questions about large languiage models (LLMs) and resources for finding answers.
 
 # Questions
 
@@ -46,6 +46,10 @@ Resources
  - https://www.datacamp.com/tutorial/fine-tuning-large-language-models
 
 ## What are some common challenges associated with using LLMs?
+
+ - *Costs* LLMs hosted in the cloud are charged based on tokens in and out. Local models haver server and power costs
+ - *Halucinations* Confident but wrong responses
+ - *New and Specialized Knowledge* LLMs only know about general knowledge they were trained on. Providing newer information or specialized information to LLMs requires additional work.
 
 ## Explain the concept of "few-shot learning" in LLMs and its advantages.
 
