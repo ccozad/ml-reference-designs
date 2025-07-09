@@ -4,7 +4,10 @@ This repo contains a set of reference designs for various ML topics. A few examp
 
 # Contents
 
-## Broswer Use [FEATURED]
+## Interview Questions [FEATURED]
+ - [Large language model interview questions](/general/interview-questions.md)
+
+## Browser Use [FEATURED]
 
 Browser Use is an open source library that allows language models to interact with browser windows and page contents
 
