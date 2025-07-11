@@ -5,7 +5,7 @@ This repo contains a set of reference designs for various ML topics. A few examp
 # Contents
 
 ## Interview Questions [FEATURED]
- - [Large language model interview questions](/general/interview-questions.md)
+ - [Large language model interview questions](/general/llm-interview-questions.md)
 
 ## Browser Use [FEATURED]
 
