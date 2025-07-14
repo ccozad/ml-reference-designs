@@ -15,5 +15,8 @@ Resources
 
 ## What is Principle Component Analysis?
 
+Resources
+ - https://statisticsbyjim.com/basics/principal-component-analysis/
+
 
 ## How do recommendation systems work?
