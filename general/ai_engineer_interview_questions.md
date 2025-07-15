@@ -6,6 +6,9 @@ This article has a list of common interview questions for AI Engineer positions
 
 ## What are the key considerations when selecting a machine learning algorithm for a large-scale business problem?
 
+Resources
+ - https://machinelearningmastery.com/practical-guide-choosing-right-algorithm-your-problem/
+
 ## What are some consideration before deploying a machine learning model to production?
 
 ## Describe the k-means clustering algorithm
