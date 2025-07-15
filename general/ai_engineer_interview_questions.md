@@ -11,6 +11,9 @@ Resources
 
 ## What are some consideration before deploying a machine learning model to production?
 
+Resources
+ - https://www.anyscale.com/blog/considerations-for-deploying-machine-learning-models-in-production?source=docs
+
 ## Describe the k-means clustering algorithm
 
 Resources
