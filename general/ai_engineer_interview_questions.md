@@ -20,3 +20,6 @@ Resources
 
 
 ## How do recommendation systems work?
+
+Resources
+ - https://towardsdatascience.com/recommender-systems-a-complete-guide-to-machine-learning-models-96d3f94ea748/
