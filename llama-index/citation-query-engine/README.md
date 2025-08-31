@@ -85,15 +85,17 @@ nltk.download()
 
 Issue the command `python load_data.py` which will download persona data to the data folder
 
-## Generate the index
-
-Issue the command `python generate_index.py` which will load all of the JSON document personas in the data folder and addd them to a Chroma DB vector index.
-
-## Query the index
-
-Issue the command `python query_index.py`
+## Run a query
 
 ```
-python query_index.py
-Response:  An author with a deep passion for cultural exploration and language, this individual often delves into the rich tapestry of Eastern European history, weaving stories that transport readers to ancient sites and bustling markets. With a background in linguistics or education, they bring a unique perspective to their travel writing, highlighting the linguistic nuances and historical significance of each destination. Another persona is a history or travel enthusiast who captivates general audiences with their vivid descriptions of cultural and archaeological sites. As a content creator or blogger, they share their extensive knowledge and personal experiences, making history and travel accessible and engaging for everyone.
+python3 demo.py
+
+Query the database with: What information do you have about YC?
+
+Retrieved 2 nodes.
+Processing node with score: 0.5156701239092963
+Processing node with score: 0.4996543388285388
+
+Summary:
+YC, or Y Combinator, is known for its distinctive batch model, which involves funding multiple startups simultaneously, twice a year. This approach allows for intensive support over three months, helping startups grow while also providing a community for founders to share experiences and solutions to common problems [1]. The first batch of startups included notable companies such as Reddit and Twitch, and the program was designed to be more appealing to founders by offering a supportive environment compared to traditional summer jobs at established companies [2]. YC initially operated without being a formal fund, but it transitioned to a fund model in 2009 due to its growth, before returning to self-funding after achieving financial stability [4].
 ```
