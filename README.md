@@ -168,7 +168,7 @@ Form graphs to model decisions and loops with AI
   - [Load data](/llama-index/query-engine/load_data.py)
   - [Generate index](/llama-index/query-engine/generate_index.py)
   - [Query index](/llama-index/query-engine/query_index.py)
--[Include sources using a citation query engine](/llama-index/citation-query-engine/)
+- [Include sources using a citation query engine](/llama-index/citation-query-engine/)
 
 ## Small Language Models
 
