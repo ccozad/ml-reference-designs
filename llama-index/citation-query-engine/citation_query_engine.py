@@ -21,14 +21,11 @@ from llama_index.core.response_synthesizers import (
 )
 
 from typing import Union, List
-from llama_index.core.node_parser import SentenceSplitter
 
 from events import RetrieverEvent, CreateCitationsEvent
 from config import (
     CITATION_QA_TEMPLATE,
-    CITATION_REFINE_TEMPLATE,
-    DEFAULT_CITATION_CHUNK_SIZE,
-    DEFAULT_CITATION_CHUNK_OVERLAP,
+    CITATION_REFINE_TEMPLATE
 )
 
 class CitationQueryEngineWorkflow(Workflow):
@@ -50,7 +47,7 @@ class CitationQueryEngineWorkflow(Workflow):
             print("Index is empty, load some documents before querying!")
             return None
 
-        retriever = ev.index.as_retriever(similarity_top_k=2)
+        retriever = ev.index.as_retriever(similarity_top_k=3)
         nodes = retriever.retrieve(query)
         print(f"\nRetrieved {len(nodes)} nodes.")
         return RetrieverEvent(nodes=nodes)
@@ -62,46 +59,31 @@ class CitationQueryEngineWorkflow(Workflow):
         """
         Modify retrieved nodes to create granular sources for citations.
 
-        Takes a list of NodeWithScore objects and splits their content
-        into smaller chunks, creating new NodeWithScore objects for each chunk.
-        Each new node is labeled as a numbered source, allowing for more precise
-        citation in query results.
+        Takes a list of NodeWithScore objects and adds a source number to each node.
 
         Args:
             nodes (List[NodeWithScore]): A list of NodeWithScore objects to be processed.
 
         Returns:
-            List[NodeWithScore]: A new list of NodeWithScore objects, where each object
-            represents a smaller chunk of the original nodes, labeled as a source.
+            List[NodeWithScore]: A new list of NodeWithScore objects labeled as a source.
         """
         nodes = ev.nodes
 
         new_nodes: List[NodeWithScore] = []
 
-        text_splitter = SentenceSplitter(
-            chunk_size=DEFAULT_CITATION_CHUNK_SIZE,
-            chunk_overlap=DEFAULT_CITATION_CHUNK_OVERLAP,
-        )
 
         for node in nodes:
-            print("Processing node with score:", node.score)
-            text_chunks = text_splitter.split_text(
-                node.node.get_content(metadata_mode=MetadataMode.NONE)
+            text = f"Source {len(new_nodes)+1}:\n{node.node.text}\n"
+            new_text_node = TextNode(
+                text=text,
+                id_=node.node.id_,
+                metadata=node.node.metadata,
+            )
+            new_node = NodeWithScore(
+                node=new_text_node, score=node.score
             )
 
-            for text_chunk in text_chunks:
-                text = f"Source {len(new_nodes)+1}:\n{text_chunk}\n"
-
-                # Create a new TextNode with the chunk text and original metadata
-                new_text_node = TextNode(
-                    text=text,
-                    id_=node.node.id_,
-                    metadata=node.node.metadata,
-                )
-                new_node = NodeWithScore(
-                    node=new_text_node, score=node.score
-                )
-                new_nodes.append(new_node)
+            new_nodes.append(new_node)
         
         return CreateCitationsEvent(nodes=new_nodes)
 
