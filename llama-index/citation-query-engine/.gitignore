@@ -1,0 +1,15 @@
+/data/*
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+*.pot
+*.mo
+*.swp
+*.swo
+*.DS_Store
+.vscode/
+.venv/

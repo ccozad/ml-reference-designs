@@ -1,0 +1,55 @@
+from llama_index.core.prompts import PromptTemplate
+
+CITATION_QA_TEMPLATE = PromptTemplate(
+    "Please provide an answer based solely on the provided sources. "
+    "When referencing information from a source, "
+    "cite the appropriate source(s) using their corresponding numbers. "
+    "Every answer should include at least one source citation. "
+    "Only cite a source when you are explicitly referencing it. "
+    "If none of the sources are helpful, you should indicate that. "
+    "For example:\n"
+    "Source 1:\n"
+    "The sky is red in the evening and blue in the morning.\n"
+    "Source 2:\n"
+    "Water is wet when the sky is red.\n"
+    "Query: When is water wet?\n"
+    "Answer: Water will be wet when the sky is red [2], "
+    "which occurs in the evening [1].\n"
+    "Now it's your turn. Below are several numbered sources of information:"
+    "\n------\n"
+    "{context_str}"
+    "\n------\n"
+    "Query: {query_str}\n"
+    "Answer: "
+)
+
+CITATION_REFINE_TEMPLATE = PromptTemplate(
+    "Please provide an answer based solely on the provided sources. "
+    "When referencing information from a source, "
+    "cite the appropriate source(s) using their corresponding numbers. "
+    "Every answer should include at least one source citation. "
+    "Only cite a source when you are explicitly referencing it. "
+    "If none of the sources are helpful, you should indicate that. "
+    "For example:\n"
+    "Source 1:\n"
+    "The sky is red in the evening and blue in the morning.\n"
+    "Source 2:\n"
+    "Water is wet when the sky is red.\n"
+    "Query: When is water wet?\n"
+    "Answer: Water will be wet when the sky is red [2], "
+    "which occurs in the evening [1].\n"
+    "Now it's your turn. "
+    "We have provided an existing answer: {existing_answer}"
+    "Below are several numbered sources of information. "
+    "Use them to refine the existing answer. "
+    "If the provided sources are not helpful, you will repeat the existing answer."
+    "\nBegin refining!"
+    "\n------\n"
+    "{context_msg}"
+    "\n------\n"
+    "Query: {query_str}\n"
+    "Answer: "
+)
+
+DEFAULT_CITATION_CHUNK_SIZE = 512
+DEFAULT_CITATION_CHUNK_OVERLAP = 20
