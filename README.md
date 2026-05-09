@@ -135,6 +135,7 @@ Examples that interact with large language models with billions of parameters th
 ### Claude
  - [Claude Hello World](/llm/claude/hello-world/)
  - [Claude Tool Calling](/llm/claude/tool-calling/)
+ - [Building with Claude course (companion repo)](https://github.com/ccozad/building-with-claude-course) — in-depth coverage of the topics from the Building with Claude course.
 
 ### LangChain
 - [LangChain terminology](/lang-chain/terminology.md)
