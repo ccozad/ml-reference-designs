@@ -8,7 +8,7 @@ import anthropic
 quotes = json.load(open('quotes.json'))
 
 client = anthropic.Anthropic()
-MODEL = "claude-3-5-sonnet-20240620"
+MODEL = "claude-sonnet-4-6"
 
 tools = [
     {

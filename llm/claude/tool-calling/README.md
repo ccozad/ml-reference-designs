@@ -1,6 +1,6 @@
 # Introduction
 
-This example adds simple tool calling to Claude 3.5 model interactions shown in the [Claude 3.5 Hello World Example](/llm/claude-3-5/hello-world/README.md)
+This example adds simple tool calling to Claude model interactions shown in the [Claude Hello World Example](/llm/claude/hello-world/README.md)
 
  ![Tool Calling](/images/tool-calling.png?raw=true "Tool Calling")
 
@@ -12,7 +12,7 @@ Tool calling is a useful pattern to extend the capabilities of a natural languag
 
 Pipeline Components used
  - Framework: Anthropic library
- - Large Language Model: Anthropic, `claude-3-5-sonnet-20240620`, remote access (Requires paid account)
+ - Large Language Model: Anthropic, `claude-sonnet-4-6`, remote access (Requires paid account)
 
 ## New information
 

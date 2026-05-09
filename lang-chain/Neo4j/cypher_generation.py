@@ -10,7 +10,7 @@ neo4j_user = os.getenv("NEO4J_USER")
 neo4j_password = os.getenv("NEO4J_PASSWORD")
 
 llm = ChatAnthropic(
-    model="claude-3-sonnet-20240229",
+    model="claude-sonnet-4-6",
     temperature=0
 )
 

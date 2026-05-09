@@ -132,9 +132,10 @@ Intelligently select complex objects in images
 
 Examples that interact with large language models with billions of parameters that are often training across many commercial grade GPUs for many millions of hours.
 
-### Claude 3.5
- - [Claude 3.5 Hello World](/llm/claude-3-5/hello-world/)
- - [Claude 3.5 Tool Calling](/llm/claude-3-5/tool-calling/)
+### Claude
+ - [Claude Hello World](/llm/claude/hello-world/)
+ - [Claude Tool Calling](/llm/claude/tool-calling/)
+ - [Building with Claude course (companion repo)](https://github.com/ccozad/building-with-claude-course) — in-depth coverage of the topics from the Building with Claude course.
 
 ### LangChain
 - [LangChain terminology](/lang-chain/terminology.md)

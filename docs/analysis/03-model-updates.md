@@ -4,6 +4,8 @@ Every hard-coded model string in the repo, what generation it represents, and ho
 
 ## Anthropic (Claude)
 
+**Resolved 2026-05-08 (issue #28).** All Claude model strings standardized on `claude-sonnet-4-6`, and `llm/claude-3-5/` renamed to `llm/claude/` (version-agnostic) to avoid future per-release renames. The original audit table is preserved below for historical reference.
+
 | File | Current model | Notes |
 | --- | --- | --- |
 | `llm/claude-3-5/hello-world/app.py` | `claude-3-5-sonnet-20240620` | Folder name is `claude-3-5/`. Consider renaming the folder to `claude-4/` (or `claude/` and version-agnostic) to avoid a recurring rename every release. |
