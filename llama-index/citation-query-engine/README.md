@@ -24,7 +24,7 @@ Log in to OpenAI and retrieve your access token.
 Create an environment file named `.env`. Add the following line to your environment file:
 
 ```ini
-OPENAI_API_KEY=your token>
+OPENAI_API_KEY=<your token>
 ```
 
 ## Python Virtual Environment

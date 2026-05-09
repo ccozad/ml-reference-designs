@@ -32,7 +32,7 @@ Data managed by third parties is often accessed through application programming 
 
 # Key Ideas
 
-At it's core, tool calling is simple message protocol where the model tells the client when a tool should be invoked. The model has no server side tools it can execute and the model relies on the caller or client to process tool requests.
+At its core, tool calling is simple message protocol where the model tells the client when a tool should be invoked. The model has no server side tools it can execute and the model relies on the caller or client to process tool requests.
 
 The process involves the following idea:
 

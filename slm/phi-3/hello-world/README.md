@@ -15,8 +15,8 @@ All of the dependencies listed below need to be in place before running the code
 
 ## Python virtual environment
 
- - Move to the llm\phi-3\hello-world folder
-   - `cd <slm\phi-3\hello-world>`
+ - Move to the slm/phi-3/hello-world folder
+   - `cd <slm/phi-3/hello-world>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
    - On Windows: `python -m venv .venv`

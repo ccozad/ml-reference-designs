@@ -12,8 +12,8 @@ All of the dependencies listed below need to be in place before running the code
 
 ## Python virtual environment
 
- - Move to the slm\smollm2\story-writer folder
-   - `cd <slm\smollm2\story-writer>`
+ - Move to the slm/smollm2/story-writer folder
+   - `cd <slm/smollm2/story-writer>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
    - On Windows: `python -m venv .venv`

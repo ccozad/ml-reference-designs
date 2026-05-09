@@ -120,7 +120,7 @@ OPENAI_API_KEY=<your key>
 
 ## Python Virtual Environment
 
- - Move to the workout-agents folder
+ - Move to the travel-agent folder
    - `cd <lang-graph/travel-agent>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`

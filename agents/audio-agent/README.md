@@ -25,7 +25,7 @@ OPENAI_API_KEY=<your token>
 
 ## Python Virtual Environment
 
- - Move to the multi-agents folder
+ - Move to the audio-agent folder
    - `cd <agents/audio-agent>`
  - Create a virtual environment
    - On Mac: `python3 -m venv .venv`
