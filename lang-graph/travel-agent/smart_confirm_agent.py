@@ -39,7 +39,7 @@ else:
 
 # 2. Initialize the LLM
 print("2. Initializing the LLM...")
-llm = ChatAnthropic(model="claude-3-sonnet-20240229", temperature=1)
+llm = ChatAnthropic(model="claude-sonnet-4-6", temperature=1)
 print(" - LLM initialized.")
 
 primary_assistant_prompt = ChatPromptTemplate.from_messages(
