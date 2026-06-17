@@ -1,6 +1,6 @@
 # Introduction
 
-This examples builds on the concepts shown in [Serve index and RAG pipelines over HTTP using Flask](/langchain/RAG-serve/README.md)
+This examples builds on the concepts shown in [Serve index and RAG pipelines over HTTP using Flask](/lang-chain/RAG-serve/README.md)
 
 We'll take the Python REST API and add it to a Docker container. Then we'll test the deployment in the same way we did previously to show the behavior is still the same.
 
@@ -166,7 +166,7 @@ While Docker images are smaller that full virtual machine operating systems, ima
 
 1. Change to the docker-serve directory
 
-`cd <ml-reference-designs/langchain/docker-serve>`
+`cd <ml-reference-designs/lang-chain/docker-serve>`
 
 2. Build and tag the docker image
 

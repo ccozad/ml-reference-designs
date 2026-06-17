@@ -1,6 +1,6 @@
 # Introduction
 
-This examples builds on the concepts shown in [Retrieval Augmented Generation Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/langchain/RAG/README.md)
+This examples builds on the concepts shown in [Retrieval Augmented Generation Q&A pipeline using OpenAI Embeddings, OpenAI Chat and Chroma](/lang-chain/RAG/README.md)
 
 Instead of using OpenAI services, we'll use an open source embedding model from Hugging Face and a foundation model accessed through the Amazon Bedrock service.
 
