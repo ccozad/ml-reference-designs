@@ -203,6 +203,8 @@ Various tasks that deal with deploying AI systems
 
 # Setup
 
+If you are using an AI coding assistant or want a quick orientation to how this repo is organized, see [CLAUDE.md](/CLAUDE.md) for conventions on running examples and adding new ones.
+
 ## Jupyter requirement
 
 Some of the examples in this repo are meant to be run interactively using Jupyter-Lab or Jupiter-Notebooks. See https://jupyter.org/install
