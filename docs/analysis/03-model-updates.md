@@ -2,6 +2,8 @@
 
 Every hard-coded model string in the repo, what generation it represents, and how to bring it current. This is one of the easiest classes of cleanup — most are one-line edits — but a few cases require README rewrites because the modern equivalent won't fit on a mid-tier consumer GPU.
 
+> **Verification status:** all updates below have been applied to code + READMEs but are **not yet runtime-verified**. The end-to-end verification pass is tracked by one issue per vendor (label `verification`, milestone **2026 Cleanup**): OpenAI [#51](https://github.com/ccozad/ml-reference-designs/issues/51), Anthropic [#52](https://github.com/ccozad/ml-reference-designs/issues/52), Meta/Llama [#53](https://github.com/ccozad/ml-reference-designs/issues/53), Microsoft/Phi [#54](https://github.com/ccozad/ml-reference-designs/issues/54), Hugging Face/SmolLM [#55](https://github.com/ccozad/ml-reference-designs/issues/55). See [README → Verification tracking](./README.md#verification-tracking).
+
 ## Anthropic (Claude)
 
 **Resolved 2026-05-08 (issue #28).** All Claude model strings standardized on `claude-sonnet-4-6`, and `llm/claude-3-5/` renamed to `llm/claude/` (version-agnostic) to avoid future per-release renames. The original audit table is preserved below for historical reference.
