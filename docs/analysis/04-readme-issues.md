@@ -24,7 +24,7 @@ These weren't in the original audit but are the same class of copy-paste path bu
 
 - ~~**`llama-index/citation-query-engine/README.md`** has `OPENAI_API_KEY=your token>` — the leading `<` is missing.~~ **FIXED** — now `OPENAI_API_KEY=<your token>`.
 - ~~**`lang-chain/Azure/rag_pipeline.py`** sample output in the README mentions "Initializing Bedrock client...". This is leftover from the AWS Bedrock example; the Azure version doesn't talk to Bedrock.~~ **FIXED** — the Bedrock line is no longer in the Azure README.
-- **`lang-chain/Azure/README.md`** lists `OPENAI_API_KEY` in the env-var block but the dependencies section doesn't explain why an OpenAI key is needed alongside Azure AI Search. Add a one-liner or remove the env var if the example is fully Azure-native. **(STILL OPEN)**
+- ~~**`lang-chain/Azure/README.md`** lists `OPENAI_API_KEY` in the env-var block but the dependencies section doesn't explain why an OpenAI key is needed alongside Azure AI Search. Add a one-liner or remove the env var if the example is fully Azure-native.~~ **FIXED** — added an "OpenAI API key" dependency and a note explaining the key powers only the RAG chat model (`gpt-3.5-turbo-0125`); embeddings are local Hugging Face (`all-MiniLM-L6-v2`).
 - ~~**`llm/claude-3-5/tool-calling/README.md`** has the line "At it's core" — should be "At its core". Minor.~~ **RESOLVED** — superseded by `llm/claude/tool-calling/README.md`, which reads "At its core".
 
 ## Empty / abandoned

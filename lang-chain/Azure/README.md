@@ -4,6 +4,7 @@ All of the dependencies listed below need to be in place before running the code
 
  - Azure account
  - Azure AI Search
+ - OpenAI API key
  - Environment variables
  - Python virtual environment
  - Create vector index
@@ -23,6 +24,10 @@ The index is created the first time it is referenced if it doesn't already exist
 Further Reading
 - https://azure.microsoft.com/en-us/pricing/details/search/
 - https://learn.microsoft.com/en-us/azure/search/search-security-api-keys
+
+## OpenAI API key
+
+This example stores and searches embeddings in Azure AI Search, but the embeddings themselves are generated locally with an open-source Hugging Face model (`all-MiniLM-L6-v2`) — no OpenAI key is required for indexing or retrieval. The OpenAI key is used only by the RAG pipeline's chat model (`gpt-3.5-turbo-0125` in `rag_pipeline.py`), which writes the final natural-language answer from the retrieved documents. Retrieve your key from https://platform.openai.com/api-keys
 
 ## Environment variables
 
