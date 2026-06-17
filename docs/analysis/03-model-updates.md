@@ -6,16 +6,16 @@ Every hard-coded model string in the repo, what generation it represents, and ho
 
 **Resolved 2026-05-08 (issue #28).** All Claude model strings standardized on `claude-sonnet-4-6`, and `llm/claude-3-5/` renamed to `llm/claude/` (version-agnostic) to avoid future per-release renames. The original audit table is preserved below for historical reference.
 
-| File | Current model | Notes |
-| --- | --- | --- |
-| `llm/claude-3-5/hello-world/app.py` | `claude-3-5-sonnet-20240620` | Folder name is `claude-3-5/`. Consider renaming the folder to `claude-4/` (or `claude/` and version-agnostic) to avoid a recurring rename every release. |
-| `llm/claude-3-5/tool-calling/app.py` | `claude-3-5-sonnet-20240620` | Same as above. |
-| `llm/claude-3-5/tool-calling/README.md` | references `claude-3-5-sonnet-20240620` | Update text alongside code. |
-| `lang-graph/travel-agent/zero_shot_agent.py` | `claude-3-sonnet-20240229` | This Claude 3 (not 3.5) Sonnet ID is **deprecated**. |
-| `lang-graph/travel-agent/confirmation_agent.py` | `claude-3-sonnet-20240229` | Same. |
-| `lang-graph/travel-agent/smart_confirm_agent.py` | `claude-3-sonnet-20240229` | Same. |
-| `lang-chain/Neo4j/cypher_generation.py` | `claude-3-sonnet-20240229` | Same. |
-| `mcp/client-py/client.py` | `claude-3-5-sonnet-20241022` (×2) | Newer than the others but still a generation behind. |
+| File (audit-era path) | Audit-era model | Now (2026-06-17) | Notes |
+| --- | --- | --- | --- |
+| `llm/claude-3-5/hello-world/app.py` | `claude-3-5-sonnet-20240620` | `claude-sonnet-4-6` (now `llm/claude/hello-world/app.py`) | Folder renamed `claude-3-5/` → `claude/` (version-agnostic). |
+| `llm/claude-3-5/tool-calling/app.py` | `claude-3-5-sonnet-20240620` | `claude-sonnet-4-6` (now `llm/claude/tool-calling/app.py`) | Same. |
+| `llm/claude-3-5/tool-calling/README.md` | references `claude-3-5-sonnet-20240620` | `claude-sonnet-4-6` (now `llm/claude/tool-calling/README.md`) | Updated alongside code. |
+| `lang-graph/travel-agent/zero_shot_agent.py` | `claude-3-sonnet-20240229` | `claude-sonnet-4-6` | Deprecated Claude 3 ID replaced. |
+| `lang-graph/travel-agent/confirmation_agent.py` | `claude-3-sonnet-20240229` | `claude-sonnet-4-6` | Same. |
+| `lang-graph/travel-agent/smart_confirm_agent.py` | `claude-3-sonnet-20240229` | `claude-sonnet-4-6` | Same. |
+| `lang-chain/Neo4j/cypher_generation.py` | `claude-3-sonnet-20240229` | `claude-sonnet-4-6` | Same. |
+| `mcp/client-py/client.py` | `claude-3-5-sonnet-20241022` (×2) | `claude-sonnet-4-6` (×2) | Same. |
 
 **Recommendation**: standardize all Claude examples on the latest Claude 4.x Sonnet (or Haiku where cost matters — e.g. the dummy / chat-style demos). Add a small comment near each model string explaining what changes if the user wants to swap it out.
 
@@ -23,54 +23,56 @@ Every hard-coded model string in the repo, what generation it represents, and ho
 
 **Resolved 2026-06-17.** Standardized on the current (June 2026) GPT-5.4 generation: cheap completion/RAG demos use `gpt-5.4-nano`, agentic/tool-using examples use `gpt-5.4` (with `gpt-5.4-mini` as the browser-use planner). `gpt-4o`/`gpt-4o-mini` were two generations behind by mid-2026, so the doc's original `gpt-4o-mini` recommendation was superseded. Files updated: `lang-chain/RAG`, `lang-chain/RAG-serve`, `lang-chain/docker-serve`, `lang-chain/Azure` (code + READMEs), `llama-index/llm/app.py`, `llama-index/citation-query-engine`, `lang-chain/fast-api` (enum + default), `browser-use/find_car_prices.py`, `browser-use/find_flights.py`. The original audit table is preserved below for historical reference.
 
-| File | Current model | Notes |
-| --- | --- | --- |
-| `lang-chain/RAG/rag_pipeline.py` | `gpt-3.5-turbo-0125` | Upgrade to `gpt-4o-mini` at minimum; the cost delta is negligible and quality is much better for RAG. |
-| `lang-chain/RAG/README.md` | mentions `gpt-3.5-turbo-0125` | Update text alongside code. |
-| `lang-chain/RAG-serve/custom_pipelines.py` | `gpt-3.5-turbo-0125` | Same. |
-| `lang-chain/RAG-serve/README.md` | mentions `gpt-3.5-turbo-0125` | Same. |
-| `lang-chain/docker-serve/custom_pipelines.py` | `gpt-3.5-turbo-0125` | Same. |
-| `lang-chain/docker-serve/README.md` | mentions `gpt-3.5-turbo-0125` | Same. |
-| `lang-chain/Azure/rag_pipeline.py` | `gpt-3.5-turbo-0125` | Same. |
-| `llama-index/llm/app.py` | `gpt-3.5-turbo` | Same. |
-| `lang-chain/fast-api/pydantic_models.py` | enum `gpt-4o`, `gpt-4o-mini` | Current as of mid-2024; revisit once the repo settles on a default. |
-| `lang-chain/fast-api/langchain_utils.py` | `gpt-4o-mini` default | Same. |
-| `llama-index/citation-query-engine/citation_query_engine.py` | `gpt-4o-mini` | Same. |
-| `browser-use/find_car_prices.py` | `gpt-4o` | Current; revisit when standardizing. |
-| `browser-use/find_flights.py` | `gpt-4o` | Same. |
+| File | Audit-era model | Now (2026-06-17) | Notes |
+| --- | --- | --- | --- |
+| `lang-chain/RAG/rag_pipeline.py` | `gpt-3.5-turbo-0125` | `gpt-5.4-nano` | Cheap RAG demo. |
+| `lang-chain/RAG/README.md` | mentions `gpt-3.5-turbo-0125` | `gpt-5.4-nano` | Updated alongside code. |
+| `lang-chain/RAG-serve/custom_pipelines.py` | `gpt-3.5-turbo-0125` | `gpt-5.4-nano` | Cheap RAG demo. |
+| `lang-chain/RAG-serve/README.md` | mentions `gpt-3.5-turbo-0125` | `gpt-5.4-nano` | Updated alongside code. |
+| `lang-chain/docker-serve/custom_pipelines.py` | `gpt-3.5-turbo-0125` | `gpt-5.4-nano` | Cheap RAG demo. |
+| `lang-chain/docker-serve/README.md` | mentions `gpt-3.5-turbo-0125` | `gpt-5.4-nano` | Updated alongside code. |
+| `lang-chain/Azure/rag_pipeline.py` | `gpt-3.5-turbo-0125` | `gpt-5.4-nano` | Cheap RAG demo. |
+| `llama-index/llm/app.py` | `gpt-3.5-turbo` | `gpt-5.4-nano` | Cheap completion demo. |
+| `lang-chain/fast-api/pydantic_models.py` | enum `gpt-4o`, `gpt-4o-mini` | enum `gpt-5.4`, `gpt-5.4-nano` (default `gpt-5.4-nano`) | Selector enum bumped to current generation. |
+| `lang-chain/fast-api/langchain_utils.py` | `gpt-4o-mini` default | `gpt-5.4-nano` default | Same. |
+| `llama-index/citation-query-engine/citation_query_engine.py` | `gpt-4o-mini` | `gpt-5.4-nano` | Cheap demo. |
+| `browser-use/find_car_prices.py` | `gpt-4o` | `gpt-5.4` | Agentic/tool-using → capable tier. |
+| `browser-use/find_flights.py` | `gpt-4o` (planner `o3-mini`) | `gpt-5.4` (planner `gpt-5.4-mini`) | Agentic; deprecated `o3-mini` planner replaced. |
 
-**Recommendation**: pick a single default tier (e.g. `gpt-4o-mini` for cheap demos, `gpt-4o` or newer for anything tool-using) and apply it consistently. Document the choice once in the top-level README so per-example READMEs don't have to repeat the rationale.
+**Recommendation (superseded)**: the original advice was `gpt-4o-mini` for cheap demos / `gpt-4o`+ for tool-using. As of June 2026 the chosen default is `gpt-5.4-nano` for cheap demos and `gpt-5.4` for agentic/tool-using work.
 
 ## Meta (Llama)
 
 **Resolved 2026-06-17.** Bumped `llm/llama-3/hello-world/` from `meta-llama/Meta-Llama-3-8B` to `meta-llama/Llama-3.1-8B` (code + README + model-card URL). This is the latest *dense 8B* Llama — Llama 3.2 has no 8B, Llama 3.3 is 70B-only, and Llama 4 is MoE — so the same-size bump keeps the existing AWS g5.xlarge hardware story intact. Folder left as `llama-3/` per decision (no version-agnostic rename). The `agents/dummy-agent/*` files stay on `meta-llama/Llama-3.2-3B-Instruct`. SmolLM (`slm/smollm2/`) was intentionally left on `SmolLM2-360M` — SmolLM3 only ships at ~3B, an ~8x hardware jump not worth it for the "runs anywhere" demo. The original audit table is preserved below for historical reference.
 
-| File | Current model | Notes |
-| --- | --- | --- |
-| `llm/llama-3/hello-world/hello.py` | `meta-llama/Meta-Llama-3-8B` | The README is built around a g5.xlarge AWS EC2 instance; that's still fine, but Llama 3 has been superseded by Llama 3.1 / 3.2 / 3.3. The 8B size will not fit comfortably on a mid-tier consumer GPU (8–12 GB VRAM); call this out explicitly in the README. |
-| `llm/llama-3/hello-world/README.md` | references `Meta-Llama-3-8B` (×2) | Update text alongside code. |
-| `agents/dummy-agent/*.py` (4 files) | `meta-llama/Llama-3.2-3B-Instruct` | Already Llama 3.2 and a small variant — **leave as-is** or bump to Llama 3.3 once that's released in a 3B size. Good consumer-GPU fit. |
+| File | Audit-era model | Now (2026-06-17) | Notes |
+| --- | --- | --- | --- |
+| `llm/llama-3/hello-world/hello.py` | `meta-llama/Meta-Llama-3-8B` | `meta-llama/Llama-3.1-8B` | Latest dense 8B; same g5.xlarge footprint, AWS README unchanged. |
+| `llm/llama-3/hello-world/README.md` | references `Meta-Llama-3-8B` (×2) | `Llama-3.1-8B` (+ model-card URL) | Updated alongside code. |
+| `agents/dummy-agent/*.py` (4 files) | `meta-llama/Llama-3.2-3B-Instruct` | unchanged | Already current small variant; good consumer-GPU fit. |
 
-**Recommendation**: rename the `llm/llama-3/` folder to something version-agnostic (`llm/llama/`) and pick the latest 8B or 70B target. For a "fits on consumer hardware" story, prefer Llama 3.2-3B in any new content.
+**Recommendation (partially applied)**: bumped to the latest 8B (`Llama-3.1-8B`) keeping the `llm/llama-3/` folder; the version-agnostic folder rename was declined. Llama 3.2 has no 8B, 3.3 is 70B-only, and Llama 4 is MoE, so 3.1 is the newest dense 8B.
 
 ## Microsoft (Phi)
 
 **Resolved 2026-06-17.** Bumped `slm/phi-3/hello-world/` from `microsoft/Phi-3-mini-4k-instruct` to `microsoft/Phi-4-mini-instruct` (code + README). Phi-4-mini is 3.8B — the same size class as Phi-3-mini, so it runs on the same hardware; it supersedes the originally-recommended Phi-3.5-mini. The folder name (`phi-3/`) was left as-is. A separate larger `slm/phi-4/` (~14B) example remains a possible follow-up (GitHub issue #8). The original audit table is preserved below for historical reference.
 
-| File | Current model | Notes |
-| --- | --- | --- |
-| `slm/phi-3/hello-world/hello.py` | `microsoft/Phi-3-mini-4k-instruct` | Phi-3.5 and Phi-4 have shipped since this was written. Phi-3.5-mini has the same parameter footprint and runs on the same hardware; Phi-4 is larger (~14B). |
-| `slm/phi-3/hello-world/README.md` | references Phi-3 throughout | Update text alongside code. |
+| File | Audit-era model | Now (2026-06-17) | Notes |
+| --- | --- | --- | --- |
+| `slm/phi-3/hello-world/hello.py` | `microsoft/Phi-3-mini-4k-instruct` | `microsoft/Phi-4-mini-instruct` | Phi-4-mini is 3.8B — same size class, same hardware. |
+| `slm/phi-3/hello-world/README.md` | references Phi-3 throughout | references Phi-4 | Updated alongside code. |
 
-**Recommendation**: bump to `microsoft/Phi-3.5-mini-instruct` for a same-size upgrade, or add a separate `slm/phi-4/` example as a "what does the next size up look like?" comparison. The original GitHub issue #8 (Add Phi 4 example) covers this.
+**Recommendation (applied, revised)**: the original advice was `Phi-3.5-mini-instruct`; by June 2026 `Phi-4-mini-instruct` is the current same-size (3.8B) successor, so that was used instead. A separate larger `slm/phi-4/` (~14B) example is still a possible follow-up (GitHub issue #8).
 
 ## Hugging Face (SmolLM)
 
-| File | Current model | Notes |
-| --- | --- | --- |
-| `slm/smollm2/story-writer/generate-story.py` | `HuggingFaceTB/SmolLM2-360M` | SmolLM3 has shipped. SmolLM2 still works fine for the demo. |
+**Reviewed 2026-06-17 — intentionally left as-is.** SmolLM3 only ships at ~3B, an ~8x jump from the 360M model; that breaks the "runs anywhere / even on a phone" point of this demo, so it stays on SmolLM2-360M.
 
-**Recommendation**: bump to SmolLM3 in a follow-up; lower priority than the Anthropic/OpenAI changes.
+| File | Audit-era model | Now (2026-06-17) | Notes |
+| --- | --- | --- | --- |
+| `slm/smollm2/story-writer/generate-story.py` | `HuggingFaceTB/SmolLM2-360M` | unchanged | SmolLM3 (~3B) is too large for the tiny-model demo; 360M kept deliberately. |
+
+**Recommendation (declined)**: bumping to SmolLM3 was considered and declined — the hardware jump outweighs the benefit for this example.
 
 ## Hardware caveat
 
