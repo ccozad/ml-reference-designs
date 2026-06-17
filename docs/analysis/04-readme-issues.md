@@ -2,20 +2,30 @@
 
 The per-example READMEs were largely produced by copy-pasting a boilerplate setup section between folders, then editing inconsistently. This document lists the bugs that block a new reader from following along, grouped by kind.
 
+> **Status update (2026-06-17):** The wrong-directory bugs below were resolved when the venv boilerplate was centralized to `docs/setup/python-venv.md` (commit `c7809c8`), which removed the per-folder "Move to the X folder" blocks that carried them. A separate batch of `langchain` → `lang-chain` cross-link path bugs (not originally caught in this audit) was also fixed — see "Additional path bugs found and fixed" below. Remaining open items are flagged inline.
+
 ## Bugs that point readers to the wrong directory
 
 These are the ones that actively send a reader running `cd <wrong/path>`:
 
-- **`agents/audio-agent/README.md`** says "Move to the multi-agents folder / `cd <agents/audio-agent>`". The label is wrong; the path is right. Fix the prose.
-- **`lang-graph/travel-agent/README.md`** says "Move to the workout-agents folder / `cd <lang-graph/travel-agent>`". Same shape — wrong label, right path.
-- **`slm/phi-3/hello-world/README.md`** says "Move to the llm\\phi-3\\hello-world folder / `cd <slm\\phi-3\\hello-world>`". The first path is wrong (`llm` should be `slm`); the second is right.
+- ~~**`agents/audio-agent/README.md`** says "Move to the multi-agents folder / `cd <agents/audio-agent>`". The label is wrong; the path is right. Fix the prose.~~ **FIXED** — the "Move to" block is gone (venv boilerplate centralized).
+- ~~**`lang-graph/travel-agent/README.md`** says "Move to the workout-agents folder / `cd <lang-graph/travel-agent>`". Same shape — wrong label, right path.~~ **FIXED** — same cause/fix as above.
+- ~~**`slm/phi-3/hello-world/README.md`** says "Move to the llm\\phi-3\\hello-world folder / `cd <slm\\phi-3\\hello-world>`". The first path is wrong (`llm` should be `slm`); the second is right.~~ **FIXED** — same cause/fix as above; the backslash paths are gone too.
+
+## Additional path bugs found and fixed
+
+These weren't in the original audit but are the same class of copy-paste path bug. All fixed 2026-06-17:
+
+- ~~**`lang-chain/AWS-Bedrock/README.md`** cross-linked `/langchain/RAG/README.md` (no hyphen).~~ **FIXED** → `/lang-chain/RAG/README.md`.
+- ~~**`lang-chain/RAG-serve/README.md`** cross-linked `/langchain/RAG/README.md`.~~ **FIXED** → `/lang-chain/RAG/README.md`.
+- ~~**`lang-chain/docker-serve/README.md`** cross-linked `/langchain/RAG-serve/README.md` and had `cd <ml-reference-designs/langchain/docker-serve>`.~~ **FIXED** → both now use `lang-chain`.
 
 ## Typos and minor errors
 
-- **`llama-index/citation-query-engine/README.md`** has `OPENAI_API_KEY=your token>` — the leading `<` is missing.
-- **`lang-chain/Azure/rag_pipeline.py`** sample output in the README mentions "Initializing Bedrock client...". This is leftover from the AWS Bedrock example; the Azure version doesn't talk to Bedrock.
-- **`lang-chain/Azure/README.md`** lists `OPENAI_API_KEY` in the env-var block but the dependencies section doesn't explain why an OpenAI key is needed alongside Azure AI Search. Add a one-liner or remove the env var if the example is fully Azure-native.
-- **`llm/claude-3-5/tool-calling/README.md`** has the line "At it's core" — should be "At its core". Minor.
+- ~~**`llama-index/citation-query-engine/README.md`** has `OPENAI_API_KEY=your token>` — the leading `<` is missing.~~ **FIXED** — now `OPENAI_API_KEY=<your token>`.
+- ~~**`lang-chain/Azure/rag_pipeline.py`** sample output in the README mentions "Initializing Bedrock client...". This is leftover from the AWS Bedrock example; the Azure version doesn't talk to Bedrock.~~ **FIXED** — the Bedrock line is no longer in the Azure README.
+- **`lang-chain/Azure/README.md`** lists `OPENAI_API_KEY` in the env-var block but the dependencies section doesn't explain why an OpenAI key is needed alongside Azure AI Search. Add a one-liner or remove the env var if the example is fully Azure-native. **(STILL OPEN)**
+- ~~**`llm/claude-3-5/tool-calling/README.md`** has the line "At it's core" — should be "At its core". Minor.~~ **RESOLVED** — superseded by `llm/claude/tool-calling/README.md`, which reads "At its core".
 
 ## Empty / abandoned
 
