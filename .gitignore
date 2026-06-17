@@ -4,3 +4,4 @@
 *.pth
 *.pt
 .DS_Store
+.env
