@@ -43,6 +43,8 @@ Every hard-coded model string in the repo, what generation it represents, and ho
 
 ## Meta (Llama)
 
+**Resolved 2026-06-17.** Bumped `llm/llama-3/hello-world/` from `meta-llama/Meta-Llama-3-8B` to `meta-llama/Llama-3.1-8B` (code + README + model-card URL). This is the latest *dense 8B* Llama — Llama 3.2 has no 8B, Llama 3.3 is 70B-only, and Llama 4 is MoE — so the same-size bump keeps the existing AWS g5.xlarge hardware story intact. Folder left as `llama-3/` per decision (no version-agnostic rename). The `agents/dummy-agent/*` files stay on `meta-llama/Llama-3.2-3B-Instruct`. SmolLM (`slm/smollm2/`) was intentionally left on `SmolLM2-360M` — SmolLM3 only ships at ~3B, an ~8x hardware jump not worth it for the "runs anywhere" demo. The original audit table is preserved below for historical reference.
+
 | File | Current model | Notes |
 | --- | --- | --- |
 | `llm/llama-3/hello-world/hello.py` | `meta-llama/Meta-Llama-3-8B` | The README is built around a g5.xlarge AWS EC2 instance; that's still fine, but Llama 3 has been superseded by Llama 3.1 / 3.2 / 3.3. The 8B size will not fit comfortably on a mid-tier consumer GPU (8–12 GB VRAM); call this out explicitly in the README. |

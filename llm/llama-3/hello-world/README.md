@@ -1,6 +1,6 @@
 # Introduction
 
-The Llama 3 LLM model from Meta was released in April 2024 and it rapidly showed promise as a state of the art model by quickly rising in the ranking charts. Previously the Llama 2 models were popular because the smallest variations could run on modest consumer hardware.
+The Llama 3 LLM model from Meta was released in April 2024 and it rapidly showed promise as a state of the art model by quickly rising in the ranking charts. Previously the Llama 2 models were popular because the smallest variations could run on modest consumer hardware. This example targets `meta-llama/Llama-3.1-8B`, the latest 8B variant — it has the same hardware footprint as the original Llama 3 8B, so the setup below is unchanged.
 
 The 8 Billion parameter model has increased hardware requirements, though still in an economical range for experimentation. Since this model starts to require hardware released in the last couple of years, this tutorial expects that you'll need cloud resources to try it on your own. We only explain in depth how to configure AWS EC2 cloud resources but the general ideas can be applied to other cloud providers. Running the instances described in this tutorial will cost around $1 an hour and you should be able to complete the setup in less than an hour. Be sure to turn off your server instance when you are done with this exercise.
 
@@ -88,7 +88,7 @@ ln -s /data/hf huggingface
 
 The Llama 3 model is what is called a "gated model" in the sense that the owner of the model, Facebook's parent company Meta, has terms of use for how the model and its pre-trained weights can be used. And since millions of hours of high end GPU time has gone into the model training it's to our benefit to stay within the terms of use for access to the pre-trained weights.
 
-First you will need a free Hugging Face account. Then you'll need to follow the access instructions on the model card to be able to download the model. See https://huggingface.co/meta-llama/Meta-Llama-3-8B for more details. Requesting permission from Meta requires a Facebook account and it usually takes a day or more to get approval. Be sure to use the same email between your Hugging Face account and Facebook account because the approval by Meta transfers over to Hugging Face.
+First you will need a free Hugging Face account. Then you'll need to follow the access instructions on the model card to be able to download the model. See https://huggingface.co/meta-llama/Llama-3.1-8B for more details. Requesting permission from Meta requires a Facebook account and it usually takes a day or more to get approval. Be sure to use the same email between your Hugging Face account and Facebook account because the approval by Meta transfers over to Hugging Face.
 
 We'll use our code to download the model onto the server.
 
@@ -183,7 +183,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-model_id = "meta-llama/Meta-Llama-3-8B"
+model_id = "meta-llama/Llama-3.1-8B"
 
 pipeline = transformers.pipeline (
     "text-generation",
@@ -205,7 +205,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-model_id = "meta-llama/Meta-Llama-3-8B"
+model_id = "meta-llama/Llama-3.1-8B"
 
 pipeline = transformers.pipeline (
     "text-generation",

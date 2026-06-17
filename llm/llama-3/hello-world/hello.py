@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-model_id = "meta-llama/Meta-Llama-3-8B"
+model_id = "meta-llama/Llama-3.1-8B"
 
 pipeline = transformers.pipeline (
     "text-generation",
