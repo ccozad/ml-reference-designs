@@ -43,8 +43,8 @@ Stop before going to the checkout. Print the airline, price and flight number in
 async def main():
     agent = Agent(
         task=prompt,
-        llm=ChatOpenAI(model="gpt-4o"),
-        planner_llm=ChatOpenAI(model="o3-mini"),
+        llm=ChatOpenAI(model="gpt-5.4"),
+        planner_llm=ChatOpenAI(model="gpt-5.4-mini"),
         use_vision_for_planner=False,
         planner_interval=4
     )

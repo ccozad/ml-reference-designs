@@ -21,6 +21,8 @@ Every hard-coded model string in the repo, what generation it represents, and ho
 
 ## OpenAI
 
+**Resolved 2026-06-17.** Standardized on the current (June 2026) GPT-5.4 generation: cheap completion/RAG demos use `gpt-5.4-nano`, agentic/tool-using examples use `gpt-5.4` (with `gpt-5.4-mini` as the browser-use planner). `gpt-4o`/`gpt-4o-mini` were two generations behind by mid-2026, so the doc's original `gpt-4o-mini` recommendation was superseded. Files updated: `lang-chain/RAG`, `lang-chain/RAG-serve`, `lang-chain/docker-serve`, `lang-chain/Azure` (code + READMEs), `llama-index/llm/app.py`, `llama-index/citation-query-engine`, `lang-chain/fast-api` (enum + default), `browser-use/find_car_prices.py`, `browser-use/find_flights.py`. The original audit table is preserved below for historical reference.
+
 | File | Current model | Notes |
 | --- | --- | --- |
 | `lang-chain/RAG/rag_pipeline.py` | `gpt-3.5-turbo-0125` | Upgrade to `gpt-4o-mini` at minimum; the cost delta is negligible and quality is much better for RAG. |
@@ -50,6 +52,8 @@ Every hard-coded model string in the repo, what generation it represents, and ho
 **Recommendation**: rename the `llm/llama-3/` folder to something version-agnostic (`llm/llama/`) and pick the latest 8B or 70B target. For a "fits on consumer hardware" story, prefer Llama 3.2-3B in any new content.
 
 ## Microsoft (Phi)
+
+**Resolved 2026-06-17.** Bumped `slm/phi-3/hello-world/` from `microsoft/Phi-3-mini-4k-instruct` to `microsoft/Phi-4-mini-instruct` (code + README). Phi-4-mini is 3.8B — the same size class as Phi-3-mini, so it runs on the same hardware; it supersedes the originally-recommended Phi-3.5-mini. The folder name (`phi-3/`) was left as-is. A separate larger `slm/phi-4/` (~14B) example remains a possible follow-up (GitHub issue #8). The original audit table is preserved below for historical reference.
 
 | File | Current model | Notes |
 | --- | --- | --- |

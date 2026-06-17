@@ -6,7 +6,7 @@ dotenv.load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 
-llm = OpenAI(model="gpt-3.5-turbo", temperature=0)
+llm = OpenAI(model="gpt-5.4-nano", temperature=0)
 
 text_qa_template = PromptTemplate(
     "Context information is below.\n"

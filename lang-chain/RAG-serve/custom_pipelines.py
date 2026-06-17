@@ -61,7 +61,7 @@ class CustomPipelines:
         retrieved_docs = retriever.invoke(query)
         print(f"Retrieved {len(retrieved_docs)} documents")
 
-        llm = ChatOpenAI(model="gpt-3.5-turbo-0125")
+        llm = ChatOpenAI(model="gpt-5.4-nano")
 
         template = """
         You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise. 

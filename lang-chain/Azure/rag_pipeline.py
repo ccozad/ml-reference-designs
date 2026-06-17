@@ -39,7 +39,7 @@ retrieved_docs = retriever.invoke(query)
 print(f"Retrieved {len(retrieved_docs)} documents")
 
 # Initiatialize the large language model
-llm = ChatOpenAI(model="gpt-3.5-turbo-0125")
+llm = ChatOpenAI(model="gpt-5.4-nano")
 
 # Based on https://smith.langchain.com/hub/rlm/rag-prompt
 template = """

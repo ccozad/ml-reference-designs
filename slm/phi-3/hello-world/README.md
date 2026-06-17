@@ -1,6 +1,6 @@
 # Introduction
 
-Microsoft's Phi-3 models are marketed as small language models that can run on average consumer hardware, even on devices like phones.
+Microsoft's Phi models are marketed as small language models that can run on average consumer hardware, even on devices like phones. This example uses `Phi-4-mini-instruct` (3.8B), a same-size successor to the original `Phi-3-mini` that runs on the same hardware.
 
 https://news.microsoft.com/source/features/ai/the-phi-3-small-language-models-with-big-potential/
 
@@ -27,7 +27,7 @@ Follow the instructions at https://pytorch.org/get-started/locally/
 
 Example output:
 ```text
-Microsoft Phi-3 LLM Test:
+Microsoft Phi-4 LLM Test:
 
 <s><|user|> Can you provide a few examples of musical instruments?<|end|><|assistant|> Certainly! Here are a few examples of musical instruments:
 

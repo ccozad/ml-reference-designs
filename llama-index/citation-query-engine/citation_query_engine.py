@@ -92,7 +92,7 @@ class CitationQueryEngineWorkflow(Workflow):
         self, ctx: Context, ev: CreateCitationsEvent
     ) -> StopEvent:
         """Return a streaming response using the retrieved nodes."""
-        llm = OpenAI(model="gpt-4o-mini")
+        llm = OpenAI(model="gpt-5.4-nano")
         query = await ctx.store.get("query", default=None)
 
         synthesizer = get_response_synthesizer(

@@ -27,7 +27,7 @@ Further Reading
 
 ## OpenAI API key
 
-This example stores and searches embeddings in Azure AI Search, but the embeddings themselves are generated locally with an open-source Hugging Face model (`all-MiniLM-L6-v2`) — no OpenAI key is required for indexing or retrieval. The OpenAI key is used only by the RAG pipeline's chat model (`gpt-3.5-turbo-0125` in `rag_pipeline.py`), which writes the final natural-language answer from the retrieved documents. Retrieve your key from https://platform.openai.com/api-keys
+This example stores and searches embeddings in Azure AI Search, but the embeddings themselves are generated locally with an open-source Hugging Face model (`all-MiniLM-L6-v2`) — no OpenAI key is required for indexing or retrieval. The OpenAI key is used only by the RAG pipeline's chat model (`gpt-5.4-nano` in `rag_pipeline.py`), which writes the final natural-language answer from the retrieved documents. Retrieve your key from https://platform.openai.com/api-keys
 
 ## Environment variables
 

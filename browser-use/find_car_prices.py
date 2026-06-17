@@ -7,7 +7,7 @@ load_dotenv()
 async def main():
     agent = Agent(
         task="Use autotrader.com to find car prices for a make of toyota and model of corolla in the 95621 zip code. Stop when you have gathered 5 prices and present a summary." ,
-        llm=ChatOpenAI(model="gpt-4o"),
+        llm=ChatOpenAI(model="gpt-5.4"),
     )
     await agent.run()
 

@@ -7,7 +7,7 @@ Based on concepts presented in https://python.langchain.com/v0.1/docs/use_cases/
 Pipeline Components used
  - Prompt Template: based on https://smith.langchain.com/hub/rlm/rag-prompt
  - Embedding Model: OpenAI Embeddings, remote access (Requires paid account)
- - Large Language Model: OpenAI Chat, gpt-3.5-turbo-0125, remote access (Requires paid account)
+ - Large Language Model: OpenAI Chat, gpt-5.4-nano, remote access (Requires paid account)
  - Vectorstore: Chroma, local instance (Open source)
 
 Paid model access should cost a few cents of usage fees.
